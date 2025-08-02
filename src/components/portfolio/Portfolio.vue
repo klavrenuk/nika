@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="portfolio">
+  <section class="portfolio app-section">
     <div>
       <h5 class="portfolio__title">
         Портфолио объектов

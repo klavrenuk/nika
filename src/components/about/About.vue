@@ -3,7 +3,7 @@ import AboutRight from "@/components/about/AboutRight.vue";
 </script>
 
 <template>
-  <section class="about">
+  <section class="about app-section">
     <div></div>
     <AboutRight />
   </section>

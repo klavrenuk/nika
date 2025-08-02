@@ -1,9 +1,15 @@
 <script setup>
-
+defineProps({
+  type: {
+    type: String,
+    required: false,
+    default: 'default'
+  }
+})
 </script>
 
 <template>
-  <div class="section-name d-flex align-items-center">
+  <div class="section-name d-flex align-items-center" :class="type">
     <span class="section-name__dot"></span>
     <slot />
   </div>
@@ -21,6 +27,14 @@
     width: 9px;
     border-radius: 100%;
     background: #7A4FF1;
+  }
+}
+
+.section-name.white {
+  color: #fff;
+
+  &__dot {
+    background: #fff;
   }
 }
 </style>

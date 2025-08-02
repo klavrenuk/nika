@@ -48,3 +48,18 @@ export const whyChooseUsBlocks = [
         description: 'Широкий ассортимент плитки и керамогранита всегда в наличии на локальных складах.'
     },
 ]
+
+export const socials = [
+    {
+        icon: '/images/tg.svg',
+        link: 'tg'
+    },
+    {
+        icon: '/images/vk.svg',
+        link: 'vk'
+    },
+    {
+        icon: '/images/whatsApp.svg',
+        link: 'whatsApp'
+    }
+]

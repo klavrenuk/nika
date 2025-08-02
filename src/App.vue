@@ -6,6 +6,7 @@
     <WhyChooseUsRight />
     <Founder />
     <Contacts />
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Portfolio from "@/components/portfolio/Portfolio.vue";
 import WhyChooseUsRight from "@/components/why-choose-us/WhyChooseUsRight.vue";
 import Founder from '@/components/founder/Founder.vue';
 import Contacts from '@/components/contacts/Contacts.vue';
+import Footer from '@/components/footer/Footer.vue';
 </script>
 
 <style lang="scss">
