@@ -3,10 +3,10 @@ import AboutRight from "@/components/about/AboutRight.vue";
 </script>
 
 <template>
-  <div class="about">
+  <section class="about">
     <div></div>
     <AboutRight />
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">

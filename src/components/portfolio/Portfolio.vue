@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="portfolio">
+  <section class="portfolio">
     <div>
       <h5 class="portfolio__title">
         Портфолио объектов
@@ -11,7 +11,7 @@
     </div>
 
 
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">

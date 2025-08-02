@@ -4,3 +4,9 @@
   padding: 0 15px;
   width: calc(100% - 60px);
 }
+
+.app-component-layout {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 105px;
+}

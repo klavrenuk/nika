@@ -1,0 +1,29 @@
+<script setup>
+defineProps({
+  label: String,
+  text: String
+})
+</script>
+
+<template>
+  <div class="contact-info-item d-flex flex-column">
+    <label class="contact-info-item__label">{{ label }}</label>
+    <span class="contact-info-item__text">{{ text }}</span>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.contact-info-item {
+  gap: 15px;
+
+  &__label {
+    color: #868B91;
+    font-size: 16px;
+  }
+
+  &__text {
+    color: #121211;
+    font-size: 22px;
+  }
+}
+</style>
