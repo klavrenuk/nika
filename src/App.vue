@@ -1,12 +1,9 @@
 <template>
   <div class="app">
-    Hello from Nicka
+    <AppHeader />
   </div>
 </template>
 
-<script>
+<script setup>
+import AppHeader from '@/components/header/AppHeader.vue'
 </script>
-
-<style lang="scss">
-
-</style>
