@@ -1,10 +1,12 @@
 <script setup>
 import HeaderTop from '@/components/header/HeaderTop.vue';
+import HeaderBottom from '@/components/header/HeaderBottom.vue';
 </script>
 
 <template>
   <div class="app-header">
     <HeaderTop />
+    <HeaderBottom />
   </div>
 </template>
 
