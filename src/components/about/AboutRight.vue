@@ -1,9 +1,9 @@
 <script setup>
-
+import AboutAchievements from "@/components/about/AboutAchievements.vue";
 </script>
 
 <template>
-  <div class="about-right">
+  <div class="about-right d-flex flex-column">
     <h4 class="about-right__title">
       О компании
     </h4>
@@ -11,18 +11,29 @@
     <p class="about-right__text">
       Мы специализируемся на оптовых поставках керамики и керамогранита для жилых, коммерческих и общественных помещений. Прямые поставки по Югу России, ЛНР и ДНР.
     </p>
-    <p class="about-right__text text-white">
-      Мы более 20 лет специализируемся на оптовых поставках керамической плитки и керамогранита от ведущих производителей. Являемся официальными дилерами Piastrella, M‑Квадрат (PROGRES,PiezaRosa), ProTile, Italon, Kerama Marazzi, Нефрит Керамика, Unitile, Grani Taganaya и других признанных брендов.
-    </p>
-    <p class="about-right__text text-white">
-      Осуществляем поставки в Ростов‑на‑Дону, Краснодарский край, ЛНР и ДНР для жилых комплексов, коттеджных посёлков, а также коммерческих и общественных объектов — от фасадов и террас до интерьеров ресторанов, школ и супермаркетов.
-    </p>
+
+    <div class="d-flex flex-column about-right__wrap-text">
+      <p class="about-right__text text-white">
+        Мы более 20 лет специализируемся на оптовых поставках керамической плитки и керамогранита от ведущих производителей. Являемся официальными дилерами Piastrella, M‑Квадрат (PROGRES,PiezaRosa), ProTile, Italon, Kerama Marazzi, Нефрит Керамика, Unitile, Grani Taganaya и других признанных брендов.
+      </p>
+      <p class="about-right__text text-white">
+        Осуществляем поставки в Ростов‑на‑Дону, Краснодарский край, ЛНР и ДНР для жилых комплексов, коттеджных посёлков, а также коммерческих и общественных объектов — от фасадов и террас до интерьеров ресторанов, школ и супермаркетов.
+      </p>
+    </div>
+
+    <div class="about-right__footer d-flex align-items-center flex-wrap">
+      <AboutAchievements text="20 лет" description="опыта в отрасли" />
+      <AboutAchievements text="15+" description="заводов‑партнёров" />
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .about-right {
+  gap: 23px;
+
   &__title {
+    margin-bottom: 25px;
     color: #121211;
     font-size: 48px;
     line-height: 43px;
@@ -35,8 +46,16 @@
     line-height: 120%;
 
     &.text-white {
-      color: #949494;
+      color: #949494 !important;
     }
   }
+}
+
+.about-right__wrap-text {
+  gap: 10px;
+}
+
+.about-right__footer {
+  gap: 88px;
 }
 </style>

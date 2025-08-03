@@ -1,5 +1,4 @@
 <script setup>
-
 import SectionName from "@/components/section/SectionName.vue";
 </script>
 
