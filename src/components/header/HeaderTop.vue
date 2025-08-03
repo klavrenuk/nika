@@ -18,7 +18,7 @@ import { navHeader } from '@/constants/constants';
           </a>
         </nav>
 
-        <a href="tel:+79380802222">+7 (938) 080-22-22</a>
+        <a href="tel:+79380802222" class="header-top__phone">+7 (938) 080-22-22</a>
       </div>
     </div>
   </div>
@@ -26,10 +26,20 @@ import { navHeader } from '@/constants/constants';
 
 <style scoped lang="scss">
 .header-top {
+  padding: 32px 0 0;
+
   &__right {
     display: flex;
     align-items: center;
     gap: 90px
+  }
+
+  &__phone {
+    color: #fff;
+
+    &:hover, &:active, &:focus {
+      color: #7A4FF1;
+    }
   }
 }
 
@@ -41,6 +51,10 @@ import { navHeader } from '@/constants/constants';
   &__link {
     color: #fff;
     font-size: 16px;
+
+    &:hover, &:active, &:focus {
+      color: #7A4FF1;
+    }
   }
 }
 </style>

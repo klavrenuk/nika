@@ -5,16 +5,44 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
 
 <template>
   <div class="app-header">
-<!--    <HeaderTop />-->
-<!--    <HeaderBottom />-->
+    <div class="app-container app-header__container h-100">
+      <div class="d-flex flex-column app-header__blocks h-100">
+        <HeaderTop />
+        <HeaderBottom />
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .app-header {
+  position: relative;
   height: 696px;
   width: 100%;
   background: url('@/assets/images/header-back.png') center center no-repeat;
   background-color: #000;
+  background-size: cover;
+  z-index: 2;
+  padding-bottom: 50px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
+    z-index: -1;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__blocks {
+    justify-content: space-between;
+  }
 }
 </style>
