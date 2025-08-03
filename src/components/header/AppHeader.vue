@@ -5,8 +5,8 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
 
 <template>
   <div class="app-header">
-    <HeaderTop />
-    <HeaderBottom />
+<!--    <HeaderTop />-->
+<!--    <HeaderBottom />-->
   </div>
 </template>
 

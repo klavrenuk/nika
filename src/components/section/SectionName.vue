@@ -27,13 +27,14 @@ defineProps({
     width: 9px;
     border-radius: 100%;
     background: #7A4FF1;
+    display: inline-block;
   }
 }
 
 .section-name.white {
   color: #fff;
 
-  &__dot {
+  & .section-name__dot {
     background: #fff;
   }
 }
