@@ -25,7 +25,9 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
         </div>
       </div>
 
-      <img src="/images/address-img.svg" alt="" />
+      <div class="contacts__map">
+        <img src="/images/address-img.svg" alt="" class="contacts__map__img" />
+      </div>
     </div>
   </section>
 </template>
@@ -53,5 +55,11 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
     grid-template-columns: 50% 50%;
     gap: 70px;
   }
+}
+
+.contacts__map__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 </style>

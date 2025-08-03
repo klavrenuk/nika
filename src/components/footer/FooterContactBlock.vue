@@ -25,6 +25,7 @@ defineProps({
   &__label {
     color: #fff;
     font-size: 16px;
+    opacity: .6;
   }
 
 

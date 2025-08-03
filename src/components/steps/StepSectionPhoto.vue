@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="step-section-photo">
+  <section class="app-component-layout">
     <div class="d-flex flex-column step-section-photo__left">
       <div class="step-section-photo__text-info d-flex flex-column">
         <h5 class="step-section-photo__title">

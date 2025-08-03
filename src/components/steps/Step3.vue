@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="step3">
+  <div class="app-component-layout">
     <img src="/images/step3.jpg" alt="" />
 
     <div class="step3__right d-flex flex-column">

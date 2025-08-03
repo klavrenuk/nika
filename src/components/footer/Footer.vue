@@ -15,5 +15,6 @@ import FooterRight from "@/components/footer/FooterRight.vue";
 <style scoped lang="scss">
 .footer {
   background: #121212;
+  padding-bottom: 60px;
 }
 </style>

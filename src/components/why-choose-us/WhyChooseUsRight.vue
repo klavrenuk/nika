@@ -5,7 +5,7 @@ import ChooseAdvance from "@/components/why-choose-us/ChooseAdvance.vue";
 </script>
 
 <template>
-  <div class="why-choose-us-right app-section">
+  <div class="why-choose-us-right">
     <div class="why-choose-us-right__advances d-flex flex-column">
       <ChooseAdvance v-for="advance in whyChooseUsBlocks" :data="advance" :key="advance.title" />
     </div>
