@@ -10,12 +10,17 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
       <div class="about__left d-flex flex-column">
         <SectionName>О бренде</SectionName>
 
-        <div class="about__company">
+        <div class="about__company d-flex flex-column">
           <div class="about__company__images d-flex align-items-end">
-            <img src="/images/about-left-img.png" alt="" class="about__company__img" />
+            <div class="about__company__img">
+              <img src="/images/about-left-img.png" alt="" />
+            </div>
             <div class="about__company__rect"></div>
           </div>
-          <p class="about__company__text"></p>
+
+          <p class="about__company__text">
+            ООО «Ника» — официальный дистрибьютор Italon, Kerama Marazzi, Grani Taganaya, Progres и других ведущих брендов.
+          </p>
         </div>
 
         <AboutAchievements text="5 млн+ м²" description="плитки реализовано на объектах" />
@@ -30,6 +35,7 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
 .about__company {
   width: 100%;
   max-width: 360px;
+  gap: 28px;
 
   &__images {
     gap: 10px;
@@ -38,11 +44,30 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
   &__text {
     color: #121211;
     font-size: 22px;
+    line-height: 120%;
   }
 
   & .about__company__img {
+    position: relative;
     height: 184px;
     width: 184px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      linear-gradient(90deg, #000000 -15.44%, rgba(0, 0, 0, 0) 18.24%, rgba(0, 0, 0, 0) 87.12%, #000000 112.38%),
+      linear-gradient(0deg, rgba(6, 6, 6, 0.6), rgba(6, 6, 6, 0.6));
+    }
   }
 
   & .about__company__rect {
@@ -53,6 +78,6 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
 }
 
 .about__left {
-
+  justify-content: space-between;
 }
 </style>

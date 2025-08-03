@@ -21,6 +21,8 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
       </p>
     </div>
 
+    <img src="/images/about-people.svg" alt="" class="about-right__people" />
+
     <div class="about-right__footer d-flex align-items-center flex-wrap">
       <AboutAchievements text="20 лет" description="опыта в отрасли" />
       <AboutAchievements text="15+" description="заводов‑партнёров" />
@@ -57,5 +59,12 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
 
 .about-right__footer {
   gap: 88px;
+}
+
+.about-right__people {
+  margin-top: 48px;
+  height: 72px;
+  width: 204px;
+  object-fit: cover;
 }
 </style>
