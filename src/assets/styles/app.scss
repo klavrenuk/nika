@@ -1,15 +1,27 @@
 @import './buttons.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+
+@font-face {
+  font-family: 'Onest';
+  src: url('https://cdn.example.com/fonts/Onest.woff2') format('woff2'),
+  url('https://cdn.example.com/fonts/Onest.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   color: #121211;
   font-size: 16px;
   line-height: 120%;
+  font-family: 'Onest', sans-serif;
 }
 
 .app {
   font-size: 16px;
   color: #121211;
   line-height: 120%;
+  font-family: 'Onest', sans-serif;
 }
 
 .app-container {
