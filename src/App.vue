@@ -3,7 +3,7 @@
     <AppHeader />
     <About />
     <Portfolio />
-    <WhyChooseUsRight />
+    <WhyChooseUs />
     <Founder />
     <Contacts />
     <Footer />
@@ -14,7 +14,7 @@
 import AppHeader from '@/components/header/AppHeader.vue'
 import About from '@/components/about/About.vue';
 import Portfolio from "@/components/portfolio/Portfolio.vue";
-import WhyChooseUsRight from "@/components/why-choose-us/WhyChooseUsRight.vue";
+import WhyChooseUs from "@/components/why-choose-us/WhyChooseUs.vue";
 import Founder from '@/components/founder/Founder.vue';
 import Contacts from '@/components/contacts/Contacts.vue';
 import Footer from '@/components/footer/Footer.vue';
