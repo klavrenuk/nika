@@ -77,11 +77,21 @@
   font-size: 12px;
   text-transform: uppercase;
   background: #7A4FF1;
+
+  &:hover, &:active, &:focus {
+    color: #0A0A0D;
+    background: #fff;
+  }
 }
 
 .header-bottom__view-objects {
   color: #0A0A0D;
   background: #fff;
+
+  &:hover, &:active, &:focus {
+    color: #fff;
+    background: #7A4FF1;
+  }
 }
 
 .header-bottom__list {
