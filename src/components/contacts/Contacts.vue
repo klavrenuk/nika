@@ -24,6 +24,8 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
           <ContactInfoItem label="Часы работы:" text="Пн–Вс 10:00–20:00" />
         </div>
       </div>
+
+      <img src="/images/address-img.svg" alt="" />
     </div>
   </section>
 </template>
