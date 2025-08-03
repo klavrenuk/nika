@@ -7,7 +7,7 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
   <section class="contacts app-section">
     <div class="app-component-layout">
       <div class="d-flex flex-column contacts__top">
-        <SectionName />
+        <SectionName>Контакты</SectionName>
         <div>
           <h4 class="contacts__title">
             Свяжитесь с нами
@@ -24,7 +24,6 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
           <ContactInfoItem label="Часы работы:" text="Пн–Вс 10:00–20:00" />
         </div>
       </div>
-
     </div>
   </section>
 </template>
@@ -33,6 +32,24 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
 .contacts {
   &__top {
     gap: 40px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    color: #121211;
+    font-weight: 500;
+    font-size: 48px;
+  }
+
+  &__subtitle {
+    color: #121211;
+    font-size: 22px;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 70px;
   }
 }
 </style>

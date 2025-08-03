@@ -12,6 +12,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  color: transparent;
 
   &__rect {
     height: 38px;
@@ -20,9 +21,11 @@
   }
 
   &__text {
+    color: #FFFFFF;
     font-weight: 800;
     font-size: 33px;
     text-transform: uppercase;
+    text-decoration: none;
   }
 }
 </style>

@@ -6,7 +6,7 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
 <template>
   <div class="footer-left">
     <div class="footer-left__top">
-      <div>
+      <div class="footer-left__container">
         <div class="footer-left__block-logo d-flex flex-column">
           <FooterLogo />
           <p class="footer-left__block-logo__text">© 2025. Все права защищены</p>
@@ -19,7 +19,7 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
             <a href="" target="_blank">О нас</a>
           </nav>
 
-          <nav lass="footer-left__nav">
+          <nav class="footer-left__nav">
             <a href="" target="_blank">Преимущества</a>
             <a href="" target="_blank">Контакты</a>
           </nav>
@@ -36,6 +36,19 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
   &__top {
     margin-bottom: 125px;
   }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__block-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
 }
 
 .footer-left__nav {
@@ -45,6 +58,11 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
 
   & a {
     color: #FFFFFF;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+      color: #7A4FF1;
+    }
   }
 }
 

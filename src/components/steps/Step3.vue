@@ -43,6 +43,11 @@
     color: #868B91;
     font-weight: 500;
   }
+
+  &__title,
+  &__text {
+    text-align: right;
+  }
 }
 
 .step3__right__footer {
