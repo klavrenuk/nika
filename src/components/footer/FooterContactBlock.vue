@@ -36,12 +36,32 @@ defineProps({
 
   & .footer-contact-block__icon {
     position: relative;
-    top: 4px;
+    top: 2px;
   }
 
   & a {
     color: #FFFFFF;
     font-size: 37px;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .footer-contact-block {
+    & a {
+      font-size: 16px;
+    }
+  }
+
+  .footer-contact-block {
+    gap: 8px;
+  }
+
+  .footer-contact-block__info {
+    gap: 8px;
+  }
+
+  .footer-contact-block__icon {
+    display: none;
   }
 }
 </style>

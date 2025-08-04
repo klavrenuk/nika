@@ -15,9 +15,9 @@ import SectionName from "@/components/section/SectionName.vue";
             >50 масштабных проектов
           </h6>
           <div class="position-relative portfolio__wrap-btn">
-            <button class="portfolio__submit-application app-button">
+            <a class="portfolio__submit-application app-button" href="#application">
               оставить заявку
-            </button>
+            </a>
             <div class="portfolio-block-img"></div>
           </div>
         </div>
@@ -102,11 +102,31 @@ import SectionName from "@/components/section/SectionName.vue";
 
 @media all and (max-width: 720px) {
   .portfolio__left {
-    gap: 24px;
+    gap: 16px;
   }
   
   .portfolio__submit-application {
     max-width: 100%;
+  }
+
+  .portfolio__title {
+    font-size: 32px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .portfolio__right {
+    gap: 16px;
+  }
+
+  .portfolio__submit-application {
+    padding: 11px 8px;
+    font-size: 12px;
+  }
+
+  .portfolio__submit-application {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
   }
 }
 </style>

@@ -65,12 +65,26 @@ defineProps({
 
 @media all and (max-width: 720px) {
   .step-section-photo__text-info {
-    gap: 16px;
+    gap: 8px;
   }
 
   .item-img {
     width: 100%;
     object-fit: cover;
+  }
+
+  .step-section-photo__title {
+    font-size: 16px;
+  }
+
+  .step-section-photo__text {
+    margin-bottom: 8px;
+  }
+
+  .step-section-photo__btn {
+    padding: 11px 8px;
+    font-size: 12px;
+    height: 40px;
   }
 }
 </style>

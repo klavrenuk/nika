@@ -36,6 +36,8 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
 
 <style scoped lang="scss">
 .contacts {
+  overflow: hidden;
+
   &__top {
     gap: 40px;
   }
@@ -63,5 +65,26 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+@media all and (max-width: 720px) {
+  .contacts__title {
+    font-size: 32px;
+  }
+
+  .contacts__info {
+    grid-template-columns: 100%;
+    gap: 24px;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .contacts__map {
+    margin-top: 16px;
+  }
+
+  .contacts__top {
+    gap: 16px;
+  }
 }
 </style>

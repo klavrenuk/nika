@@ -13,3 +13,14 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@media all and (max-width: 720px) {
+  .feedback {
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+</style>

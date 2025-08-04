@@ -42,6 +42,7 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
   &__footer {
     color: #fff;
     font-size: 50px;
+    line-height: 50px;
   }
 }
 
@@ -52,5 +53,11 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
   align-items: center;
   justify-content: center;
   background: #7A4FF1;
+}
+
+@media all and (max-width: 720px) {
+  .footer-right__footer {
+    margin-top: 16px;
+  }
 }
 </style>

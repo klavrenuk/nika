@@ -88,5 +88,17 @@
   .founder-person__bottom {
     gap: 16px;
   }
+
+  .founder-person__name {
+    font-size: 32px;
+  }
+
+  .founder-person__words {
+    font-size: 16px;
+  }
+
+  .founder-person__description {
+    font-size: 16px;
+  }
 }
 </style>

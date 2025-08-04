@@ -67,4 +67,20 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
   width: 204px;
   object-fit: cover;
 }
+
+@media all and (max-width: 720px) {
+  .about-right {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .about-right__title {
+    margin-bottom: 0;
+    font-size: 32px;
+  }
+
+  .about-right__footer {
+    gap: 16px;
+  }
+}
 </style>

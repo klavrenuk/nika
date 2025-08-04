@@ -31,4 +31,10 @@ defineProps({
     font-weight: 500;
   }
 }
+
+@media all and (max-width: 720px) {
+  .choose-advance {
+    gap: 16px;
+  }
+}
 </style>

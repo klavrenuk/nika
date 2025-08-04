@@ -94,5 +94,9 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
   .about__company__images {
     display: none !important;
   }
+
+  .about__left  {
+    gap: 16px;
+  }
 }
 </style>

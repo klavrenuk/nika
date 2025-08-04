@@ -28,4 +28,22 @@ defineProps({
     font-size: 22px;
   }
 }
+
+@media all and (max-width: 720px) {
+  .about-achievements__text {
+    font-size: 32px;
+  }
+
+  .achievements__description {
+    font-size: 16px;
+  }
+
+  .about-achievements__description {
+    font-size: 16px;
+  }
+
+  .about-achievements {
+    gap: 0;
+  }
+}
 </style>

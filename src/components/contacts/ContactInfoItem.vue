@@ -26,4 +26,14 @@ defineProps({
     font-size: 22px;
   }
 }
+
+@media all and (max-width: 720px) {
+  .contact-info-item {
+    gap: 4px;
+  }
+
+  .contact-info-item__text {
+    font-size: 16px;
+  }
+}
 </style>

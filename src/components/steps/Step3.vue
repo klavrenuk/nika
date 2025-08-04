@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="app-component-layout">
+  <div class="app-component-layout step3">
     <img src="/images/step3.jpg" alt="" />
 
     <div class="step3__right d-flex flex-column">
@@ -87,6 +87,20 @@
 
   .step3__right__text {
     margin-bottom: 16px;
+  }
+
+  .step3 {
+    grid-template-columns: 100%;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .step3__right__footer__btn {
+    height: 40px;
+    font-size: 12px;
   }
 }
 </style>

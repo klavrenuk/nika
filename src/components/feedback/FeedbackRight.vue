@@ -102,4 +102,16 @@ const handleSubmit = () => {
     color: #868B9133;
   }
  }
+
+ @media all and (max-width: 720px) {
+  .feedback-right__title {
+    font-size: 32px;
+    margin-top: 16px;
+  }
+
+  .feedback-right__submit {
+    padding: 11px 8px;
+    font-size: 12px;
+  }
+ }
 </style>

@@ -50,5 +50,13 @@ const text2 = 'Надёжные решения для складов, произ
   .steps__title {
     font-size: 32px;
   }
+
+  .steps__section-name {
+    margin-bottom: 16px;
+  }
+
+  .steps__container {
+    gap: 16px;
+  }
 }
 </style>

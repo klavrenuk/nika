@@ -65,6 +65,7 @@ const listStages = [
 
   .stages__title {
     margin: 24px 0;
+    font-size: 32px;
   }
 }
 </style>

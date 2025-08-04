@@ -19,4 +19,10 @@ import FooterRight from "@/components/footer/FooterRight.vue";
   background: #121212;
   padding-bottom: 60px;
 }
+
+@media all and (max-width: 720px) {
+  .footer {
+    padding-bottom: 32px;
+  }
+}
 </style>

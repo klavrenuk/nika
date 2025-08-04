@@ -83,5 +83,9 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
   .app-header__blocks {
     justify-content: flex-start;
   }
+
+  .app-header {
+    height: 400px;
+  }
 }
 </style>

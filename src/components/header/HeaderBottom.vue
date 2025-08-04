@@ -147,7 +147,7 @@
 
   .header-bottom__btn {
     width: auto;
-    padding: 16px 8px;
+    padding: 11px 8px;
     font-size: 12px;
   }
 
@@ -158,6 +158,16 @@
 
   .header-bottom__list {
     margin-top: 32px;
+  }
+
+  .header-bottom__control {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    & button {
+      width: 100%;
+    }
   }
 }
 </style>

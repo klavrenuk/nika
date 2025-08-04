@@ -78,4 +78,10 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
     font-size: 12px;
   }
 }
+
+@media all and (max-width: 720px) {
+  .footer-left__top {
+    margin-bottom: 24px;
+  }
+}
 </style>
