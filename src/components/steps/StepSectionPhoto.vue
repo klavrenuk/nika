@@ -16,9 +16,9 @@ defineProps({
         <p class="step-section-photo__text">{{ text }}</p>
       </div>
 
-      <button class="app-button step-section-photo__btn">
+      <a class="app-button step-section-photo__btn" href="#application">
         Оставить заявку
-      </button>
+      </a>
     </div>
 
     <img :src="photo" alt="" />
@@ -54,6 +54,9 @@ defineProps({
   padding: 0;
   color: #fff;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step-section-photo__left {

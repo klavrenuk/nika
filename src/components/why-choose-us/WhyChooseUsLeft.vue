@@ -4,11 +4,16 @@ import SectionName from "@/components/section/SectionName.vue";
 
 <template>
   <div class="why-choose-us-left d-flex flex-column">
-    <SectionName>преимущества</SectionName>
-    <h3 class="why-choose-us-left__title">Почему<br /> выбирают нас</h3>
+    <div class="d-flex flex-column">
+      <SectionName>преимущества</SectionName>
+      <h3 class="why-choose-us-left__title">Почему<br /> выбирают нас</h3>
+      <div class="why-choose-us-left__wrap-top-img">
+        <img src="/images/why-choose-us-left-img.svg" alt="" class="why-choose-us-left__top-img" />
+      </div>
+    </div>
 
     <div class="why-choose-us-left__images d-flex align-items-end">
-      <img src="/images/about-left-img.png" alt="" class="why-choose-us-left__img" />
+      <img src="/images/why-choose-us-left-img.jpg" alt="" class="why-choose-us-left__img" />
       <div class="why-choose-us-left__rect"></div>
     </div>
   </div>
@@ -17,6 +22,7 @@ import SectionName from "@/components/section/SectionName.vue";
 <style scoped lang="scss">
 .why-choose-us-left {
   gap: 20px;
+  justify-content: space-between;
 
   &__images {
     gap: 10px;
@@ -34,9 +40,20 @@ import SectionName from "@/components/section/SectionName.vue";
   }
 
   &__title {
+    margin: 20px 0 13px;
     color: #121211;
     font-size: 48px;
     font-weight: 500;
   }
+}
+
+.why-choose-us-left__top-img {
+  height: 52px;
+  width: 180px;
+}
+
+.why-choose-us-left__wrap-top-img {
+  width: 315px;
+  text-align: right;
 }
 </style>

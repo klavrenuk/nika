@@ -29,6 +29,7 @@ defineProps({
   &__blocks {
     display: flex;
     gap: 15px;
+    padding-right: 15px;
   }
 
   &__block {
@@ -45,21 +46,33 @@ defineProps({
   &__title {
     color: #121211;
     font-size: 25px;
+    text-align: center;
   }
 
   &__text {
     color: #868B91;
     font-weight: 500;
     font-size: 16px;
+    text-align: center;
   }
 }
 
 .stage__circle {
-  width: 20px;
-  height: 20px;
-  border: 7.3px solid #9278DA33;
-  display: inline-block;
-  background: #7A4FF1;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E9E4F8;
   border-radius: 100%;
+
+  &__inner {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: #7A4FF1;
+    border-radius: 100%;
+  }
 }
 </style>

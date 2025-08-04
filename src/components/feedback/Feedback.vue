@@ -3,7 +3,7 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
 </script>
 
 <template>
-  <div class="feedback app-section">
+  <div id="application" class="feedback app-section">
     <div class="app-container">
       <div class="app-component-layout">
         <img src="/images/feedback-photo.svg" alt="Форма обратной связи" />

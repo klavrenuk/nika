@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from "vue";
+
 import SectionName from "@/components/section/SectionName.vue";
+
+const isChecked = ref(false)
 
 const handleSubmit = () => {
   console.log('submit');
@@ -18,6 +22,12 @@ const handleSubmit = () => {
       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
       <input type="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+7 (999) 999-99-99">
       <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Тип объекта и площадь (м²) ">
+      <div class="form-check feedback-right__form__check">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault" v-model="isChecked" :class="{'checked': isChecked}">
+        <label class="form-check-label" for="checkDefault">
+          Я соглашаюсь на обработку персональных данных
+        </label>
+      </div>
       <button class="app-button feedback-right__submit">
         оставить заявку
       </button>
@@ -28,7 +38,7 @@ const handleSubmit = () => {
 <style scoped lang="scss">
 .feedback-right {
   &__title {
-    margin: 10px 0 40px;
+    margin: 40px 0 10px;
     font-weight: 500;
     font-size: 48px;
     color: #121211;
@@ -65,4 +75,31 @@ const handleSubmit = () => {
   margin-top: 40px;
   color: #fff;
 }
+
+.feedback-right__form__check {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+
+  & .form-check-input {
+    position: relative;
+    top: -3px;
+    height: 20px;
+    width: 20px;
+    padding: 0 !important;
+    border: 1px solid #868B9133;
+    background-color: #fff;
+
+
+    &.checked {
+      background-color: #7A4FF1;
+    }
+  }
+
+  & .form-check-label {
+    color: #868B9133;
+  }
+ }
 </style>

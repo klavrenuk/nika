@@ -7,8 +7,12 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
   <div class="app-header">
     <div class="app-container app-header__container h-100">
       <div class="d-flex flex-column app-header__blocks h-100">
+        <div class="app-header__img-top"></div>
+
         <HeaderTop />
         <HeaderBottom />
+
+        <div class="app-header__img-bottom"></div>
       </div>
     </div>
   </div>
@@ -42,7 +46,26 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
   }
 
   &__blocks {
+    position: relative;
     justify-content: space-between;
   }
+}
+
+.app-header__img-top {
+  position: absolute;
+  top: 113px;
+  right: 0;
+  height: 52px;
+  width: 180px;
+  background: url("@/assets/images/header-top-img.svg") center center no-repeat;
+}
+
+.app-header__img-bottom {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  height: 77px;
+  width: 307px;
+  background: url("@/assets/images/header-bottom-img.svg") center center no-repeat;
 }
 </style>

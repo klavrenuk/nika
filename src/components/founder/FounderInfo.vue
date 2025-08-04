@@ -6,7 +6,8 @@
   <div class="founder-person d-flex flex-column">
     <div class="founder-person__top d-flex flex-column">
       <h6 class="founder-person__post">
-        основатель компании
+        <span class="founder-person__post__dot"></span>
+        <span>основатель компании</span>
       </h6>
 
       <h5 class="founder-person__name">
@@ -43,6 +44,9 @@
     font-size: 12px;
     text-transform: uppercase;
     color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &__name {
@@ -60,6 +64,15 @@
   &__description {
     color: #C1AAFF;
     font-size: 22px;
+    line-height: 22px;
   }
+}
+
+.founder-person__post__dot {
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  border-radius: 100%;
+  background: #fff;
 }
 </style>

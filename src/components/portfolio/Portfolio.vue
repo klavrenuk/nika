@@ -6,7 +6,7 @@ import SectionName from "@/components/section/SectionName.vue";
   <section id="Production" class="portfolio app-section">
     <div class="app-container">
       <div class="app-component-layout">
-        <div class="d-flex flex-column portfolio__left">
+        <div class="d-flex flex-column portfolio__left position-relative">
           <SectionName class="portfolio__left__section-name" type="white">Работы</SectionName>
           <h5 class="portfolio__title">
             Портфолио объектов
@@ -14,15 +14,21 @@ import SectionName from "@/components/section/SectionName.vue";
           <h6 class="portfolio__subtitle">
             >50 масштабных проектов
           </h6>
-          <button class="portfolio__submit-application app-button">
-            оставить заявку
-          </button>
+          <div class="position-relative portfolio__wrap-btn">
+            <button class="portfolio__submit-application app-button">
+              оставить заявку
+            </button>
+            <div class="portfolio-block-img"></div>
+          </div>
         </div>
 
         <div class="portfolio__right d-flex flex-column">
           <img src="/images/portfolio-img.jpg" alt="Портфолио" />
           <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
-          <a class="portfolio__right__link">подробнее</a>
+          <a class="portfolio__right__link">
+            <span>подробнее</span>
+            <img src="/images/portfolio-arrow.svg" alt="" />
+          </a>
         </div>
       </div>
     </div>
@@ -39,7 +45,7 @@ import SectionName from "@/components/section/SectionName.vue";
   color: #fff;
 
   &__section-name,
-  & .portfolio__title, {
+  & .portfolio__title {
     padding-bottom: 16px;
   }
 
@@ -56,7 +62,9 @@ import SectionName from "@/components/section/SectionName.vue";
 }
 
 .portfolio__submit-application {
-  padding: 24px 90px;
+  max-width: 340px;
+  width: 100%;
+  padding: 23px 90px;
   color: #1D1D1D;
   font-size: 12px;
   background: #fff;
@@ -76,6 +84,19 @@ import SectionName from "@/components/section/SectionName.vue";
 
   &__link {
     color: #C1AAFF;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
   }
 }
+
+.portfolio-block-img {
+   position: absolute;
+  bottom: 85px;
+  left: 468px;
+   height: 52px;
+   width: 78px;
+   background: url("@/assets/images/portfolio-block-img.svg") center center no-repeat;
+ }
 </style>

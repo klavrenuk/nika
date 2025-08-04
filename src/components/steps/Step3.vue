@@ -14,9 +14,9 @@
 
       <div class="step3__right__footer">
         <img src="/images/step3-footer.png" alt="" class="step3__right__footer__img" />
-        <button class="app-button step3__right__footer__btn">
+        <a class="app-button step3__right__footer__btn" href="#application">
           оставить заявку
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -63,6 +63,9 @@
     padding: 0;
     color: #fff;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__img {
