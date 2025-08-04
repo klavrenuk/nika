@@ -21,7 +21,7 @@ defineProps({
       </a>
     </div>
 
-    <img :src="photo" alt="" />
+    <img :src="photo" alt="" class="item-img" />
   </section>
 </template>
 
@@ -61,5 +61,16 @@ defineProps({
 
 .step-section-photo__left {
   justify-content: space-between;
+}
+
+@media all and (max-width: 720px) {
+  .step-section-photo__text-info {
+    gap: 16px;
+  }
+
+  .item-img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 </style>

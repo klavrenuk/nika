@@ -68,4 +68,20 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
   width: 307px;
   background: url("@/assets/images/header-bottom-img.svg") center center no-repeat;
 }
+
+@media all and (max-width: 1200px) {
+  .app-header__img-top {
+    display: none;
+  }
+
+  .app-header__img-bottom {
+    display: none;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .app-header__blocks {
+    justify-content: flex-start;
+  }
+}
 </style>

@@ -56,4 +56,23 @@ import SectionName from "@/components/section/SectionName.vue";
   width: 315px;
   text-align: right;
 }
+
+@media all and (max-width: 720px) {
+  .why-choose-us-left__top-img,
+  .why-choose-us-left__wrap-top-img {
+    display: none;
+  }
+
+  .why-choose-us-left__title {
+    font-size: 32px;
+  }
+
+  .why-choose-us-left__rect {
+    display: none;
+  }
+
+  .why-choose-us-left__img {
+    width: 100%;
+  }
+}
 </style>

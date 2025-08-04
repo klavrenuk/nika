@@ -82,4 +82,17 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
 .about__left {
   justify-content: space-between;
 }
+
+@media all and (max-width: 1200px) {
+  .about__company {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .about__company__images {
+    display: none !important;
+  }
+}
 </style>

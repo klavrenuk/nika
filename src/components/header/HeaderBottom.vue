@@ -19,6 +19,9 @@
       <h3 class="header-bottom__title">
         Керамическая плитка<br /> и керамогранит оптом
       </h3>
+      <h3 class="header-bottom__title mobile">
+        Керамическая плитка и керамогранит оптом
+      </h3>
 
       <div class="header-bottom__control d-flex align-items-center">
         <button class="app-button header-bottom__btn header-bottom__catalog">Перейти в каталог</button>
@@ -58,6 +61,10 @@
   font-size: 48px;
   font-weight: 500;
   line-height: 43px;
+
+  &.mobile {
+    display: none;
+  }
 }
 
 .header-bottom__control {
@@ -116,6 +123,41 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .header-bottom {
+    padding-right: 0;
+  }
+
+  .header-bottom__title {
+    display: none;
+  }
+
+  .header-bottom__title.mobile {
+    display: block;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  
+  .header-bottom__control {
+    justify-content: space-between;
+  }
+
+  .header-bottom__btn {
+    width: auto;
+    padding: 16px 8px;
+    font-size: 12px;
+  }
+
+  .header-bottom__container {
+    max-width: 100%;
+    gap: 32px;
+  }
+
+  .header-bottom__list {
+    margin-top: 32px;
   }
 }
 </style>

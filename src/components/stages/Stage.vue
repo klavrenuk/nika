@@ -75,4 +75,16 @@ defineProps({
     border-radius: 100%;
   }
 }
+
+@media all and (max-width: 1200px) {
+  .stage__blocks {
+    display: none;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .stage {
+    gap: 16px;
+  }
+}
 </style>

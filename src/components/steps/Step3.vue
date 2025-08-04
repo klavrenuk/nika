@@ -74,4 +74,19 @@
     object-fit: cover;
   }
 }
+
+@media all and (max-width: 720px) {
+  .step3__right__footer {
+    flex-direction: column;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .step3__right__text {
+    margin-bottom: 16px;
+  }
+}
 </style>

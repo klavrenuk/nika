@@ -35,6 +35,10 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
 .footer-left {
   &__top {
     margin-bottom: 125px;
+
+    @media all and (max-width: 1200px) {
+      margin-bottom: 120px;
+    }
   }
 
   &__container {

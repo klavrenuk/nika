@@ -75,4 +75,18 @@
   border-radius: 100%;
   background: #fff;
 }
+
+@media all and (max-width: 720px) {
+  .founder-person {
+    gap: 16px;
+  }
+
+  .founder-person__top {
+    gap: 16px;
+  }
+
+  .founder-person__bottom {
+    gap: 16px;
+  }
+}
 </style>

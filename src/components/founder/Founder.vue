@@ -24,4 +24,10 @@ import FounderInfo from "@/components/founder/FounderInfo.vue";
     height: 576px;
   }
 }
+
+@media all and (max-width: 720px) {
+  .founder__photo {
+    display: none;
+  }
+}
 </style>

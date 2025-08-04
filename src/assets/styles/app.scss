@@ -30,16 +30,30 @@ body {
   padding: 0 15px;
   width: calc(100% - 60px);
   max-width: 1440px;
+
+  @media all and (max-width: 1200px) {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 .app-component-layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
+
+  @media all and (max-width: 1200px) {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
 }
 
 .app-section {
   padding: 85px 60px;
+
+  @media all and (max-width: 1200px) {
+    padding: 24px 0;
+  }
 }
 
 .app {

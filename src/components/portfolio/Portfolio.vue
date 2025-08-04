@@ -98,5 +98,15 @@ import SectionName from "@/components/section/SectionName.vue";
    height: 52px;
    width: 78px;
    background: url("@/assets/images/portfolio-block-img.svg") center center no-repeat;
- }
+}
+
+@media all and (max-width: 720px) {
+  .portfolio__left {
+    gap: 24px;
+  }
+  
+  .portfolio__submit-application {
+    max-width: 100%;
+  }
+}
 </style>

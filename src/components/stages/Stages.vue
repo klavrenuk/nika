@@ -51,6 +51,20 @@ const listStages = [
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+
+    @media all and (max-width: 1200px) {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 720px) {
+  .stages__list {
+    gap: 16px;
+  }
+
+  .stages__title {
+    margin: 24px 0;
   }
 }
 </style>

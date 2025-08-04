@@ -41,4 +41,14 @@ const text2 = 'Надёжные решения для складов, произ
     gap: 100px;
   }
 }
+
+@media all and (max-width: 720px) {
+  .steps__title {
+    margin-bottom: 16px;
+  }
+
+  .steps__title {
+    font-size: 32px;
+  }
+}
 </style>
