@@ -4,6 +4,7 @@
     <About />
     <Portfolio />
     <WhyChooseUs />
+    <Stages />
     <Founder />
     <Steps />
     <Feedback />
@@ -22,6 +23,7 @@ import Contacts from '@/components/contacts/Contacts.vue';
 import Footer from '@/components/footer/Footer.vue';
 import Steps from '@/components/steps/Steps.vue';
 import Feedback from '@/components/feedback/Feedback.vue';
+import Stages from '@/components/stages/Stages.vue';
 </script>
 
 <style lang="scss">
