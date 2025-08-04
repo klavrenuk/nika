@@ -5,28 +5,30 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
 
 <template>
   <section id="Contacts" class="contacts app-section">
-    <div class="app-component-layout">
-      <div class="d-flex flex-column contacts__top">
-        <SectionName>Контакты</SectionName>
-        <div>
-          <h4 class="contacts__title">
-            Свяжитесь с нами
-          </h4>
-          <h6 class="contacts__subtitle">
-            ООО «Ника»
-          </h6>
+    <div class="app-container">
+      <div class="app-component-layout">
+        <div class="d-flex flex-column contacts__top">
+          <SectionName>Контакты</SectionName>
+          <div>
+            <h4 class="contacts__title">
+              Свяжитесь с нами
+            </h4>
+            <h6 class="contacts__subtitle">
+              ООО «Ника»
+            </h6>
+          </div>
+
+          <div class="contacts__info">
+            <ContactInfoItem label="Телефон:" text="+7 (938) 080-22-22" />
+            <ContactInfoItem label="Почта:" text="plitka2222@mail.ru" />
+            <ContactInfoItem label="Адрес:" text="Ростов-на-Дону, ул. Ерёменко, 89Б/5" />
+            <ContactInfoItem label="Часы работы:" text="Пн–Вс 10:00–20:00" />
+          </div>
         </div>
 
-        <div class="contacts__info">
-          <ContactInfoItem label="Телефон:" text="+7 (938) 080-22-22" />
-          <ContactInfoItem label="Почта:" text="plitka2222@mail.ru" />
-          <ContactInfoItem label="Адрес:" text="Ростов-на-Дону, ул. Ерёменко, 89Б/5" />
-          <ContactInfoItem label="Часы работы:" text="Пн–Вс 10:00–20:00" />
+        <div class="contacts__map">
+          <img src="/images/address-img.svg" alt="" class="contacts__map__img" />
         </div>
-      </div>
-
-      <div class="contacts__map">
-        <img src="/images/address-img.svg" alt="" class="contacts__map__img" />
       </div>
     </div>
   </section>

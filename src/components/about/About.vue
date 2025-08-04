@@ -6,27 +6,29 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
 
 <template>
   <section id="About" class="about app-section">
-    <div class="app-component-layout">
-      <div class="about__left d-flex flex-column">
-        <SectionName>О бренде</SectionName>
+    <div class="app-container">
+      <div class="app-component-layout">
+        <div class="about__left d-flex flex-column">
+          <SectionName>О бренде</SectionName>
 
-        <div class="about__company d-flex flex-column">
-          <div class="about__company__images d-flex align-items-end">
-            <div class="about__company__img">
-              <img src="/images/about-left-img.png" alt="" />
+          <div class="about__company d-flex flex-column">
+            <div class="about__company__images d-flex align-items-end">
+              <div class="about__company__img">
+                <img src="/images/about-left-img.png" alt="" />
+              </div>
+              <div class="about__company__rect"></div>
             </div>
-            <div class="about__company__rect"></div>
+
+            <p class="about__company__text">
+              ООО «Ника» — официальный дистрибьютор Italon, Kerama Marazzi, Grani Taganaya, Progres и других ведущих брендов.
+            </p>
           </div>
 
-          <p class="about__company__text">
-            ООО «Ника» — официальный дистрибьютор Italon, Kerama Marazzi, Grani Taganaya, Progres и других ведущих брендов.
-          </p>
+          <AboutAchievements text="5 млн+ м²" description="плитки реализовано на объектах" />
         </div>
 
-        <AboutAchievements text="5 млн+ м²" description="плитки реализовано на объектах" />
+        <AboutRight />
       </div>
-
-      <AboutRight />
     </div>
   </section>
 </template>

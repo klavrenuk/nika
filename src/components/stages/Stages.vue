@@ -28,12 +28,14 @@ const listStages = [
 
 <template>
   <section class="stages app-section">
-    <SectionName class="stages__section-name">Этапы работы</SectionName>
-    <h3 class="stages__title">
-      Как мы работаем
-    </h3>
-    <div class="stages__list">
-      <Stage v-for="(stage, index) in listStages" :key="stage.title" :title="stage.title" :text="stage.text" :isHide="index === 4" />
+    <div class="app-container">
+      <SectionName class="stages__section-name">Этапы работы</SectionName>
+      <h3 class="stages__title">
+        Как мы работаем
+      </h3>
+      <div class="stages__list">
+        <Stage v-for="(stage, index) in listStages" :key="stage.title" :title="stage.title" :text="stage.text" :isHide="index === 4" />
+      </div>
     </div>
   </section>
 </template>

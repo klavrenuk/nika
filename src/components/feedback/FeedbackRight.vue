@@ -16,6 +16,7 @@ const handleSubmit = () => {
       <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
       <input class="form-control" id="company" aria-describedby="emailHelp" placeholder="Компания">
       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
+      <input type="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+7 (999) 999-99-99">
       <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Тип объекта и площадь (м²) ">
       <button class="app-button feedback-right__submit">
         оставить заявку
@@ -43,6 +44,7 @@ const handleSubmit = () => {
   gap: 10px;
 
   & input {
+    padding: 17px 0;
     color: #868B91;
     font-size: 16px;
     font-weight: 500;
@@ -50,7 +52,6 @@ const handleSubmit = () => {
     border-bottom: 1px solid #868B9133;
     outline: none !important;
     border-radius: 0;
-    padding: 0;
 
     &:focus {
       outline: none !important;

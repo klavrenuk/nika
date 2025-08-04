@@ -5,9 +5,11 @@ import FooterRight from "@/components/footer/FooterRight.vue";
 
 <template>
   <div class="footer app-section">
-    <div class="app-component-layout">
-      <FooterLeft />
-      <FooterRight />
+    <div class="app-container">
+      <div class="app-component-layout">
+        <FooterLeft />
+        <FooterRight />
+      </div>
     </div>
   </div>
 </template>

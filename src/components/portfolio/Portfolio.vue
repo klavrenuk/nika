@@ -4,24 +4,26 @@ import SectionName from "@/components/section/SectionName.vue";
 
 <template>
   <section id="Production" class="portfolio app-section">
-    <div class="app-component-layout">
-      <div class="d-flex flex-column portfolio__left">
-        <SectionName class="portfolio__left__section-name" type="white">Работы</SectionName>
-        <h5 class="portfolio__title">
-          Портфолио объектов
-        </h5>
-        <h6 class="portfolio__subtitle">
-          >50 масштабных проектов
-        </h6>
-        <button class="portfolio__submit-application app-button">
-          оставить заявку
-        </button>
-      </div>
+    <div class="app-container">
+      <div class="app-component-layout">
+        <div class="d-flex flex-column portfolio__left">
+          <SectionName class="portfolio__left__section-name" type="white">Работы</SectionName>
+          <h5 class="portfolio__title">
+            Портфолио объектов
+          </h5>
+          <h6 class="portfolio__subtitle">
+            >50 масштабных проектов
+          </h6>
+          <button class="portfolio__submit-application app-button">
+            оставить заявку
+          </button>
+        </div>
 
-      <div class="portfolio__right d-flex flex-column">
-        <img src="/images/portfolio-img.jpg" alt="Портфолио" />
-        <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
-        <a class="portfolio__right__link">подробнее</a>
+        <div class="portfolio__right d-flex flex-column">
+          <img src="/images/portfolio-img.jpg" alt="Портфолио" />
+          <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
+          <a class="portfolio__right__link">подробнее</a>
+        </div>
       </div>
     </div>
   </section>

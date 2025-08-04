@@ -9,15 +9,17 @@ const text2 = 'Надёжные решения для складов, произ
 
 <template>
   <section id="Cases" class="app-section steps">
-    <SectionName class="steps__section-name">Этапы работы</SectionName>
-    <h3 class="steps__title">
-      Варианты продукции
-    </h3>
+    <div class="app-container">
+      <SectionName class="steps__section-name">Этапы работы</SectionName>
+      <h3 class="steps__title">
+        Варианты продукции
+      </h3>
 
-    <div class="d-flex flex-column steps__container">
-      <StepSectionPhoto title="Интерьерная плитка" :text="text1" photo="/images/step1.svg" />
-      <Steps3 />
-      <StepSectionPhoto title="Для промышленных и технических объектов" :text="text2" photo="/images/step2.svg" />
+      <div class="d-flex flex-column steps__container">
+        <StepSectionPhoto title="Интерьерная плитка" :text="text1" photo="/images/step1.svg" />
+        <Steps3 />
+        <StepSectionPhoto title="Для промышленных и технических объектов" :text="text2" photo="/images/step2.svg" />
+      </div>
     </div>
   </section>
 </template>

@@ -5,9 +5,11 @@ import WhyChooseUsLeft from "@/components/why-choose-us/WhyChooseUsLeft.vue";
 
 <template>
   <section id="WhyChooseUs" class="why-choose-us app-section">
-    <div class="app-component-layout">
-      <WhyChooseUsLeft />
-      <WhyChooseUsRight />
+    <div class="app-container">
+      <div class="app-component-layout">
+        <WhyChooseUsLeft />
+        <WhyChooseUsRight />
+      </div>
     </div>
   </section>
 </template>

@@ -4,11 +4,13 @@ import FounderInfo from "@/components/founder/FounderInfo.vue";
 
 <template>
   <section class="founder app-section">
-    <div class="app-component-layout">
-      <div>
-        <img src="/images/founder-photo.svg" alt="Камбулат Германбиевич" class="founder__photo" />
+    <div class="app-container">
+      <div class="app-component-layout">
+        <div>
+          <img src="/images/founder-photo.svg" alt="Камбулат Германбиевич" class="founder__photo" />
+        </div>
+        <FounderInfo />
       </div>
-      <FounderInfo />
     </div>
   </section>
 </template>

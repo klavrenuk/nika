@@ -4,14 +4,12 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
 
 <template>
   <div class="feedback app-section">
-    <div class="app-component-layout">
-      <img src="/images/feedback-photo.svg" alt="Форма обратной связи" />
+    <div class="app-container">
+      <div class="app-component-layout">
+        <img src="/images/feedback-photo.svg" alt="Форма обратной связи" />
 
-      <FeedbackRight />
+        <FeedbackRight />
+      </div>
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>
