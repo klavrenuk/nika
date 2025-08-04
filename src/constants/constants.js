@@ -1,22 +1,22 @@
 export const navHeader = [
     {
-        url: 'cases',
+        url: '#Cases',
         name: 'Кейсы'
     },
     {
-        url: 'production',
+        url: '#Production',
         name: 'Продукция'
     },
     {
-        url: 'about',
+        url: '#About',
         name: 'О нас'
     },
     {
-        url: 'advantages',
+        url: '#WhyChooseUs',
         name: 'Преимущества'
     },
     {
-        url: 'contacts',
+        url: '#Contacts',
         name: 'Контакты'
     }
 ];

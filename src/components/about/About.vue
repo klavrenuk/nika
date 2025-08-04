@@ -5,7 +5,7 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
 </script>
 
 <template>
-  <section class="about app-section">
+  <section id="About" class="about app-section">
     <div class="app-component-layout">
       <div class="about__left d-flex flex-column">
         <SectionName>О бренде</SectionName>

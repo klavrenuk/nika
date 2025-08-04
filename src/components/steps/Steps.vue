@@ -8,7 +8,7 @@ const text2 = 'Надёжные решения для складов, произ
 </script>
 
 <template>
-  <section class="app-section steps">
+  <section id="Cases" class="app-section steps">
     <SectionName class="steps__section-name">Этапы работы</SectionName>
     <h3 class="steps__title">
       Варианты продукции

@@ -13,7 +13,7 @@ import { navHeader } from '@/constants/constants';
 
       <div class="col-6 header-top__right">
         <nav class="header-top__nav">
-          <a v-for="navItem in navHeader" :key="navItem.url" class="header-top__nav__link">
+          <a v-for="navItem in navHeader" :key="navItem.url" :href="navItem.url" class="header-top__nav__link">
             {{ navItem.name }}
           </a>
         </nav>

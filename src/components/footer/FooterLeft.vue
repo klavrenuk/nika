@@ -14,14 +14,14 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
 
         <div class="footer-left__block-nav">
           <nav class="footer-left__nav">
-            <a href="" target="_blank">Кейсы</a>
-            <a href="" target="_blank">Продукция</a>
-            <a href="" target="_blank">О нас</a>
+            <a href="#Cases">Кейсы</a>
+            <a href="#Production">Продукция</a>
+            <a href="#About">О нас</a>
           </nav>
 
           <nav class="footer-left__nav">
-            <a href="" target="_blank">Преимущества</a>
-            <a href="" target="_blank">Контакты</a>
+            <a href="#WhyChooseUs" >Преимущества</a>
+            <a href="#Contacts" >Контакты</a>
           </nav>
         </div>
       </div>

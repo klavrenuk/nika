@@ -4,7 +4,7 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
 </script>
 
 <template>
-  <section class="contacts app-section">
+  <section id="Contacts" class="contacts app-section">
     <div class="app-component-layout">
       <div class="d-flex flex-column contacts__top">
         <SectionName>Контакты</SectionName>
