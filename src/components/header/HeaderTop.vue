@@ -31,7 +31,8 @@ import { navHeader } from '@/constants/constants';
   &__right {
     display: flex;
     align-items: center;
-    gap: 90px
+    gap: 90px;
+    justify-content: flex-end;
   }
 
   &__phone {
