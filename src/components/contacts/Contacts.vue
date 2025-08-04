@@ -27,7 +27,7 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
         </div>
 
         <div class="contacts__map">
-          <img src="/images/address-img.svg" alt="" class="contacts__map__img" />
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc07e653bf4510318cf2b7d3e088ff792998a9a814c2c16512ee9d56add71614&amp;source=constructor" width="100%" height="521" frameborder="0"></iframe>
         </div>
       </div>
     </div>
