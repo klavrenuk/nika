@@ -19,7 +19,7 @@ defineProps({
 .section-name {
   gap: 10px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: .9rem;
   text-transform: uppercase;
 
   &__dot {

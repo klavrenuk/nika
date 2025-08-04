@@ -21,7 +21,7 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
 <style scoped lang="scss">
 .app-header {
   position: relative;
-  height: 696px;
+  height: 100vh;
   width: 100%;
   background: url('@/assets/images/header-back.png') center center no-repeat;
   background-color: #000;
@@ -81,11 +81,11 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
 
 @media all and (max-width: 720px) {
   .app-header__blocks {
-    justify-content: flex-start;
+
   }
 
   .app-header {
-    height: 400px;
+    height: 700px;
   }
 }
 </style>
