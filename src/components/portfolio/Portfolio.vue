@@ -1,17 +1,25 @@
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-import 'swiper/css';
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 import SectionName from "@/components/section/SectionName.vue";
 
-const onSwiper = () => {
-  console.log('onSwiper')
+const images = [
+  { src: '/images/portfolio-img.jpg', alt: 'Портфолио' },
+  { src: '/images/portfolio/slide2.png', alt: 'Портфолио' },
+  { src: '/images/portfolio/slide3.png', alt: 'Портфолио' },
+  { src: '/images/portfolio/slide4.jpg', alt: 'Портфолио' }
+]
+
+const currentIndex = ref(0)
+let sliderInterval = null
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % images.length
 }
 
-const onSlideChange = () => {
-  console.log('onSlideChange')
-}
+onMounted(() => {
+  sliderInterval = setInterval(nextSlide, 2000)
+})
 </script>
 
 <template>
@@ -35,17 +43,17 @@ const onSlideChange = () => {
         </div>
 
         <div class="portfolio__right d-flex flex-column">
-          <swiper
-              :slides-per-view="1"
-              :space-between="50"
-              @swiper="onSwiper"
-              @slideChange="onSlideChange"
-          >
-            <swiper-slide>
-              <img src="/images/portfolio-img.jpg" alt="Портфолио" />
-            </swiper-slide>
-            <swiper-slide>Slide 1</swiper-slide>
-          </swiper>
+          <div class="slider">
+            <div
+                v-for="(image, index) in images"
+                :key="index"
+                class="slider-item"
+                :class="{ 'active': currentIndex === index }"
+            >
+              <img :src="image.src" :alt="image.alt">
+            </div>
+          </div>
+
           <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
           <a class="portfolio__right__link">
             <span>подробнее</span>
@@ -57,7 +65,7 @@ const onSlideChange = () => {
   </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .portfolio {
   background: #7A4FF1;
 }
@@ -149,6 +157,43 @@ const onSlideChange = () => {
     width: 100%;
     display: inline-block;
     text-align: center;
+  }
+}
+
+.swiper-wrapper {
+  height: 580px !important;
+
+  & img {
+    height: 580px !important;
+    object-fit: cover
+  }
+}
+
+.portfolio {
+  .slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .slider-item.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 </style>
