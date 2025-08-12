@@ -1,5 +1,7 @@
 <template>
   <div class="app">
+    <CustomCursor />
+
     <AppHeader class="scroll-animate" />
     <About class="scroll-animate" />
     <Portfolio class="scroll-animate" />
@@ -16,6 +18,7 @@
 <script setup>
 import { onMounted } from 'vue'
 
+import CustomCursor from '@/components/CustomCursor.vue'
 import AppHeader from '@/components/header/AppHeader.vue'
 import About from '@/components/about/About.vue';
 import Portfolio from "@/components/portfolio/Portfolio.vue";
@@ -66,5 +69,9 @@ onMounted(() => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.app {
+  cursor: none;
 }
 </style>
