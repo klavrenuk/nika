@@ -22,7 +22,7 @@ const text = () => {
     }
 
     counterPartners.value += 1;
-  })
+  }, 200)
 }
 
 onMounted(() => {

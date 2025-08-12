@@ -1,11 +1,15 @@
 <script setup>
-import { computed, ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
 import AboutRight from "@/components/about/AboutRight.vue";
 import SectionName from "@/components/section/SectionName.vue";
 import AboutAchievements from "@/components/about/AboutAchievements.vue";
+import {isVisible} from "bootstrap/js/src/util";
 
 const counter = ref(0);
+const isShowAnimateBlocks = ref(false)
+
+let observer = null
 
 const text = () => {
   const timer = setInterval(() => {
@@ -14,14 +18,36 @@ const text = () => {
       return
     }
 
-    console.log('interval')
     counter.value += 1;
-
   }, 200)
 }
 
+const handleIntersection = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      isShowAnimateBlocks.value = true
+      observer.unobserve(entry.target)
+
+      setTimeout(() => {
+        text()
+      }, 1500)
+    }
+  })
+}
+
+const setIntersection = () => {
+  const aboutElement = document.querySelector('#About')
+  if (aboutElement) {
+    observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: '0px',
+      threshold: 0.1
+    })
+    observer.observe(aboutElement)
+  }
+}
+
 onMounted(() => {
-  text()
+  setIntersection();
 })
 </script>
 
@@ -45,10 +71,12 @@ onMounted(() => {
             </p>
           </div>
 
-          <AboutAchievements :text="`${counter} млн+ м²`" description="плитки реализовано на объектах" />
+          <AboutAchievements v-if="isShowAnimateBlocks" :text="`${counter} млн+ м²`" description="плитки реализовано на объектах" />
         </div>
 
-        <AboutRight />
+        <div v-if="isShowAnimateBlocks">
+          <AboutRight />
+        </div>
       </div>
     </div>
   </section>
