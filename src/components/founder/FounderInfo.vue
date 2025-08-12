@@ -1,5 +1,26 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 
+const quote = '«Сроки и качество — под моим личным контролем.»'
+
+const displayedText = ref('')
+const isTyping = ref(true)
+let typewriterInterval = null
+
+const startTyping = () => {
+  typewriterInterval = setInterval(() => {
+    if (displayedText.value.length < quote.length) {
+      displayedText.value += quote[displayedText.value.length]
+    } else {
+      clearInterval(typewriterInterval)
+      isTyping.value = false
+    }
+  }, 100)
+}
+
+onMounted(() => {
+  startTyping()
+})
 </script>
 
 <template>
@@ -17,7 +38,7 @@
 
     <div class="founder-person__bottom d-flex flex-column">
       <h6 class="founder-person__words">
-        «Сроки и качество — под моим личным контролем.»
+        {{ displayedText  }}
       </h6>
 
       <p class="founder-person__description">
