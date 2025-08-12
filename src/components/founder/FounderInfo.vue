@@ -6,6 +6,8 @@ const quote = '«Сроки и качество — под моим личным
 const displayedText = ref('')
 const isTyping = ref(true)
 let typewriterInterval = null
+let observer = null
+const founderBlock = ref(null)
 
 const startTyping = () => {
   typewriterInterval = setInterval(() => {
@@ -18,13 +20,28 @@ const startTyping = () => {
   }, 100)
 }
 
+const handleIntersection = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      isTyping.value = true
+      startTyping()
+      observer.unobserve(entry.target)
+    }
+  })
+}
+
 onMounted(() => {
-  startTyping()
+  observer = new IntersectionObserver(handleIntersection, {
+    rootMargin: '0px',
+    threshold: 0.1
+  })
+
+  observer.observe(founderBlock.value)
 })
 </script>
 
 <template>
-  <div class="founder-person d-flex flex-column">
+  <div class="founder-person d-flex flex-column" ref="founderBlock">
     <div class="founder-person__top d-flex flex-column">
       <h6 class="founder-person__post">
         <span class="founder-person__post__dot"></span>
