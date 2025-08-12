@@ -1,7 +1,28 @@
 <script setup>
+import { computed, ref, onMounted } from 'vue'
+
 import AboutRight from "@/components/about/AboutRight.vue";
 import SectionName from "@/components/section/SectionName.vue";
 import AboutAchievements from "@/components/about/AboutAchievements.vue";
+
+const counter = ref(0);
+
+const text = () => {
+  const timer = setInterval(() => {
+    if (counter.value === 5) {
+      clearInterval(timer);
+      return
+    }
+
+    console.log('interval')
+    counter.value += 1;
+
+  }, 200)
+}
+
+onMounted(() => {
+  text()
+})
 </script>
 
 <template>
@@ -24,7 +45,7 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
             </p>
           </div>
 
-          <AboutAchievements text="5 млн+ м²" description="плитки реализовано на объектах" />
+          <AboutAchievements :text="`${counter} млн+ м²`" description="плитки реализовано на объектах" />
         </div>
 
         <AboutRight />

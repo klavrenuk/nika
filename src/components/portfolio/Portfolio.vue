@@ -1,5 +1,17 @@
 <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+
+import 'swiper/css';
+
 import SectionName from "@/components/section/SectionName.vue";
+
+const onSwiper = () => {
+  console.log('onSwiper')
+}
+
+const onSlideChange = () => {
+  console.log('onSlideChange')
+}
 </script>
 
 <template>
@@ -23,7 +35,17 @@ import SectionName from "@/components/section/SectionName.vue";
         </div>
 
         <div class="portfolio__right d-flex flex-column">
-          <img src="/images/portfolio-img.jpg" alt="Портфолио" />
+          <swiper
+              :slides-per-view="1"
+              :space-between="50"
+              @swiper="onSwiper"
+              @slideChange="onSlideChange"
+          >
+            <swiper-slide>
+              <img src="/images/portfolio-img.jpg" alt="Портфолио" />
+            </swiper-slide>
+            <swiper-slide>Slide 1</swiper-slide>
+          </swiper>
           <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
           <a class="portfolio__right__link">
             <span>подробнее</span>
@@ -104,7 +126,7 @@ import SectionName from "@/components/section/SectionName.vue";
   .portfolio__left {
     gap: 16px;
   }
-  
+
   .portfolio__submit-application {
     max-width: 100%;
   }

@@ -1,5 +1,33 @@
 <script setup>
 import AboutAchievements from "@/components/about/AboutAchievements.vue";
+import {onMounted, ref} from "vue";
+
+const counterYears = ref(0);
+const counterPartners = ref(0);
+
+const text = () => {
+  const timerYears = setInterval(() => {
+    if (counterYears.value === 20) {
+      clearInterval(timerYears);
+      return
+    }
+
+    counterYears.value += 1;
+  }, 200)
+
+  const timerPartners = setInterval(() => {
+    if (counterPartners.value === 15) {
+      clearInterval(timerPartners);
+      return
+    }
+
+    counterPartners.value += 1;
+  })
+}
+
+onMounted(() => {
+  text()
+})
 </script>
 
 <template>
@@ -24,8 +52,8 @@ import AboutAchievements from "@/components/about/AboutAchievements.vue";
     <img src="/images/about-people.svg" alt="" class="about-right__people" />
 
     <div class="about-right__footer d-flex align-items-center flex-wrap">
-      <AboutAchievements text="20 лет" description="опыта в отрасли" />
-      <AboutAchievements text="15+" description="заводов‑партнёров" />
+      <AboutAchievements :text="`${counterYears} лет`" description="опыта в отрасли" />
+      <AboutAchievements :text="`+${counterPartners}`" description="заводов‑партнёров" />
     </div>
   </div>
 </template>
