@@ -1,10 +1,10 @@
 export const navHeader = [
     {
-        url: '#Cases',
+        url: '#Production',
         name: 'Кейсы'
     },
     {
-        url: '#Production',
+        url: '#Cases',
         name: 'Продукция'
     },
     {

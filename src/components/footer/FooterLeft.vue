@@ -14,8 +14,8 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
 
         <div class="footer-left__block-nav">
           <nav class="footer-left__nav">
-            <a href="#Cases">Кейсы</a>
-            <a href="#Production">Продукция</a>
+            <a href="#Production">Кейсы</a>
+            <a href="#Cases">Продукция</a>
             <a href="#About">О нас</a>
           </nav>
 

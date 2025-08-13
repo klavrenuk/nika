@@ -24,8 +24,8 @@
       </h3>
 
       <div class="header-bottom__control d-flex align-items-center">
-        <button class="app-button header-bottom__btn header-bottom__catalog">Перейти в каталог</button>
-        <button class="app-button header-bottom__btn header-bottom__view-objects">Смотреть объекты ↓</button>
+        <a class="app-button header-bottom__btn header-bottom__catalog">Получить КП</a>
+        <a class="app-button header-bottom__btn header-bottom__view-objects" href="#Production">Смотреть объекты ↓</a>
       </div>
     </div>
   </div>
@@ -76,6 +76,7 @@
 .header-bottom__btn {
   width: 259px;
   padding: 23px 0;
+  text-align: center;
 }
 
 .header-bottom__catalog {
