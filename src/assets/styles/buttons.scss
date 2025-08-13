@@ -5,9 +5,23 @@
   border: none;
   background: #7A4FF1;
   padding: 21px 90px;
+  font-family: 'Onest', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
 }
 
 a {
   cursor: pointer;
   text-decoration: none !important;
+}
+
+button {
+  font-family: 'Onest', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.header-bottom__catalog,
+.header-bottom__btn {
+  font-family: 'Onest', sans-serif !important;
+  font-weight: 600 !important;
 }

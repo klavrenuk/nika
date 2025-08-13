@@ -24,6 +24,7 @@ defineProps({
   &__text {
     color: #121211;
     font-size: 22px;
+    line-height: 28px;
   }
 }
 
