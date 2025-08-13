@@ -62,8 +62,8 @@ onMounted(() => {
   opacity: 0;
   transform: translateY(20px);
   transition:
-      opacity .8s cubic-bezier(.215,.61,.355,1) .1s,
-      transform .8s cubic-bezier(.215,.61,.355,1) .1s;
+      opacity 1.5s cubic-bezier(.215,.61,.355,1) .1s,
+      transform 1s cubic-bezier(.215,.61,.355,1) .1s;
 
   &.visible {
     opacity: 1;
