@@ -1,20 +1,55 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted } from 'vue'
+import VueEasyLightbox from 'vue-easy-lightbox'
 
 import SectionName from "@/components/section/SectionName.vue";
 
+
 const images = [
-  { src: '/images/portfolio-img.jpg', alt: 'Портфолио' },
-  { src: '/images/portfolio/slide2.png', alt: 'Портфолио' },
-  { src: '/images/portfolio/slide3.png', alt: 'Портфолио' },
-  { src: '/images/portfolio/slide4.jpg', alt: 'Портфолио' }
+  {
+    src: '/images/portfolio-img.jpg',
+    thumbnail: '/images/portfolio-img.jpg', // Добавьте миниатюры
+    title: 'Портфолио 1',
+    alt: 'Портфолио'
+  },
+  {
+    src: '/images/portfolio/slide2.png',
+    thumbnail: '/images/portfolio/slide2.png',
+    title: 'Портфолио 2',
+    alt: 'Портфолио'
+  },
+  {
+    src: '/images/portfolio/slide3.png',
+    thumbnail: '/images/portfolio/slide3.png',
+    title: 'Портфолио 3',
+    alt: 'Портфолио'
+  },
+  {
+    src: '/images/portfolio/slide4.jpg',
+    thumbnail: '/images/portfolio/slide4.jpg',
+    title: 'Портфолио 4',
+    alt: 'Портфолио'
+  }
 ]
 
-const currentIndex = ref(0)
 let sliderInterval = null
+
+const currentIndex = ref(0)
+const isOpen = ref(false)
+const visibleRef = ref(false)
+const indexRef = ref(0)
 
 const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % images.length
+}
+
+const showPhotoSwipe = (index) => {
+  visibleRef.value = true
+  indexRef.value = index
+}
+
+const hidePhotoSwipe = () => {
+  visibleRef.value = false;
 }
 
 onMounted(() => {
@@ -49,9 +84,17 @@ onMounted(() => {
                 :key="index"
                 class="slider-item"
                 :class="{ 'active': currentIndex === index }"
+                @click="showPhotoSwipe(index)"
             >
               <img :src="image.src" :alt="image.alt">
             </div>
+
+            <vue-easy-lightbox
+                :visible="visibleRef"
+                :imgs="images"
+                :index="indexRef"
+                @hide="hidePhotoSwipe"
+            ></vue-easy-lightbox>
           </div>
 
           <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
@@ -182,7 +225,17 @@ onMounted(() => {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    &.fade-in {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   .slider-item.active {

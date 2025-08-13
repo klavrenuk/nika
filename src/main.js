@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import { VueYandexMaps } from 'vue-yandex-maps';
+import VueEasyLightbox from 'vue-easy-lightbox'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -12,5 +13,6 @@ const settings = {
 };
 
 const app = createApp(App);
+app.use(VueEasyLightbox)
 app.use(VueYandexMaps, settings);
 app.mount('#app');
