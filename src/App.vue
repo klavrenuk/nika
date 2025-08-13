@@ -1,5 +1,7 @@
 <template>
-  <div class="app">
+  <div class="app" :class="{'show': isShowContent}">
+    <AppLoader v-if="!isShowContent" />
+
     <CustomCursor />
 
     <AppHeader class="scroll-animate" />
@@ -16,8 +18,9 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
+import AppLoader from '@/components/AppLoader.vue'
 import CustomCursor from '@/components/CustomCursor.vue'
 import AppHeader from '@/components/header/AppHeader.vue'
 import About from '@/components/about/About.vue';
@@ -32,6 +35,8 @@ import Stages from '@/components/stages/Stages.vue';
 
 let observer = null
 
+const isShowContent = ref(false)
+
 const handleIntersection = (entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -41,7 +46,7 @@ const handleIntersection = (entries) => {
   })
 }
 
-onMounted(() => {
+const startAnimation = () => {
   const elements = document.querySelectorAll('.scroll-animate')
 
   observer = new IntersectionObserver(handleIntersection, {
@@ -52,11 +57,30 @@ onMounted(() => {
   elements.forEach(element => {
     observer.observe(element)
   })
+}
+
+onMounted(() => {
+  setTimeout(() => {
+    isShowContent.value = true;
+    startAnimation()
+  }, 4000)
 })
 </script>
 
 <style lang="scss">
 @import "@/assets/styles/app.scss";
+
+.app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  &.show {
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
 
 .scroll-animate {
   opacity: 0;
