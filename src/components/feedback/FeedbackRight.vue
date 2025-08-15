@@ -22,17 +22,18 @@ const handleSubmit = () => {
       <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
       <input type="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+7 (999) 999-99-99">
       <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Тип объекта и площадь (м²) ">
+
       <div class="form-check feedback-right__form__check">
         <input class="form-check-input" type="checkbox" value="" id="checkDefault" v-model="isChecked" :class="{'checked': isChecked}">
         <label class="form-check-label" for="checkDefault">
-          Я соглашаюсь на обработку персональных данных
+          <p class="feedback-right__politics">Я согласен(а) с <a href="/docs/policy.docx" download="Политикой обработки персональных данных">Политикой обработки персональных данных</a> и даю <a href="/docs/agree.docx" download="Согласие на обработку персональных данных">согласие на обработку персональных данных</a></p>
         </label>
       </div>
-      <button class="app-button feedback-right__submit">
+
+      <button class="app-button feedback-right__submit" :disabled="!isChecked" :class="{'disabled': !isChecked}">
         оставить заявку
       </button>
     </form>
-    <p class="feedback-right__politics">Я согласен(а) с <a>Политикой обработки персональных данных</a> и даю <a>согласие на обработку персональных данных</a></p>
   </div>
 </template>
 
@@ -81,7 +82,7 @@ const handleSubmit = () => {
   margin-top: 15px;
   display: flex;
   gap: 10px;
-  align-items: center;
+  align-items: flex-start;
 
 
   & .form-check-input {
@@ -98,10 +99,6 @@ const handleSubmit = () => {
       background-color: #7A4FF1;
     }
   }
-
-  & .form-check-label {
-    color: #868B9133;
-  }
  }
 
  @media all and (max-width: 720px) {
@@ -116,12 +113,24 @@ const handleSubmit = () => {
   }
  }
 
+.wrap-policy {
+  margin: 1rem 0;
+  display: flex;
+  gap: 8px;
+}
+
 .feedback-right__politics {
-  font-size: 12px;
-  color: #ccc;
+  font-size: 16px;
 
   & a {
-    font-weight: bold
+    font-weight: bold;
+    color: #7A4FF1 !important;
+  }
+}
+
+.feedback-right__submit {
+  &.disabled {
+    opacity: .3;
   }
 }
 </style>

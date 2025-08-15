@@ -195,4 +195,15 @@ onMounted(() => {
     }
   }
 }
+
+
+@media all and (max-width: 1200px) {
+  .app-cookie-banner {
+    width: 100%;
+    max-width: calc(100% - 1rem);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
 </style>

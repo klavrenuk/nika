@@ -10,25 +10,29 @@ const images = [
     src: '/images/portfolio-img.jpg',
     thumbnail: '/images/portfolio-img.jpg', // Добавьте миниатюры
     title: 'Портфолио 1',
-    alt: 'Портфолио'
+    alt: 'Портфолио',
+    text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In'
   },
   {
     src: '/images/portfolio/slide2.png',
     thumbnail: '/images/portfolio/slide2.png',
     title: 'Портфолио 2',
-    alt: 'Портфолио'
+    alt: 'Портфолио',
+    text: 'Etiam tincidunt ultricies ligula vel posuere. Vivamus vestibulum turpis ex, ultricies elem'
   },
   {
     src: '/images/portfolio/slide3.png',
     thumbnail: '/images/portfolio/slide3.png',
     title: 'Портфолио 3',
-    alt: 'Портфолио'
+    alt: 'Портфолио',
+    text: 'Etiam tincidunt ultricies ligula vel posuere. Vivamus vestibulum turpis ex, ultricies elem'
   },
   {
     src: '/images/portfolio/slide4.jpg',
     thumbnail: '/images/portfolio/slide4.jpg',
     title: 'Портфолио 4',
-    alt: 'Портфолио'
+    alt: 'Портфолио',
+    text: 'ulputate purus sollicitudin et. Aene'
   }
 ]
 
@@ -97,7 +101,7 @@ onMounted(() => {
             ></vue-easy-lightbox>
           </div>
 
-          <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
+          <h6 class="portfolio__right__title">{{ images[currentIndex].text }}</h6>
           <a class="portfolio__right__link">
             <span>Смотреть еще</span>
             <img src="/images/portfolio-arrow.svg" alt="" />
