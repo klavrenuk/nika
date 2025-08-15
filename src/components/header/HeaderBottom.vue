@@ -16,12 +16,12 @@
         </li>
       </ul>
 
-      <h3 class="header-bottom__title">
+      <h1 class="header-bottom__title">
         Керамическая плитка<br /> и керамогранит оптом
-      </h3>
-      <h3 class="header-bottom__title mobile">
+      </h1>
+      <h1 class="header-bottom__title mobile">
         Керамическая плитка и керамогранит оптом
-      </h3>
+      </h1>
 
       <div class="header-bottom__control d-flex align-items-center">
         <a class="app-button header-bottom__btn header-bottom__catalog">Получить КП</a>

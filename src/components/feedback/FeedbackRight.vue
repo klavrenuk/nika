@@ -32,6 +32,7 @@ const handleSubmit = () => {
         оставить заявку
       </button>
     </form>
+    <p class="feedback-right__politics">Я согласен(а) с <a>Политикой обработки персональных данных</a> и даю <a>согласие на обработку персональных данных</a></p>
   </div>
 </template>
 
@@ -114,4 +115,13 @@ const handleSubmit = () => {
     font-size: 12px;
   }
  }
+
+.feedback-right__politics {
+  font-size: 12px;
+  color: #ccc;
+
+  & a {
+    font-weight: bold
+  }
+}
 </style>

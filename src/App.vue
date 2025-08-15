@@ -14,6 +14,8 @@
     <Feedback class="scroll-animate" />
     <Contacts class="scroll-animate" />
     <Footer class="scroll-animate" />
+
+    <AppCookieBanner v-if="isShowContent" />
   </div>
 </template>
 
@@ -32,6 +34,7 @@ import Footer from '@/components/footer/Footer.vue';
 import Steps from '@/components/steps/Steps.vue';
 import Feedback from '@/components/feedback/Feedback.vue';
 import Stages from '@/components/stages/Stages.vue';
+import AppCookieBanner from "@/components/AppCookieBanner.vue";
 
 let observer = null
 

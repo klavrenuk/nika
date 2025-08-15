@@ -53,7 +53,7 @@ const hidePhotoSwipe = () => {
 }
 
 onMounted(() => {
-  sliderInterval = setInterval(nextSlide, 2000)
+  sliderInterval = setInterval(nextSlide, 5000)
 })
 </script>
 
@@ -99,7 +99,7 @@ onMounted(() => {
 
           <h6 class="portfolio__right__title">Автовокзал им. М.А.Шолохова</h6>
           <a class="portfolio__right__link">
-            <span>подробнее</span>
+            <span>Смотреть еще</span>
             <img src="/images/portfolio-arrow.svg" alt="" />
           </a>
         </div>
