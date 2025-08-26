@@ -10,7 +10,6 @@ const textSettings =  computed(() => {
 })
 
 const handleClickSettings = () => {
-  console.log('check');
   isOpenList.value = !isOpenList.value;
 }
 
