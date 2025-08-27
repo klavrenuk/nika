@@ -6,11 +6,20 @@ const isShowContent = ref(true)
 
 
 const textSettings =  computed(() => {
+  if(isOpenList.value) {
+    return 'Сохранить'
+  }
+
   return 'Настройки'
 })
 
 const handleClickSettings = () => {
-  isOpenList.value = !isOpenList.value;
+  if(!isOpenList.value) {
+    isOpenList.value = !isOpenList.value;
+    return;
+  }
+
+  acceptAll()
 }
 
 const acceptAll = () => {
@@ -35,7 +44,7 @@ onMounted(() => {
 
     <div class="app-cookie-banner__container">
       <p class="app-cookie-banner__text">
-        ООО "Агент 152" обрабатывает cookies с целью персонализации сервисов, и чтобы пользоваться веб-сайтом было удобнее. Вы можете запретить обработку сookies в настройках браузера. Пожалуйста, ознакомьтесь с политикой использования cookies. Читайте подробнее, как ООО "Агент 152" защищает ваши персональные данные.
+        ООО "Ника" обрабатывает cookies с целью персонализации сервисов, и чтобы пользоваться веб-сайтом было удобнее. Вы можете запретить обработку сookies в настройках браузера. Пожалуйста, ознакомьтесь с политикой использования cookies. Читайте подробнее, как ООО "Ника" защищает ваши персональные данные.
       </p>
 
       <ul v-if="isOpenList" class="app-cookie-banner__list">

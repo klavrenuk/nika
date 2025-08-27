@@ -15,7 +15,7 @@
     <Contacts class="scroll-animate" />
     <Footer class="scroll-animate" />
 
-<!--    <AppCookieBanner v-if="isShowContent" />-->
+    <AppCookieBanner v-if="isShowContent" />
   </div>
 </template>
 
