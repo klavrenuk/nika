@@ -4,7 +4,7 @@
             <div class="distributers__container">
                 <SectionName>Официальный представитель</SectionName>
 
-                <h3 class="distributers__title">
+                <h3 class="distributers__title app-custom-color-title">
                         <span>Дистрибьюторы</span> компаний:
                     </h3>
 
@@ -31,16 +31,6 @@ import SectionName from "@/components/section/SectionName.vue";
 
     &__title {
         padding: 30px 0 40px;
-        font-size: 48px;
-        line-height: 43px;
-        font-weight: 500;
-
-        & span {
-            background: linear-gradient(90deg, #7A4FF1 0%, #462E8B 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
     }
 
     &__block-img {

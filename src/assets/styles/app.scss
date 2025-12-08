@@ -1,11 +1,11 @@
-@import './buttons.scss';
+@import "./buttons.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Onest&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Onest&display=swap");
 
 @font-face {
-  font-family: 'Onest';
-  src: url('https://cdn.example.com/fonts/Onest.woff2') format('woff2'),
-  url('https://cdn.example.com/fonts/Onest.woff') format('woff');
+  font-family: "Onest";
+  src: url("https://cdn.example.com/fonts/Onest.woff2") format("woff2"),
+    url("https://cdn.example.com/fonts/Onest.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,14 +14,14 @@ body {
   color: #121211;
   font-size: 16px;
   line-height: 120%;
-  font-family: 'Onest', sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 .app {
   font-size: 16px;
   color: #121211;
   line-height: 120%;
-  font-family: 'Onest', sans-serif;
+  font-family: "Onest", sans-serif;
 }
 
 .app-container {
@@ -57,7 +57,12 @@ body {
 }
 
 .app {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 0;
   }
 
@@ -69,4 +74,17 @@ body {
 .app-list {
   padding-left: 0;
   list-style: none;
+}
+
+.app-custom-color-title {
+  font-size: 48px;
+  line-height: 43px;
+  font-weight: 500;
+
+  & span {
+    background: linear-gradient(90deg, #7a4ff1 0%, #462e8b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }

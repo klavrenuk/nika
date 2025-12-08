@@ -11,6 +11,9 @@
     <WhyChooseUs class="scroll-animate" />
     <Stages class="scroll-animate" />
     <Founder class="scroll-animate" />
+
+    <Services class="scroll-animate" />
+
     <Steps class="scroll-animate" />
     <Feedback class="scroll-animate" />
     <Contacts class="scroll-animate" />
@@ -37,6 +40,7 @@ import Steps from '@/components/steps/Steps.vue';
 import Feedback from '@/components/feedback/Feedback.vue';
 import Stages from '@/components/stages/Stages.vue';
 import AppCookieBanner from "@/components/AppCookieBanner.vue";
+import Services from '@/components/services/Services.vue'
 
 let observer = null
 
