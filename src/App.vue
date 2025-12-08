@@ -5,6 +5,7 @@
     <CustomCursor />
 
     <AppHeader class="scroll-animate" />
+    <Distributers class="scroll-animate" />
     <About class="scroll-animate" />
     <Portfolio class="scroll-animate" />
     <WhyChooseUs class="scroll-animate" />
@@ -26,6 +27,7 @@ import AppLoader from '@/components/AppLoader.vue'
 import CustomCursor from '@/components/CustomCursor.vue'
 import AppHeader from '@/components/header/AppHeader.vue'
 import About from '@/components/about/About.vue';
+import Distributers from '@/components/distributes/Distributers.vue';
 import Portfolio from "@/components/portfolio/Portfolio.vue";
 import WhyChooseUs from "@/components/why-choose-us/WhyChooseUs.vue";
 import Founder from '@/components/founder/Founder.vue';
