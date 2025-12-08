@@ -12,6 +12,7 @@
     <Stages class="scroll-animate" />
     <Founder class="scroll-animate" />
 
+    <Production class="scroll-animate" />
     <Services class="scroll-animate" />
 
     <Steps class="scroll-animate" />
@@ -41,6 +42,7 @@ import Feedback from '@/components/feedback/Feedback.vue';
 import Stages from '@/components/stages/Stages.vue';
 import AppCookieBanner from "@/components/AppCookieBanner.vue";
 import Services from '@/components/services/Services.vue'
+import Production from '@/components/production/Production.vue';
 
 let observer = null
 
