@@ -1,6 +1,7 @@
 <script setup>
+  import {onMounted, ref} from "vue";
+
 import AboutAchievements from "@/components/about/AboutAchievements.vue";
-import {onMounted, ref} from "vue";
 
 const counterYears = ref(0);
 const counterPartners = ref(0);
@@ -42,10 +43,10 @@ onMounted(() => {
 
     <div class="d-flex flex-column about-right__wrap-text">
       <p class="about-right__text text-white">
-        Мы более 20 лет специализируемся на оптовых поставках керамической плитки и керамогранита от ведущих производителей. Являемся официальными дилерами Piastrella, M‑Квадрат (PROGRES,PiezaRosa), ProTile, Italon, Kerama Marazzi, Нефрит Керамика, Unitile, Grani Taganaya и других признанных брендов.
+        Осуществляем поставки в Ростов‑на‑Дону, Краснодарский край, ЛНР и ДНР для жилых комплексов, коттеджных посёлков, а также коммерческих и общественных объектов — от фасадов и террас до интерьеров ресторанов, школ и супермаркетов. Работаем с бюджетными учреждениями, имеем специальные счета
       </p>
-      <p class="about-right__text text-white">
-        Осуществляем поставки в Ростов‑на‑Дону, Краснодарский край, ЛНР и ДНР для жилых комплексов, коттеджных посёлков, а также коммерческих и общественных объектов — от фасадов и террас до интерьеров ресторанов, школ и супермаркетов.
+      <p class="about-right__text">
+        Также у нас есть свой розничный магазин, куда можно обращаться за объёмом менее 100 кв.м.
       </p>
     </div>
 
@@ -67,7 +68,7 @@ onMounted(() => {
     color: #121211;
     font-size: 48px;
     line-height: 43px;
-    font-weight: 500;
+    font-weight: 800;
   }
 
   &__text {

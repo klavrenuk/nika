@@ -67,7 +67,7 @@ onMounted(() => {
             </div>
 
             <p class="about__company__text">
-              ООО «Ника» — официальный дистрибьютор Italon, Kerama Marazzi, Grani Taganaya, Progres и других ведущих брендов.
+              ООО «Ника» официальный дилер М2, Piastrella, ProGRES, Kerama Marazzi, Paradyz, Unitile, а также дистрибьютор более 50 брендов
             </p>
           </div>
 
@@ -104,6 +104,8 @@ onMounted(() => {
     width: 184px;
 
     & img {
+      position: relative;
+      z-index: 9;
       width: 100%;
       height: 100%;
     }
@@ -115,9 +117,7 @@ onMounted(() => {
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      linear-gradient(90deg, #000000 -15.44%, rgba(0, 0, 0, 0) 18.24%, rgba(0, 0, 0, 0) 87.12%, #000000 112.38%),
-      linear-gradient(0deg, rgba(6, 6, 6, 0.6), rgba(6, 6, 6, 0.6));
+      background: linear-gradient(61.88deg, #171717 0.88%, #2D2D2D 43.97%, #7D7D7D 96.22%);
     }
   }
 
