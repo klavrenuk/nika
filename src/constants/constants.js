@@ -59,3 +59,8 @@ export const socials = [
         link: 'whatsApp'
     }
 ]
+
+export const footerRequisites = [
+    'ИНН: 3455834534589',
+    'ОГРН: 75563467856567'
+]

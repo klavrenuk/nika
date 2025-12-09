@@ -1,6 +1,5 @@
 <script setup>
 import FooterLeftBottom from "@/components/footer/FooterLeftBottom.vue";
-import FooterLogo from "@/components/footer/FooterLogo.vue";
 </script>
 
 <template>
@@ -8,22 +7,28 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
     <div class="footer-left__top">
       <div class="footer-left__container">
         <div class="footer-left__block-logo d-flex flex-column">
-          <FooterLogo />
+          <a class="footer-left__logo" href="/">
+            <img src="/images/logo-photo-new.png" alt="" class="footer-left__logo__img" />
+          </a>
           <p class="footer-left__block-logo__text">© 2025. Все права защищены</p>
         </div>
 
-        <div class="footer-left__block-nav">
-          <nav class="footer-left__nav">
-            <a href="#Production">Кейсы</a>
-            <a href="#Cases">Продукция</a>
-            <a href="#About">О нас</a>
-          </nav>
+        <section class="footer-left__section-nav">
+          <h6 class="footer-left__section-nav__title">Навигация</h6>
 
-          <nav class="footer-left__nav">
-            <a href="#WhyChooseUs" >Преимущества</a>
-            <a href="#Contacts" >Контакты</a>
-          </nav>
-        </div>
+          <div class="footer-left__block-nav">
+            <nav class="footer-left__nav">
+              <a href="#Production">Кейсы</a>
+              <a href="#Cases">Продукция</a>
+              <a href="#About">О нас</a>
+            </nav>
+
+            <nav class="footer-left__nav">
+              <a href="#WhyChooseUs">Преимущества</a>
+              <a href="#Contacts">Контакты</a>
+            </nav>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -55,6 +60,18 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
   }
 }
 
+.footer-left__section-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  &__title {
+    color: #FFFFFF;
+    font-size: 16px;
+    opacity: .5;
+  }
+}
+
 .footer-left__nav {
   display: flex;
   flex-direction: column;
@@ -64,7 +81,9 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
     color: #FFFFFF;
     text-decoration: none;
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       color: #7A4FF1;
     }
   }
@@ -76,6 +95,16 @@ import FooterLogo from "@/components/footer/FooterLogo.vue";
   &__text {
     color: #555555;
     font-size: 12px;
+  }
+}
+
+.footer-left__logo {
+  height: 130px;
+  width: 120px;
+
+  &__img {
+    width: 100%;
+    height: 100%;
   }
 }
 
