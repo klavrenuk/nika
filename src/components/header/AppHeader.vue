@@ -1,16 +1,29 @@
 <script setup>
+import { ref } from 'vue'
+
 import HeaderTop from '@/components/header/HeaderTop.vue';
 import HeaderBottom from '@/components/header/HeaderBottom.vue';
+import HeaderSliderNav from './HeaderSliderNav.vue';
+
+const activeSlider = ref(0);
+
+const setActiveSlider = (index) => {
+  activeSlider.value= index;
+}
 </script>
 
 <template>
-  <div class="app-header">
+  <div class="app-header" :class="`active-slider-${activeSlider}`">
     <div class="app-container app-header__container h-100">
       <div class="d-flex flex-column app-header__blocks h-100">
         <div class="app-header__img-top"></div>
 
         <HeaderTop />
-        <HeaderBottom />
+        <div class="app-header__slider-nav">
+          <HeaderSliderNav @select="setActiveSlider" />
+        </div>
+        
+        <HeaderBottom :activeSlider="activeSlider" />
 
         <div class="app-header__img-bottom"></div>
       </div>
@@ -23,11 +36,26 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('@/assets/images/header-back.png') center center no-repeat;
+  background: url('@/assets/images/slider-back-0.png') center center no-repeat;
   background-color: #000;
-  background-size: cover;
+  background-size: cover !important;
   z-index: 2;
   padding-bottom: 50px;
+
+  &.active-slider-1 {
+    opacity: 1;
+    background: url('@/assets/images/slider-back-1.png') center center no-repeat;
+  }
+
+  &.active-slider-2 {
+    opacity: 1;
+    background: url('@/assets/images/slider-back-2.png') center center no-repeat;
+  }
+
+  &.active-slider-3 {
+    opacity: 1;
+    background: url('@/assets/images/slider-back-3.png') center center no-repeat;
+  }
 
   &:after {
     content: '';
@@ -51,13 +79,21 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue';
   }
 }
 
-.app-header__img-top {
+.app-header__slider-nav {
   position: absolute;
   top: 113px;
   right: 0;
-  height: 52px;
-  width: 180px;
-  background: url("@/assets/images/header-top-img.svg") center center no-repeat;
+  z-index: 10;
+}
+
+.app-header__img-top {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url("@/assets/images/slider-top-1.png") center center no-repeat;
 }
 
 .app-header__img-bottom {

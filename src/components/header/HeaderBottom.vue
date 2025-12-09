@@ -1,31 +1,61 @@
 <script setup>
+import { computed } from 'vue'
 
+const {activeSlider} = defineProps({
+  activeSlider: {
+    type: Number,
+  }
+})
+
+
+const description = computed(() => {
+  switch(activeSlider) {
+    case 0:
+      return 'Оптовые поставки керамической плитки и керамогранита от 100 кв.м.'
+
+    case 1:
+      return 'Комплектация строительных объектов по всей Росии';
+
+    case 2:
+      return 'Более 80 000 кв. м. плитки в наличии на складе';
+
+    case 3:
+      return 'Официальный дилер PROTILES, Piastrella, PROGRES, UNITILE, Gracia ceramica, Kerama Marazzi, Italon'
+
+    default:
+      return null;
+  }
+})
 </script>
 
 <template>
   <div class="header-bottom">
     <div class="header-bottom__container">
-      <ul class="header-bottom__list app-list d-flex flex-column">
+      <ul v-if="activeSlider === 0" class="header-bottom__list app-list d-flex flex-column">
         <li>
           <span class="header-bottom__list__dot"></span>
-          <span class="header-bottom__list__text">комплектация объектов</span>
+          <span class="header-bottom__list__text">Официальный Дилер </span>
         </li>
         <li>
           <span class="header-bottom__list__dot"></span>
-          <span class="header-bottom__list__text">оптовые поставки</span>
+          <span class="header-bottom__list__text">Доставка по Югу</span>
         </li>
       </ul>
 
       <h1 class="header-bottom__title">
-        Керамическая плитка<br /> и керамогранит оптом
+        ООО «НИКА»
       </h1>
       <h1 class="header-bottom__title mobile">
-        Керамическая плитка и керамогранит оптом
+        ООО «НИКА»
       </h1>
 
+      <p v-if="activeSlider !== null" class="header-bottom__description">
+        {{ description }}
+      </p>
+
       <div class="header-bottom__control d-flex align-items-center">
-        <a class="app-button header-bottom__btn header-bottom__catalog">Получить КП</a>
-        <a class="app-button header-bottom__btn header-bottom__view-objects" href="#Production">Смотреть объекты ↓</a>
+        <a class="app-button header-bottom__btn header-bottom__catalog">Смотреть продукцию</a>
+        <a class="app-button header-bottom__btn header-bottom__view-objects" href="#Production">Реализованные объекты ↓</a>
       </div>
     </div>
   </div>
@@ -33,12 +63,13 @@
 
 <style scoped lang="scss">
 .header-bottom {
-  padding-right: 200px;
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: flex-end;
 
   &__container {
-    max-width: 530px;
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -125,6 +156,14 @@
     font-size: 12px;
     font-weight: 600;
   }
+}
+
+.header-bottom__description {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 110%;
 }
 
 @media all and (max-width: 720px) {
