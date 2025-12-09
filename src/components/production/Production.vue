@@ -11,16 +11,25 @@
                 <div class="app-component-layout production__layout">
                     <ProductionCard v-for="item in list" :key="item.id" :data="item" />
                 </div>
+
+                <div class="app-component-layout production__layout">
+                    <ProductionCardNoImg v-for="itemNoImg in listNoImg" :key="itemNoImg.id" :data="itemNoImg" /> 
+                </div>
+
+                <div class="app-component-layout production__layout">
+                    <ProductionCard v-for="item in listWithImg" :key="item.id" :data="item" />
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-import { list } from './constants'
+import { list, listNoImg, listWithImg } from '../../../public/images/production/constants'
 
 import SectionName from "@/components/section/SectionName.vue";
 import ProductionCard from './ProductionCard.vue';
+import ProductionCardNoImg from './ProductionCardNoImg.vue';
 </script>
 
 
