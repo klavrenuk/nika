@@ -8,15 +8,16 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
     <div class="app-container">
       <div class="app-component-layout">
         <div class="d-flex flex-column contacts__top">
-          <SectionName>Контакты</SectionName>
           <div>
+            <SectionName>Контакты</SectionName>
             <h4 class="contacts__title">
               Свяжитесь с нами
             </h4>
-            <h6 class="contacts__subtitle">
-              ООО «Ника»
-            </h6>
           </div>
+
+          <h6 class="contacts__subtitle">
+            ООО «Ника»
+          </h6>
 
           <div class="contacts__info">
             <ContactInfoItem label="Телефон:" text="+7 (938) 080-22-22" />
@@ -43,13 +44,14 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
   }
 
   &__title {
-    margin-bottom: 15px;
+    margin: 20px 0 50px;
     color: #121211;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 48px;
   }
 
   &__subtitle {
+    padding-bottom: 10px;
     color: #121211;
     font-size: 22px;
   }
