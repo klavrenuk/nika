@@ -6,8 +6,8 @@ import { navHeader } from '@/constants/constants';
   <div class="header-top">
     <div class="row">
       <div class="col-4">
-        <a>
-          <img src="/images/logo.svg" alt="Ника" />
+        <a class="header-top__logo">
+          <img src="/images/header-logo-new.png" alt="Ника" />
         </a>
       </div>
 
@@ -56,6 +56,20 @@ import { navHeader } from '@/constants/constants';
     &:hover, &:active, &:focus {
       color: #7A4FF1;
     }
+  }
+}
+
+.header-top__logo { 
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 190px;
+  height: 205px;
+  display: inline-block;
+
+  & img {
+    width: 100%;
+    height: 100%;
   }
 }
 

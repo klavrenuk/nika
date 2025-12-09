@@ -14,10 +14,10 @@ const setActiveSlider = (index) => {
 
 <template>
   <div class="app-header" :class="`active-slider-${activeSlider}`">
+    <div class="app-header__img-top"></div>
+
     <div class="app-container app-header__container h-100">
       <div class="d-flex flex-column app-header__blocks h-100">
-        <div class="app-header__img-top"></div>
-
         <HeaderTop />
         <div class="app-header__slider-nav">
           <HeaderSliderNav @select="setActiveSlider" />
@@ -41,6 +41,7 @@ const setActiveSlider = (index) => {
   background-size: cover !important;
   z-index: 2;
   padding-bottom: 50px;
+  overflow: hidden;
 
   &.active-slider-1 {
     opacity: 1;
@@ -88,8 +89,9 @@ const setActiveSlider = (index) => {
 
 .app-header__img-top {
   position: absolute;
-  top: 32px;
-  right: 0;
+  right: auto;
+  left: -170px;
+  top: 26%;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -99,7 +101,7 @@ const setActiveSlider = (index) => {
 .app-header__img-bottom {
   position: absolute;
   bottom: -50px;
-  left: 0;
+  left: -95px;
   height: 77px;
   width: 307px;
   background: url("@/assets/images/header-bottom-img.svg") center center no-repeat;
