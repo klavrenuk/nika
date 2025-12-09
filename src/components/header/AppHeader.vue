@@ -33,7 +33,7 @@ onBeforeUnmount(() => {
       <div class="d-flex flex-column app-header__blocks h-100">
         <HeaderTop />
         <div class="app-header__slider-nav">
-          <HeaderSliderNav @select="setActiveSlider" />
+          <HeaderSliderNav @select="setActiveSlider" :activeSlider="activeSlider" />
         </div>
         
         <HeaderBottom :activeSlider="activeSlider" />
@@ -49,7 +49,7 @@ onBeforeUnmount(() => {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('@/assets/images/slider-back-0.png') center center no-repeat;
+  background: url('@/assets/images/slider-back-0.png') top left no-repeat;
   background-color: #000;
   background-size: cover !important;
   z-index: 2;
@@ -58,17 +58,17 @@ onBeforeUnmount(() => {
 
   &.active-slider-1 {
     opacity: 1;
-    background: url('@/assets/images/slider-back-1.png') center center no-repeat;
+    background: url('@/assets/images/slider-back-1.png') top left no-repeat;
   }
 
   &.active-slider-2 {
     opacity: 1;
-    background: url('@/assets/images/slider-back-2.png') center center no-repeat;
+    background: url('@/assets/images/slider-back-2.png') top left no-repeat;
   }
 
   &.active-slider-3 {
     opacity: 1;
-    background: url('@/assets/images/slider-back-3.png') center center no-repeat;
+    background: url('@/assets/images/slider-back-3.png') top left no-repeat;
   }
 
   &:after {
@@ -127,16 +127,6 @@ onBeforeUnmount(() => {
 
   .app-header__img-bottom {
     display: none;
-  }
-}
-
-@media all and (max-width: 720px) {
-  .app-header__blocks {
-
-  }
-
-  .app-header {
-    height: 700px;
   }
 }
 </style>

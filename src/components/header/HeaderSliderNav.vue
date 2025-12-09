@@ -1,13 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+
+const { activeSlider } = defineProps({
+    activeSlider: {
+        type: Number
+    }
+})
+
 
 const emits = defineEmits(['select']);
 
 const sliders = [0, 1, 2, 3];
-const activeSlider = ref(0);
 
 const handleSelect = (index) => {
-    activeSlider.value = index;
     emits('select', index)
 }
 </script>
