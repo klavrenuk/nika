@@ -39,7 +39,7 @@ onMounted(() => {
     <div class="app-container">
       <div class="app-component-layout">
         <div>
-          <img src="/images/founder-photo.svg" alt="Камбулат Германбиевич" class="founder__photo" :class="{'active': isActivePhoto}" />
+          <img src="/images/founder-photo.jpg" alt="Камбулат Германбиевич" class="founder__photo" :class="{'active': isActivePhoto}" />
         </div>
         <FounderInfo />
       </div>
@@ -49,11 +49,12 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .founder {
-  background: #7A4FF1;
+  background: linear-gradient(105.75deg, #7A4FF1 11.9%, #462E8B 107.99%);
 
   &__photo {
     width: 568px;
     height: 576px;
+    object-fit: cover;
 
     opacity: 0;
     transform: translateY(50px) scale(0.95);
