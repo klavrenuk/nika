@@ -13,24 +13,38 @@ const handleSubmit = () => {
 <template>
   <div class="feedback-right">
     <SectionName>Форма обратной связи</SectionName>
-    <h3 class="feedback-right__title">
-      Рассчитать объект<br /><span>за 30 минут</span>
-    </h3>
-    <form @submit.prevent="handleSubmit" class="feedback-right__form d-flex flex-column">
-      <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
-      <input class="form-control" id="company" aria-describedby="emailHelp" placeholder="Компания">
-      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
-      <input type="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="+7 (999) 999-99-99">
-      <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Тип объекта и площадь (м²) ">
+
+    <div class="feedback-right__header">
+      <h3 class="feedback-right__title">
+        Хотите получить<br /><span>индивидуальное решение</span> для вашего проекта?
+      </h3>
+      <p class="feedback-right__description">
+        После отправки формы наши специалисты свяжутся с вами в ближайшее время
+      </p>
+    </div>
+
+    <form @submit.prevent="handleSubmit" class="feedback-right__form">
+      <div class="feedback-right__form__grid">
+        <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
+        <input class="form-control" id="company" aria-describedby="emailHelp" placeholder="Компания">
+        <input type="phone" class="form-control" id="phone" aria-describedby="emailHelp"
+          placeholder="+7 (999) 999-99-99">
+      </div>
+
+      <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Сообщение">
 
       <div class="form-check feedback-right__form__check">
-        <input class="form-check-input" type="checkbox" value="" id="checkDefault" v-model="isChecked" :class="{'checked': isChecked}">
+        <input class="form-check-input" type="checkbox" value="" id="checkDefault" v-model="isChecked"
+          :class="{ 'checked': isChecked }">
         <label class="form-check-label" for="checkDefault">
-          <p class="feedback-right__politics">Я согласен(а) с <a href="/docs/policy.docx" download="Политикой обработки персональных данных">Политикой обработки персональных данных</a> и даю <a href="/docs/agree.docx" download="Согласие на обработку персональных данных">согласие на обработку персональных данных</a></p>
+          <p class="feedback-right__politics">
+            Я соглашаюсь на обработку персональных данных  
+          </p>
         </label>
       </div>
 
-      <button class="app-button feedback-right__submit" :disabled="!isChecked" :class="{'disabled': !isChecked}">
+      <button class="app-button feedback-right__submit" :disabled="!isChecked" :class="{ 'disabled': !isChecked }">
         оставить заявку
       </button>
     </form>
@@ -53,7 +67,15 @@ const handleSubmit = () => {
 }
 
 .feedback-right__form {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
 
   & input {
     padding: 17px 0;
@@ -99,9 +121,21 @@ const handleSubmit = () => {
       background-color: #7A4FF1;
     }
   }
- }
+}
 
- @media all and (max-width: 720px) {
+.feedback-right__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & .feedback-right__description {
+    color: #949494;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+@media all and (max-width: 720px) {
   .feedback-right__title {
     font-size: 32px;
     margin-top: 16px;
@@ -111,7 +145,7 @@ const handleSubmit = () => {
     padding: 11px 8px;
     font-size: 12px;
   }
- }
+}
 
 .wrap-policy {
   margin: 1rem 0;
