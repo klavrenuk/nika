@@ -75,6 +75,12 @@ const handleSubmit = () => {
     display: grid;
     grid-template-columns: auto auto;
     gap: 20px;
+
+    @media all and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   & input {
@@ -98,6 +104,10 @@ const handleSubmit = () => {
 .feedback-right__submit {
   margin-top: 40px;
   color: #fff;
+
+  @media all and (max-width: 1200px) {
+    margin-top: 0;
+  }
 }
 
 .feedback-right__form__check {
@@ -139,6 +149,7 @@ const handleSubmit = () => {
   .feedback-right__title {
     font-size: 32px;
     margin-top: 16px;
+    line-height: 32px;
   }
 
   .feedback-right__submit {

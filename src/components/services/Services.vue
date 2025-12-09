@@ -26,7 +26,7 @@
                     <div class="services__right__header">
                         <h6 class="services__right__title">Изготовление ступеней</h6>
 
-                        <span>
+                        <span class="services__right__arrow">
                             <img src="/images/arrow-right.svg" alt="" />
                         </span>
                     </div>
@@ -94,6 +94,11 @@ import SectionName from "@/components/section/SectionName.vue";
     flex-direction: column;
     gap: 30px;
 
+    @media all and (max-width: 1200px) {
+        margin-top: 30px;
+        gap: 1rem;
+    }
+
     &__header {
         display: flex;
         align-items: center;
@@ -109,6 +114,10 @@ import SectionName from "@/components/section/SectionName.vue";
         color: #949494;
         font-size: 22px;
         line-height: 120%;
+
+        @media all and (max-width: 1200px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -121,18 +130,32 @@ import SectionName from "@/components/section/SectionName.vue";
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media all and (max-width: 1200px) {
+            padding: 1rem 0;
+        }
     }
 
     &__title {
         color: #121211;
         font-size: 22px;
         line-height: 100%;
+
+        @media all and (max-width: 1200px) {
+            font-size: 16px;
+        }
     }
 
     & .services__right__list__img {
         max-width: 690px;
         width: 100%;
         height: 380px;
+    }
+}
+
+.services__right__arrow {
+    @media all and (max-width: 1200px) {
+        display: none;
     }
 }
 </style>

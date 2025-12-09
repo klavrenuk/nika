@@ -35,6 +35,17 @@ import SectionName from "@/components/section/SectionName.vue";
 
     &__block-img {
         height: 305px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 1px;
+            background: #fff;
+        }
 
         & .distributers__img {
             height: 100%;

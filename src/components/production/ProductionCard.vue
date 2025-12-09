@@ -34,6 +34,11 @@ const imgSrc = computed(() => {
     flex-direction: column;
     gap: 20px;
 
+    @media all and (max-width: 1200px) {
+        width: 100%;
+        gap: 10px;
+    }
+
 
     &__wrap-img {
         position: relative;
@@ -51,6 +56,10 @@ const imgSrc = computed(() => {
         color: #212121;
         font-size: 21px;
         line-height: 100%;
+
+        @media all and (max-width: 1200px) {
+            font-size: 16px;
+        }
     }
 
     &__link {
@@ -59,6 +68,10 @@ const imgSrc = computed(() => {
 
         &:hover, &:active {
             color: #7A4FF1;
+        }
+
+        @media all and (max-width: 1200px) {
+            font-size: 14px;
         }
     }
 }

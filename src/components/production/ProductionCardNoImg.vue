@@ -53,6 +53,10 @@ const { data } = defineProps({
         color: #212121;
         font-size: 21px;
         line-height: 120%;
+
+        @media all and (max-width: 1200px) {
+            font-size: 16px;
+        }
     }
 
     &__link {

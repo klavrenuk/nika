@@ -37,10 +37,20 @@ import ProductionCardNoImg from './ProductionCardNoImg.vue';
 .production {
     &__title {
         margin-top: 30px;
+
+        @media all and (max-width: 1200px) {
+            font-size: 32px;
+            margin-top: 16px;
+        }
     }
 
     &__layout {
         margin-top: 80px;
+
+        @media all and (max-width: 1200px) {
+            margin-top: 16px;
+            gap: 10px;
+        }
     }
 }    
 </style>
