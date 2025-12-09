@@ -8,17 +8,19 @@
     <Distributers class="scroll-animate" />
     <About class="scroll-animate" />
     <Portfolio class="scroll-animate" />
-    <WhyChooseUs class="scroll-animate" />
-    <Stages class="scroll-animate" />
-    <Founder class="scroll-animate" />
-
     <Production class="scroll-animate" />
     <Services class="scroll-animate" />
-
-    <Steps class="scroll-animate" />
+    <WhyChooseUs class="scroll-animate" />
+    <Founder class="scroll-animate" />
     <Feedback class="scroll-animate" />
     <Contacts class="scroll-animate" />
     <Footer class="scroll-animate" />
+
+<!-- 
+    <Stages class="scroll-animate" />
+    <Steps class="scroll-animate" />
+    <Feedback class="scroll-animate" />
+    <Contacts class="scroll-animate" /> -->
 
     <AppCookieBanner v-if="isShowContent" />
   </div>

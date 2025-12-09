@@ -4,7 +4,6 @@ import { ref, onMounted } from 'vue'
 import AboutRight from "@/components/about/AboutRight.vue";
 import SectionName from "@/components/section/SectionName.vue";
 import AboutAchievements from "@/components/about/AboutAchievements.vue";
-import {isVisible} from "bootstrap/js/src/util";
 
 const counter = ref(0);
 const isShowAnimateBlocks = ref(false)
@@ -56,7 +55,7 @@ onMounted(() => {
     <div class="app-container">
       <div class="app-component-layout">
         <div class="about__left d-flex flex-column">
-          <SectionName>О бренде</SectionName>
+          <SectionName>О нас</SectionName>
 
           <div class="about__company d-flex flex-column">
             <div class="about__company__images d-flex align-items-end">

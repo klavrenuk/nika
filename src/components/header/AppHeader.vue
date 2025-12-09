@@ -1,15 +1,28 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-import HeaderTop from '@/components/header/HeaderTop.vue';
-import HeaderBottom from '@/components/header/HeaderBottom.vue';
-import HeaderSliderNav from './HeaderSliderNav.vue';
+import HeaderTop from '@/components/header/HeaderTop.vue'
+import HeaderBottom from '@/components/header/HeaderBottom.vue'
+import HeaderSliderNav from './HeaderSliderNav.vue'
 
-const activeSlider = ref(0);
+const activeSlider = ref(0)
+let intervalId = null
 
 const setActiveSlider = (index) => {
-  activeSlider.value= index;
+  activeSlider.value = index
 }
+
+onMounted(() => {
+  intervalId = setInterval(() => {
+    activeSlider.value = activeSlider.value === 3 ? 0 : activeSlider.value + 1
+  }, 5000)
+})
+
+onBeforeUnmount(() => {
+  if (intervalId) {
+    clearInterval(intervalId)
+  }
+})
 </script>
 
 <template>
