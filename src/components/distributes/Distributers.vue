@@ -31,6 +31,11 @@ import SectionName from "@/components/section/SectionName.vue";
 
     &__title {
         padding: 30px 0 40px;
+
+        @media all and (max-width: 1200px) {
+            padding: 1rem 0;
+            margin: 0;
+        }
     }
 
     &__block-img {

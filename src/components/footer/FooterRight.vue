@@ -127,6 +127,10 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
   flex-direction: column;
   gap: 14px;
 
+  @media all and (max-width: 1200px) {
+    display: none;
+  }
+
   & p {
     color: #555555;
     font-size: 14px;

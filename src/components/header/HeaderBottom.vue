@@ -164,6 +164,10 @@ const description = computed(() => {
   font-size: 48px;
   font-weight: 700;
   line-height: 110%;
+
+  @media all and (max-width: 1200px) {
+    font-size: 32px;
+  }
 }
 
 @media all and (max-width: 720px) {

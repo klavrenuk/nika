@@ -38,6 +38,10 @@ import FooterLeftBottom from "@/components/footer/FooterLeftBottom.vue";
 
 <style scoped lang="scss">
 .footer-left {
+  @media all and (max-width: 1200px) {
+    order: 2;
+  }
+
   &__top {
     margin-bottom: 125px;
 
@@ -111,6 +115,10 @@ import FooterLeftBottom from "@/components/footer/FooterLeftBottom.vue";
 @media all and (max-width: 720px) {
   .footer-left__top {
     margin-bottom: 24px;
+  }
+
+  .footer-left__block-logo__text {
+    display: none;
   }
 }
 </style>
