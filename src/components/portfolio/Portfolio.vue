@@ -3,36 +3,26 @@ import { ref, onMounted } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
 import SectionName from "@/components/section/SectionName.vue";
+import PortfolioSliderCustom from './PortfolioSliderCustom.vue';
 
 
 const images = [
   {
     src: '/images/portfolio-img.jpg',
-    thumbnail: '/images/portfolio-img.jpg', // Добавьте миниатюры
-    title: 'Портфолио 1',
-    alt: 'Портфолио',
-    text: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In'
+    thumbnail: '/images/portfolio-img.jpg',
+    title: 'Музей Самбекские высоты',
+    alt: 'Музей Самбекские высоты',
+    text: 'Музей Самбекские высоты'
   },
   {
-    src: '/images/portfolio/slide2.png',
-    thumbnail: '/images/portfolio/slide2.png',
-    title: 'Портфолио 2',
-    alt: 'Портфолио',
-    text: 'Etiam tincidunt ultricies ligula vel posuere. Vivamus vestibulum turpis ex, ultricies elem'
+    src: '/images/portfolio-img-1.png',
+    thumbnail: '/images/portfolio-img-1.png',
+    title: 'Автовокзал им. М.А. Шолохова',
+    alt: 'Автовокзал им. М.А. Шолохова',
+    text: 'Автовокзал им. М.А. Шолохова'
   },
   {
-    src: '/images/portfolio/slide3.png',
-    thumbnail: '/images/portfolio/slide3.png',
-    title: 'Портфолио 3',
-    alt: 'Портфолио',
-    text: 'Etiam tincidunt ultricies ligula vel posuere. Vivamus vestibulum turpis ex, ultricies elem'
-  },
-  {
-    src: '/images/portfolio/slide4.jpg',
-    thumbnail: '/images/portfolio/slide4.jpg',
-    title: 'Портфолио 4',
-    alt: 'Портфолио',
-    text: 'ulputate purus sollicitudin et. Aene'
+    isCustom: true
   }
 ]
 
@@ -90,7 +80,8 @@ onMounted(() => {
                 :class="{ 'active': currentIndex === index }"
                 @click="showPhotoSwipe(index)"
             >
-              <img :src="image.src" :alt="image.alt">
+              <PortfolioSliderCustom v-if="image.isCustom" />
+              <img v-else :src="image.src" :alt="image.alt">
             </div>
 
             <vue-easy-lightbox
@@ -219,7 +210,7 @@ onMounted(() => {
 .portfolio {
   .slider {
     width: 100%;
-    height: 400px;
+    height: 560px;
     position: relative;
     overflow: hidden;
   }
