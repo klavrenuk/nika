@@ -47,7 +47,9 @@ const hidePhotoSwipe = () => {
 }
 
 onMounted(() => {
-  sliderInterval = setInterval(nextSlide, 5000)
+  setTimeout(() => {
+    sliderInterval = setInterval(nextSlide, 5000)
+  }, 7000)
 })
 </script>
 
@@ -57,12 +59,16 @@ onMounted(() => {
       <div class="app-component-layout">
         <div class="d-flex flex-column portfolio__left position-relative">
           <SectionName class="portfolio__left__section-name" type="white">Работы</SectionName>
-          <h5 class="portfolio__title">
-            Портфолио объектов
-          </h5>
-          <h6 class="portfolio__subtitle">
-            >50 масштабных проектов
-          </h6>
+
+          <div class="portfolio__header">
+            <h5 class="portfolio__title">
+              Портфолио объектов
+            </h5>
+            <h6 class="portfolio__subtitle">
+              >50 масштабных проектов
+            </h6>
+          </div>
+
           <div class="position-relative portfolio__wrap-btn">
             <a class="portfolio__submit-application app-button" href="#application">
               оставить заявку
@@ -73,23 +79,14 @@ onMounted(() => {
 
         <div class="portfolio__right d-flex flex-column">
           <div class="slider">
-            <div
-                v-for="(image, index) in images"
-                :key="index"
-                class="slider-item"
-                :class="{ 'active': currentIndex === index }"
-                @click="showPhotoSwipe(index)"
-            >
+            <div v-for="(image, index) in images" :key="index" class="slider-item"
+              :class="{ 'active': currentIndex === index }" @click="showPhotoSwipe(index)">
               <PortfolioSliderCustom v-if="image.isCustom" />
               <img v-else :src="image.src" :alt="image.alt">
             </div>
 
-            <vue-easy-lightbox
-                :visible="visibleRef"
-                :imgs="images"
-                :index="indexRef"
-                @hide="hidePhotoSwipe"
-            ></vue-easy-lightbox>
+            <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
+              @hide="hidePhotoSwipe"></vue-easy-lightbox>
           </div>
 
           <h6 class="portfolio__right__title">{{ images[currentIndex].text }}</h6>
@@ -112,8 +109,7 @@ onMounted(() => {
   gap: 40px;
   color: #fff;
 
-  &__section-name,
-  & .portfolio__title {
+  &__section-name {
     padding-bottom: 16px;
   }
 
@@ -137,7 +133,9 @@ onMounted(() => {
   font-size: 12px;
   background: #fff;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: #7A4FF1;
   }
 }
@@ -160,12 +158,12 @@ onMounted(() => {
 }
 
 .portfolio-block-img {
-   position: absolute;
+  position: absolute;
   bottom: 85px;
   left: 468px;
-   height: 52px;
-   width: 78px;
-   background: url("@/assets/images/portfolio-block-img.svg") center center no-repeat;
+  height: 52px;
+  width: 78px;
+  background: url("@/assets/images/portfolio-block-img.svg") center center no-repeat;
 }
 
 @media all and (max-width: 720px) {
@@ -242,6 +240,20 @@ onMounted(() => {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.portfolio__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portfolio__wrap-btn {
+  margin-top: 140px;
+
+  @media all and (max-width: 1200px) {
+    margin-top: 0;
   }
 }
 </style>

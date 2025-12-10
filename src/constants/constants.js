@@ -48,15 +48,15 @@ export const whyChooseUsBlocks = [
 export const socials = [
     {
         icon: '/images/tg.svg',
-        link: 'tg'
+        link: 'https://t.me/galleryceramic'
     },
     {
         icon: '/images/vk.svg',
-        link: 'vk'
+        link: 'https://vk.com/galleryceramic'
     },
     {
         icon: '/images/whatsApp.svg',
-        link: 'whatsApp'
+        link: 'https://wa.me/79380802222?text=Здравствуйте!%20Мне%20нужна%20консультация!'
     }
 ]
 

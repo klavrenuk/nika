@@ -6,8 +6,8 @@
   <div class="footer-left-bottom d-flex flex-column">
     <p class="footer-left-bottom__copy">© 2025. Все права защищены</p>
     <h6 class="footer-left-bottom__title">
-      <a href="/docs/policy.docx" download="Политика конфиденциальности">Политика конфиденциальности</a> | <a
-        href="/docs/policy.docx" download="Пользовательское соглашение">Пользовательское соглашение</a>
+      <a href="/docs/policy.docx" download="Политика обработки персональных данных">Политика обработки персональных данных</a> | <a
+        href="/docs/policy.docx" download="Согласие на обработку персональных данных">Согласие на обработку персональных данных</a>
     </h6>
     <img src="/images/footer-left-img.jpg" alt="" class="footer-left-bottom__img" />
   </div>
@@ -38,11 +38,13 @@
 
   &__img {
     width: 100%;
-    height: 289px;
+    height: 297px;
     object-fit: cover;
+    border: 5px solid #fff;
   }
 }
 
+.footer-left-bottom__title,
 .footer-left-bottom__copy {
   display: none;
 

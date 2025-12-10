@@ -75,9 +75,13 @@ onMounted(() => {
     color: #121211;
     font-size: 22px;
     line-height: 120%;
+    max-width: 574px;
+    width: 100%;
 
     &.text-white {
       color: #949494 !important;
+      max-width: 628px;
+      width: 100%;
     }
   }
 }

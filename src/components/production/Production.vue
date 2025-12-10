@@ -13,13 +13,15 @@
                 </div>
 
                 <div class="app-component-layout production__layout">
-                    <ProductionCardNoImg v-for="itemNoImg in listNoImg" :key="itemNoImg.id" :data="itemNoImg" /> 
+                    <ProductionCardNoImg v-for="itemNoImg in listNoImg" :key="itemNoImg.id" :data="itemNoImg" />
                 </div>
 
                 <div class="app-component-layout production__layout">
                     <ProductionCard v-for="item in listWithImg" :key="item.id" :data="item" />
                 </div>
             </div>
+
+            <div class="production__line"></div>
         </div>
     </section>
 </template>
@@ -52,5 +54,13 @@ import ProductionCardNoImg from './ProductionCardNoImg.vue';
             gap: 10px;
         }
     }
-}    
+
+    &__line {
+        width: 100%;
+        margin: 75px 0 30px;
+        background:
+            linear-gradient(to right, #C1C1C1 2px, transparent 2px) 0 0 / 10px 100%;
+        height: 2px;
+    }
+}
 </style>

@@ -2,6 +2,10 @@
     <div class="production-card">
         <div class="production-card__wrap-img">
             <img :src="imgSrc" alt="" class="production-card__img" />
+
+            <div class="production-card__magnifier">
+                <img :src="`/images/production/${data.magnifier}`"
+            </div>
         </div>
 
         <p class="production-card__text">
@@ -73,6 +77,20 @@ const imgSrc = computed(() => {
         @media all and (max-width: 1200px) {
             font-size: 14px;
         }
+    }
+}
+
+.production-card__magnifier {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    border: 4px solid #fff;
+    width: 80px;
+    height: 80px;
+
+    & img {
+        width: 100%;
+        height: 100%;
     }
 }
 </style>

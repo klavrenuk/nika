@@ -22,7 +22,7 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
       </section>
 
       <div class="footer-right__socials">
-        <a v-for="social in socials" :key="social.link" class="footer-right__social">
+        <a v-for="social in socials" :key="social.link" :href="social.link" target="_blank" class="footer-right__social">
           <img :src="social.icon" alt="" class="footer-right__social__icon" />
         </a>
       </div>
