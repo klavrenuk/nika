@@ -12,10 +12,16 @@ const setActiveSlider = (index) => {
   activeSlider.value = index
 }
 
-onMounted(() => {
+const startAnimation = () => {
   intervalId = setInterval(() => {
     activeSlider.value = activeSlider.value === 3 ? 0 : activeSlider.value + 1
   }, 5000)
+}
+
+onMounted(() => {
+  setTimeout(() => {
+    startAnimation()
+  }, 3000)
 })
 
 onBeforeUnmount(() => {
@@ -58,16 +64,19 @@ onBeforeUnmount(() => {
 
   &.active-slider-1 {
     opacity: 1;
+    transform: translateY(0);
     background: url('@/assets/images/slider-back-1.png') top left no-repeat;
   }
 
   &.active-slider-2 {
     opacity: 1;
+    transform: translateY(0);
     background: url('@/assets/images/slider-back-2.png') top left no-repeat;
   }
 
   &.active-slider-3 {
     opacity: 1;
+    transform: translateY(0);
     background: url('@/assets/images/slider-back-3.png') top left no-repeat;
   }
 
