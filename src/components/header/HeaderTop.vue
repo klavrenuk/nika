@@ -7,7 +7,7 @@ import { navHeader } from '@/constants/constants';
     <div class="row">
       <div class="col-4">
         <a class="header-top__logo">
-          <img src="/images/header-logo-new.png" alt="Ника" />
+          <img src="/images/app-header-logo-new.svg" alt="Ника" />
         </a>
       </div>
 
@@ -70,6 +70,7 @@ import { navHeader } from '@/constants/constants';
   & img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 

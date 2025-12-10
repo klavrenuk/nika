@@ -6,6 +6,7 @@ import HeaderBottom from '@/components/header/HeaderBottom.vue'
 import HeaderSliderNav from './HeaderSliderNav.vue'
 
 const activeSlider = ref(0)
+const isChangeSlider = ref(false)
 let intervalId = null
 
 const setActiveSlider = (index) => {
@@ -14,6 +15,7 @@ const setActiveSlider = (index) => {
 
 const startAnimation = () => {
   intervalId = setInterval(() => {
+    isChangeSlider.value = true;
     activeSlider.value = activeSlider.value === 3 ? 0 : activeSlider.value + 1
   }, 5000)
 }
@@ -32,25 +34,32 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="app-header" :class="`active-slider-${activeSlider}`">
-    <div class="app-header__img-top"></div>
+  <div :class="{'slider-changed': isChangeSlider}">
+    <div class="app-header" :class="`active-slider-${activeSlider}`">
+      <div class="app-header__img-top"></div>
 
-    <div class="app-container app-header__container h-100">
-      <div class="d-flex flex-column app-header__blocks h-100">
-        <HeaderTop />
-        <div class="app-header__slider-nav">
-          <HeaderSliderNav @select="setActiveSlider" :activeSlider="activeSlider" />
+      <div class="app-container app-header__container h-100">
+        <div class="d-flex flex-column app-header__blocks h-100">
+          <HeaderTop />
+          <div class="app-header__slider-nav">
+            <HeaderSliderNav @select="setActiveSlider" :activeSlider="activeSlider" />
+          </div>
+
+          <HeaderBottom :activeSlider="activeSlider" />
+
+          <div class="app-header__img-bottom"></div>
         </div>
-        
-        <HeaderBottom :activeSlider="activeSlider" />
-
-        <div class="app-header__img-bottom"></div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.slider-changed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .app-header {
   position: relative;
   height: 100vh;
@@ -61,6 +70,18 @@ onBeforeUnmount(() => {
   z-index: 2;
   padding-bottom: 50px;
   overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+  }
+
 
   &.active-slider-1 {
     opacity: 1;

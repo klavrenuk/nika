@@ -35,6 +35,8 @@ import SectionName from "@/components/section/SectionName.vue";
         @media all and (max-width: 1200px) {
             padding: 1rem 0;
             margin: 0;
+            font-size: 24px;
+            line-height: 24px;
         }
     }
 
@@ -48,7 +50,7 @@ import SectionName from "@/components/section/SectionName.vue";
             top: 0;
             right: 0;
             height: 100%;
-            width: 1px;
+            width: 4px;
             background: #fff;
         }
 

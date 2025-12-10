@@ -11,9 +11,9 @@
         <p class="production-card__text">
             {{ data.text }}
         </p>
-        <a class="production-card__link">
+        <!-- <a class="production-card__link">
             подробнее
-        </a>
+        </a> -->
     </div>
 </template>
 

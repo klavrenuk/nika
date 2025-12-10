@@ -73,6 +73,11 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media all and (max-width: 1200px) {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
 }
 
 .footer-right__social {

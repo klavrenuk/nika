@@ -81,6 +81,11 @@ body {
   line-height: 43px;
   font-weight: 500;
 
+  @media all and (max-width: 1200px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
   & span {
     background: linear-gradient(90deg, #7a4ff1 0%, #462e8b 100%);
     -webkit-background-clip: text;

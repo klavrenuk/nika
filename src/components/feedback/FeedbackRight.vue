@@ -16,7 +16,7 @@ const handleSubmit = () => {
 
     <div class="feedback-right__header">
       <h3 class="feedback-right__title">
-        Хотите получить<br /><span>индивидуальное решение</span> для вашего проекта?
+        Хотите получить <span>индивидуальное решение</span> для вашего проекта?
       </h3>
       <p class="feedback-right__description">
         После отправки формы наши специалисты свяжутся с вами в ближайшее время
@@ -56,7 +56,7 @@ const handleSubmit = () => {
   &__title {
     margin: 40px 0 10px;
     font-weight: 500;
-    font-size: 48px;
+    font-size: 35px;
     color: #121211;
     line-height: 43px;
 
@@ -70,6 +70,7 @@ const handleSubmit = () => {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 40px;
 
   &__grid {
     display: grid;

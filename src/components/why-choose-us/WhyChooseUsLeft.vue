@@ -66,6 +66,10 @@ import SectionName from "@/components/section/SectionName.vue";
   .why-choose-us-left__title {
     font-size: 32px;
 
+    @media all and (max-width: 1200px) {
+      font-size: 24px;
+    }
+
     & br {
       display: none;
     }

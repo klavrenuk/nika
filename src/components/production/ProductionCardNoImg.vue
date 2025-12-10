@@ -10,9 +10,9 @@
         <p class="production-card-no-img__text">
             {{  data.text }}
         </p>
-        <a class="production-card-no-img__link">
+        <!-- <a class="production-card-no-img__link">
             подробнее
-        </a>
+        </a> -->
     </section>
 </template>
 
