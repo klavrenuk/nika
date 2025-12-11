@@ -141,9 +141,11 @@ onMounted(() => {
 }
 
 .portfolio__right {
+  position: relative;
   gap: 30px;
 
   &__title {
+    margin-top: 590px;
     color: #FFFFFF;
     font-size: 22px;
   }
@@ -210,25 +212,33 @@ onMounted(() => {
     width: 100%;
     height: 560px;
     position: relative;
-    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    left: 0;
+    position: absolute;
   }
 
   .slider-item {
-    position: absolute;
+    position: relative;
+    max-width: 650px;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    flex-shrink: 0;
 
-    &.fade-in {
-      opacity: 1;
-      visibility: visible;
-    }
+    // &.fade-in {
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
 
-    &.fade-out {
-      opacity: 0;
-      visibility: hidden;
-    }
+    // &.fade-out {
+    //   opacity: 0;
+    //   visibility: hidden;
+    // }
   }
 
   .slider-item.active {
