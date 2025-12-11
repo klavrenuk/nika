@@ -93,3 +93,13 @@ body {
     background-clip: text;
   }
 }
+
+
+.no-scrollbar {
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE и старый Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, новый Edge */
+}

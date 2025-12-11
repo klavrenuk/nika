@@ -38,6 +38,10 @@ const nextSlide = () => {
 }
 
 const showPhotoSwipe = (index) => {
+  if(index === 2) {
+    return;
+  }
+
   visibleRef.value = true
   indexRef.value = index
 }
@@ -78,22 +82,21 @@ onMounted(() => {
         </div>
 
         <div class="portfolio__right d-flex flex-column">
-          <div class="slider">
-            <div v-for="(image, index) in images" :key="index" class="slider-item"
-              :class="{ 'active': currentIndex === index }" @click="showPhotoSwipe(index)">
+          <div class="slider no-scrollbar">
+            <div v-for="(image, index) in images" :key="index" class="slider-item" @click="showPhotoSwipe(index)">
               <PortfolioSliderCustom v-if="image.isCustom" />
               <img v-else :src="image.src" :alt="image.alt">
+              <div class="portfolio__wrap-title">
+                <span class="portfolio__right__title">{{  image.text }}</span>
+                <span class="portfolio__right__title">15 000 м²</span>
+              </div>
             </div>
 
             <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
               @hide="hidePhotoSwipe"></vue-easy-lightbox>
           </div>
 
-          <h6 class="portfolio__right__title">{{ images[currentIndex].text }}</h6>
-          <a class="portfolio__right__link">
-            <span>Смотреть еще</span>
-            <img src="/images/portfolio-arrow.svg" alt="" />
-          </a>
+          <div class="portfolio__right__bottom"></div>
         </div>
       </div>
     </div>
@@ -125,6 +128,13 @@ onMounted(() => {
   }
 }
 
+.portfolio__wrap-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .portfolio__submit-application {
   max-width: 340px;
   width: 100%;
@@ -145,7 +155,6 @@ onMounted(() => {
   gap: 30px;
 
   &__title {
-    margin-top: 590px;
     color: #FFFFFF;
     font-size: 22px;
   }
@@ -157,6 +166,10 @@ onMounted(() => {
     align-items: center;
     gap: 18px;
   }
+}
+
+.portfolio__right__bottom {
+  margin-top: 590px;
 }
 
 .portfolio-block-img {
@@ -209,16 +222,14 @@ onMounted(() => {
 
 .portfolio {
   .slider {
-    width: 100%;
-    height: 560px;
-    position: relative;
-
+    width: 130%;
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 100%;
     left: 0;
     position: absolute;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   .slider-item {
@@ -229,16 +240,6 @@ onMounted(() => {
     opacity: 1;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     flex-shrink: 0;
-
-    // &.fade-in {
-    //   opacity: 1;
-    //   visibility: visible;
-    // }
-
-    // &.fade-out {
-    //   opacity: 0;
-    //   visibility: hidden;
-    // }
   }
 
   .slider-item.active {
@@ -248,7 +249,7 @@ onMounted(() => {
 
   .slider-item img {
     width: 100%;
-    height: 100%;
+    height: 560px;
     object-fit: cover;
   }
 }
