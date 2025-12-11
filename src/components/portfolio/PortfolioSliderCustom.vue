@@ -38,11 +38,22 @@ const projects = [
     position: relative;
     top: -25px;
 
+    @media all and (max-width: 1200px) {
+        top: 0;
+        height: auto;
+        padding: 1rem .5rem;
+        gap: 1rem;
+    }
+
     &__title {
         color: #fff;
         font-weight: 600;
         font-size: 35px;
         line-height: 120%;
+
+        @media all and (max-width: 1200px) {
+            font-size: 24px;
+        }
     }
 
     &__list {
@@ -54,6 +65,11 @@ const projects = [
         color: #FFFFFF;
         font-size: 24px;
         line-height: 120%;
+
+        @media all and (max-width: 1200px) {
+            font-size: 16px;
+            gap: .5rem;
+        }
     }
 }    
 </style>

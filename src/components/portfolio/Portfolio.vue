@@ -267,4 +267,36 @@ onMounted(() => {
     margin-top: 0;
   }
 }
+
+@media all and (max-width: 1200px) {
+  .slider  {
+    position: relative !important;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .slider-item {
+    height: auto !important;
+
+    & img {
+      height: 300px !important;
+    }
+
+    .portfolio__right__bottom {
+      display: none;
+    }
+
+    .portfolio__wrap-title {
+      margin-top: 10px;
+    }
+
+    .portfolio__right__title {
+      font-size: 16px;
+    }
+  }
+
+  .portfolio__right__bottom {
+    display: none;
+  }
+}
 </style>
