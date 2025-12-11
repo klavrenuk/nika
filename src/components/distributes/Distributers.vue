@@ -4,7 +4,7 @@
             <div class="distributers__container">
                 <SectionName>Официальный представитель</SectionName>
 
-                <h3 class="distributers__title app-custom-color-title">
+                <h3 class="distributers__title app-custom-color-title scroll-animate">
                         <span>Дистрибьюторы</span> компаний:
                     </h3>
 

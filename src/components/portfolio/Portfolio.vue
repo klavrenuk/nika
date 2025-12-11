@@ -77,16 +77,16 @@ onMounted(() => {
             <a class="portfolio__submit-application app-button" href="#application">
               оставить заявку
             </a>
-            <div class="portfolio-block-img"></div>
+            <div class="portfolio-block-img animation-fade-in-out"></div>
           </div>
         </div>
 
-        <div class="portfolio__right d-flex flex-column">
+        <div class="portfolio__right d-flex flex-column scroll-animate">
           <div class="slider no-scrollbar">
             <div v-for="(image, index) in images" :key="index" class="slider-item" @click="showPhotoSwipe(index)">
               <PortfolioSliderCustom v-if="image.isCustom" />
               <img v-else :src="image.src" :alt="image.alt">
-              <div class="portfolio__wrap-title">
+              <div class="portfolio__wrap-title" v-if="index !== 2">
                 <span class="portfolio__right__title">{{  image.text }}</span>
                 <span class="portfolio__right__title">15 000 м²</span>
               </div>

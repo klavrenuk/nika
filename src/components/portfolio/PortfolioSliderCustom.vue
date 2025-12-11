@@ -34,6 +34,9 @@ const projects = [
     display: flex;
     flex-direction: column;
     gap: 35px;
+    height: 560px;
+    position: relative;
+    top: -25px;
 
     &__title {
         color: #fff;

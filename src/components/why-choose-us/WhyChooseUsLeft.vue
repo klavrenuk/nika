@@ -7,7 +7,7 @@ import SectionName from "@/components/section/SectionName.vue";
     <div class="d-flex flex-column">
       <SectionName>преимущества</SectionName>
       <h3 class="why-choose-us-left__title">Почему<br /> выбирают нас</h3>
-      <div class="why-choose-us-left__wrap-top-img">
+      <div class="why-choose-us-left__wrap-top-img animation-fade-in-out scroll-animate">
         <img src="/images/why-choose-us-left-img.svg" alt="" class="why-choose-us-left__top-img" />
       </div>
     </div>
@@ -82,5 +82,10 @@ import SectionName from "@/components/section/SectionName.vue";
   .why-choose-us-left__img {
     width: 100%;
   }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 </style>
