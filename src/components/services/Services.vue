@@ -23,36 +23,9 @@
                 </div>
 
                 <div class="services__right">
-                    <div class="services__right__header">
-                        <h6 class="services__right__title">Изготовление ступеней</h6>
-
-                        <span class="services__right__arrow">
-                            <img src="/images/arrow-right.svg" alt="" />
-                        </span>
-                    </div>
-
-                    <p class="services__right__text">
-                        Мы предлагаем ступени из керамогранита для лестниц разных форматов. В процессе производства
-                        используется технология завальцовки (снятия фаски) с края керамогранита в 1/4 круга с
-                        последующей полировкой и дополнительной обработкой (снятие фаски по нижней части переднего края
-                        для устранения неровностей).
-                    </p>
-
                     <ul class="services__right__list">
-                        <li>
-                            <img src="/images/services-img-1.png" alt="" class="services__right__list__img" />
-                        </li>
-                        <li>
-                            <h6 class="services__right__list__title">Изготовление плинтуса</h6>
-                            <a>
-                                <img src="/images/services-arrow-right.svg" alt="" />
-                            </a>
-                        </li>
-                        <li>
-                            <h6 class="services__right__list__title">Прямой рез</h6>
-                            <a>
-                                <img src="/images/services-arrow-right.svg" alt="" />
-                            </a>
+                        <li v-for="service in services" :key="service.name">
+                            <Service :data="service" :openDefault="service.isOpenDefault" />
                         </li>
                     </ul>
                 </div>
@@ -63,6 +36,27 @@
 
 <script setup>
 import SectionName from "@/components/section/SectionName.vue";
+import Service from './Service.vue'
+
+const services = [
+    {
+        id: 1,
+        name: 'Изготовление ступеней',
+        text: 'Мы предлагаем ступени из керамогранита для лестниц разных форматов. В процессе производства используется технология завальцовки (снятия фаски) с края керамогранита в 1/4 круга с последующей полировкой и дополнительной обработкой (снятие фаски по нижней части переднего края для устранения неровностей).',
+        img: '/images/services-img-1.png',
+        isOpenDefault: true
+    },
+    {
+        id: 2,
+        name: 'Изготовление плинтуса',
+        text: 'Изготовление плинтуса из керамогранита под заказ. Точная подрезка, обработка кромки и полировка для идеального сочетания с напольным покрытием.'
+    },
+    {
+        id: 3,
+        name: 'Прямой рез',
+        text: 'Точная резка керамогранита под 90° без сколов и перекосов. Гарантируем чистый срез для стыков, плинтусов и ступеней.'
+    }
+]
 </script>
 
 <style scoped lang="scss">
