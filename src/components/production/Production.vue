@@ -37,6 +37,11 @@ import ProductionCardNoImg from './ProductionCardNoImg.vue';
 
 <style scoped lang="scss">
 .production {
+    &__container {
+        display: inline-block;
+        height: 300px;
+    }
+
     &__title {
         margin-top: 30px;
 

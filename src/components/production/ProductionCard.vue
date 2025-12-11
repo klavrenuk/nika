@@ -4,17 +4,16 @@
             <img :src="imgSrc" alt="" class="production-card__img" />
 
             <div class="production-card__magnifier">
-                <img :src="`/images/production/${data.magnifier}`"
+                <img :src="`/images/production/${data.magnifier}`" </div>
             </div>
-        </div>
 
-        <p class="production-card__text">
-            {{ data.text }}
-        </p>
-        <!-- <a class="production-card__link">
+            <p class="production-card__text">
+                {{ data.text }}
+            </p>
+            <!-- <a class="production-card__link">
             подробнее
         </a> -->
-    </div>
+        </div>
 </template>
 
 <script setup>
@@ -70,7 +69,8 @@ const imgSrc = computed(() => {
         color: #949494;
         font-size: 18px;
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             color: #7A4FF1;
         }
 
@@ -91,6 +91,19 @@ const imgSrc = computed(() => {
     & img {
         width: 100%;
         height: 100%;
+    }
+}
+
+
+@media all and (min-width: 750px) and (max-width: 1200px) {
+    .production-card__magnifier {
+        display: none;
+    }
+
+    .production-card__wrap-img {
+        min-height: 450px;  
+        height: 100%;
+        display: inline-block;
     }
 }
 </style>

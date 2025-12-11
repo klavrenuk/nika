@@ -270,6 +270,7 @@ onMounted(() => {
 
 @media all and (max-width: 1200px) {
   .slider  {
+    margin-top: 1rem;
     position: relative !important;
     flex-direction: column;
     width: 100% !important;
