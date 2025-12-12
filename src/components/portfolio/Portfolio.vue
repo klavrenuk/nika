@@ -38,6 +38,8 @@ const nextSlide = () => {
 }
 
 const showPhotoSwipe = (index) => {
+  console.log('showPhotoSwipe', index)
+
   if(index === 2) {
     return;
   }
@@ -91,7 +93,7 @@ onMounted(() => {
                 <span class="portfolio__right__title">15 000 м²</span>
               </div>
             </div> -->
-            <PortfolioSlider :list="images" />
+            <PortfolioSlider :list="images" @on-click="showPhotoSwipe" />
 
             <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
               @hide="hidePhotoSwipe"></vue-easy-lightbox>

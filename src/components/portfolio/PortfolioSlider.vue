@@ -4,14 +4,14 @@
             clickable: false,
         }" :modules="modules" class="mySwiper">
             <swiper-slide v-for="(image, index) of list">
-                <div class="slider-item">
+                <a class="slider-item" @click="handleSliderClick(index)">
                     <PortfolioSliderCustom v-if="image.isCustom" />
                     <img v-else :src="image.src" :alt="image.alt" class="slider-item__img">
                     <div class="portfolio__wrap-title" v-if="index !== 2">
                         <span class="portfolio__right__title">{{ image.text }}</span>
                         <span class="portfolio__right__title">15 000 м²</span>
                     </div>
-                </div>
+                </a>
             </swiper-slide>
         </swiper>
     </div>
@@ -38,16 +38,27 @@ export default {
         }
     },
 
+    emits: ['on-click'],
+
     components: {
         Swiper,
         SwiperSlide,
         PortfolioSliderCustom
     },
+
+    methods: {
+        handleSliderClick(index) {
+            console.log('ooo', index);
+
+            this.$emit('on-click', { index });
+        }
+    },
+
     setup() {
         return {
             modules: [Pagination],
         };
-    },
+    }
 };
 </script>
 
@@ -59,6 +70,10 @@ export default {
 .swiper {
     width: 100%;
     height: 100%;
+}
+
+.slider-item {
+    display: inline-block;
 }
 
 .swiper-slide {

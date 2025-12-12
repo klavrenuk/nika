@@ -7,7 +7,7 @@
     <AppHeader class="scroll-animate" />
     <Distributers class="scroll-animate" />
     <About class="scroll-animate" />
-    <Portfolio class="scroll-animate" />
+    <Portfolio />
     <Production class="scroll-animate" />
     <Services class="scroll-animate" />
     <WhyChooseUs class="scroll-animate" />
