@@ -22,7 +22,7 @@ const startAnimation = () => {
 
 onMounted(() => {
   setTimeout(() => {
-    startAnimation()
+    // /startAnimation()
   }, 3000)
 })
 
@@ -41,6 +41,7 @@ onBeforeUnmount(() => {
       <div class="app-container app-header__container h-100">
         <div class="d-flex flex-column app-header__blocks h-100">
           <HeaderTop />
+
           <div class="app-header__slider-nav">
             <HeaderSliderNav @select="setActiveSlider" :activeSlider="activeSlider" />
           </div>
@@ -64,9 +65,9 @@ onBeforeUnmount(() => {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('@/assets/images/slider-back-0.png') top left no-repeat;
+  background: url('/public/images/header-slider-1.png') center center no-repeat;
   background-color: #000;
-  background-size: cover !important;
+  background-size: 100% 100%;
   z-index: 2;
   padding-bottom: 50px;
   overflow: hidden;
@@ -86,7 +87,7 @@ onBeforeUnmount(() => {
   &.active-slider-1 {
     opacity: 1;
     transform: translateY(0);
-    background: url('@/assets/images/slider-back-1.png') top left no-repeat;
+    background: url('/public/images/header-slider-1.png') top left no-repeat;
   }
 
   &.active-slider-2 {
@@ -99,17 +100,6 @@ onBeforeUnmount(() => {
     opacity: 1;
     transform: translateY(0);
     background: url('@/assets/images/slider-back-3.png') top left no-repeat;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
-    z-index: -1;
   }
 
   &__container {
@@ -128,17 +118,6 @@ onBeforeUnmount(() => {
   top: 113px;
   right: 0;
   z-index: 10;
-}
-
-.app-header__img-top {
-  position: absolute;
-  right: auto;
-  left: -170px;
-  top: 26%;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: url("@/assets/images/slider-top-1.png") center center no-repeat;
 }
 
 .app-header__img-bottom {
