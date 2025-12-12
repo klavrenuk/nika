@@ -104,7 +104,7 @@ onMounted(() => {
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .portfolio {
   background: #7A4FF1;
 }
@@ -212,15 +212,6 @@ onMounted(() => {
   }
 }
 
-.swiper-wrapper {
-  height: 580px !important;
-
-  & img {
-    height: 580px !important;
-    object-fit: cover
-  }
-}
-
 .portfolio {
   .slider {
     width: 130%;
@@ -235,12 +226,15 @@ onMounted(() => {
 
   .slider-item {
     position: relative;
-    max-width: 650px;
     width: 100%;
     height: 100%;
     opacity: 1;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     flex-shrink: 0;
+
+    & img {
+      width: 650px !important;
+    }
   }
 
   .slider-item.active {

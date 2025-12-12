@@ -27,8 +27,7 @@ const projects = [
 
 <style lang="scss" scoped>
 .portfolio-slider-custom {
-    max-width: 650px;
-    width: 100%;
+    width: 650px;
     padding: 50px 60px;
     background: #633DCA;
     display: flex;

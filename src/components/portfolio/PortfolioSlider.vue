@@ -6,7 +6,7 @@
             <swiper-slide v-for="(image, index) of list">
                 <div class="slider-item">
                     <PortfolioSliderCustom v-if="image.isCustom" />
-                    <img v-else :src="image.src" :alt="image.alt">
+                    <img v-else :src="image.src" :alt="image.alt" class="slider-item__img">
                     <div class="portfolio__wrap-title" v-if="index !== 2">
                         <span class="portfolio__right__title">{{ image.text }}</span>
                         <span class="portfolio__right__title">15 000 м²</span>
@@ -84,5 +84,25 @@ export default {
 
 .swiper-slide:nth-child(3n) {
     width: 40%;
+}
+
+.portfolio__wrap-title {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio__right__title {
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.slider-item__img {
+    height: 561px !important;
 }
 </style>
