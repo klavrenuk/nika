@@ -39,7 +39,7 @@ import ProductionCardNoImg from './ProductionCardNoImg.vue';
 .production {
     &__container {
         display: inline-block;
-        height: 300px;
+        // height: 300px;
     }
 
     &__title {

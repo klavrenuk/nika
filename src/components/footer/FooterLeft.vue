@@ -10,7 +10,6 @@ import FooterLeftBottom from "@/components/footer/FooterLeftBottom.vue";
           <a class="footer-left__logo" href="/">
             <img src="/images/logo-photo-new.png" alt="" class="footer-left__logo__img" />
           </a>
-          <p class="footer-left__block-logo__text">© 2025. Все права защищены</p>
         </div>
 
         <section class="footer-left__section-nav">
@@ -115,10 +114,6 @@ import FooterLeftBottom from "@/components/footer/FooterLeftBottom.vue";
 @media all and (max-width: 720px) {
   .footer-left__top {
     margin-bottom: 24px;
-  }
-
-  .footer-left__block-logo__text {
-    display: none;
   }
 }
 </style>
