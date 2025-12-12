@@ -33,7 +33,7 @@ const projects = [
     display: flex;
     flex-direction: column;
     gap: 35px;
-    height: 560px;
+    height: calc(560px + 25px);
     position: relative;
     top: -25px;
 

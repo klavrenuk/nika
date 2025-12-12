@@ -75,15 +75,7 @@ export default {
 }
 
 .swiper-slide {
-    width: 80%;
-}
-
-.swiper-slide:nth-child(2n) {
-    width: 60%;
-}
-
-.swiper-slide:nth-child(3n) {
-    width: 40%;
+    width: 650px;
 }
 
 .portfolio__wrap-title {

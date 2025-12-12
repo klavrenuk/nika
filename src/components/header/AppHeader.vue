@@ -5,7 +5,7 @@ import HeaderTop from '@/components/header/HeaderTop.vue'
 import HeaderBottom from '@/components/header/HeaderBottom.vue'
 import HeaderSliderNav from './HeaderSliderNav.vue'
 
-const activeSlider = ref(3)
+const activeSlider = ref(0)
 const isChangeSlider = ref(false)
 let intervalId = null
 
@@ -22,7 +22,7 @@ const startAnimation = () => {
 
 onMounted(() => {
   setTimeout(() => {
-    ///startAnimation()
+    startAnimation()
   }, 3000)
 })
 

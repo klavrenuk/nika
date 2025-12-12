@@ -33,7 +33,7 @@ const description = computed(() => {
 <template>
   <div class="header-bottom">
     <div class="header-bottom__container">
-      <div class="header-bottom__avards">
+      <div v-if="activeSlider === 3" class="header-bottom__avards">
         <HeaderAvards />
       </div>
 
