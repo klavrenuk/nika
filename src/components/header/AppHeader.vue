@@ -22,7 +22,7 @@ const startAnimation = () => {
 
 onMounted(() => {
   setTimeout(() => {
-    // /startAnimation()
+    startAnimation()
   }, 3000)
 })
 
@@ -65,7 +65,7 @@ onBeforeUnmount(() => {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('/public/images/header-slider-1.png') center center no-repeat;
+  background: url('/public/images/header-slider-0.png') center center no-repeat;
   background-color: #000;
   background-size: 100% 100%;
   z-index: 2;
@@ -87,19 +87,34 @@ onBeforeUnmount(() => {
   &.active-slider-1 {
     opacity: 1;
     transform: translateY(0);
-    background: url('/public/images/header-slider-1.png') top left no-repeat;
+    background: url('/public/images/header-slider-1.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    &::before {
+      content: none;
+    }
   }
 
   &.active-slider-2 {
     opacity: 1;
     transform: translateY(0);
-    background: url('@/assets/images/slider-back-2.png') top left no-repeat;
+    background: url('/public/images/header-slider-2.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    &::before {
+      content: none;
+    }
   }
 
   &.active-slider-3 {
     opacity: 1;
     transform: translateY(0);
-    background: url('@/assets/images/slider-back-3.png') top left no-repeat;
+    background: url('/public/images/header-slider-3.png') center center no-repeat;
+    background-size: 100% 100%;
+
+    &::before {
+      content: none;
+    }
   }
 
   &__container {
