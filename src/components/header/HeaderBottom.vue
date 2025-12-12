@@ -1,7 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 
-const {activeSlider} = defineProps({
+import HeaderAvards from './HeaderAvards.vue'
+
+const { activeSlider } = defineProps({
   activeSlider: {
     type: Number,
   }
@@ -9,7 +11,7 @@ const {activeSlider} = defineProps({
 
 
 const description = computed(() => {
-  switch(activeSlider) {
+  switch (activeSlider) {
     case 0:
       return 'Оптовые поставки керамической плитки и керамогранита от 100 кв.м.'
 
@@ -31,6 +33,10 @@ const description = computed(() => {
 <template>
   <div class="header-bottom">
     <div class="header-bottom__container">
+      <div class="header-bottom__avards">
+        <HeaderAvards />
+      </div>
+
       <ul v-if="activeSlider === 0" class="header-bottom__list app-list d-flex flex-column">
         <li>
           <span class="header-bottom__list__dot"></span>
@@ -55,7 +61,8 @@ const description = computed(() => {
 
       <div class="header-bottom__control d-flex align-items-center">
         <a class="app-button header-bottom__btn header-bottom__catalog">Смотреть продукцию</a>
-        <a class="app-button header-bottom__btn header-bottom__view-objects" href="#Production">Реализованные объекты ↓</a>
+        <a class="app-button header-bottom__btn header-bottom__view-objects" href="#Production">Реализованные объекты
+          ↓</a>
       </div>
     </div>
   </div>
@@ -68,7 +75,22 @@ const description = computed(() => {
   display: flex;
   justify-content: flex-end;
 
+  &__avards {
+    position: absolute;
+    bottom: calc(100% + 20px);
+    left: -215px;
+
+    @media all and (max-height: 700px) {
+      display: none;
+    }
+
+    @media all and (max-height: 800px) {
+      left: -23%;
+    }
+  }
+
   &__container {
+    position: relative;
     max-width: 700px;
     width: 100%;
     display: flex;
@@ -117,7 +139,9 @@ const description = computed(() => {
   text-transform: uppercase;
   background: #7A4FF1;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: #0A0A0D;
     background: #fff;
   }
@@ -127,7 +151,9 @@ const description = computed(() => {
   color: #0A0A0D;
   background: #fff;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: #fff;
     background: #7A4FF1;
   }
@@ -184,7 +210,7 @@ const description = computed(() => {
     font-size: 32px;
     line-height: 36px;
   }
-  
+
   .header-bottom__control {
     justify-content: space-between;
   }
