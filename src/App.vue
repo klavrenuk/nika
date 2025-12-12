@@ -4,11 +4,11 @@
 
     <CustomCursor />
 
-    <AppHeader class="" />
+    <AppHeader class="scroll-animate" />
     <Distributers class="scroll-animate" />
     <About class="scroll-animate" />
     <Portfolio class="scroll-animate" />
-    <Production />
+    <Production class="scroll-animate" />
     <Services class="scroll-animate" />
     <WhyChooseUs class="scroll-animate" />
     <Founder class="scroll-animate" />
