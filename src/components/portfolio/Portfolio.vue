@@ -93,8 +93,10 @@ onMounted(() => {
             </div> -->
             <PortfolioSlider :list="images" @on-click="showPhotoSwipe" />
 
-            <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
+             <Teleport to="body">
+              <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
               @hide="hidePhotoSwipe"></vue-easy-lightbox>
+             </Teleport>
           </div>
 
           <div class="portfolio__right__bottom"></div>
