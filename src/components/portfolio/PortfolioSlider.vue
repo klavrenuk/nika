@@ -1,8 +1,15 @@
 <template>
     <div>
-        <swiper :slidesPerView="'auto'" :spaceBetween="30" :pagination="{
-            clickable: false,
-        }" :modules="modules" class="mySwiper">
+        <swiper 
+            :slidesPerView="'auto'" 
+            :spaceBetween="30" 
+            :pagination="{
+                clickable: false,
+            }" 
+            :modules="modules" 
+            class="mySwiper"
+            :autoplay="{ delay: 1000, disableOnInteraction: false }"
+        >
             <swiper-slide v-for="(image, index) of list">
                 <a class="slider-item" @click="handleSliderClick(index)">
                     <PortfolioSliderCustom v-if="image.isCustom" />
@@ -29,7 +36,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 export default {
     props: {
@@ -56,7 +63,7 @@ export default {
 
     setup() {
         return {
-            modules: [Pagination],
+            modules: [Pagination, Autoplay],
         };
     }
 };

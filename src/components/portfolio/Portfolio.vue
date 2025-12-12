@@ -37,15 +37,13 @@ const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % images.length
 }
 
-const showPhotoSwipe = (index) => {
-  console.log('showPhotoSwipe', index)
-
-  if(index === 2) {
-    return;
+const showPhotoSwipe = (data) => {
+  if(!data || data.index === 2) {
+    return
   }
 
   visibleRef.value = true
-  indexRef.value = index
+  indexRef.value = data.index
 }
 
 const hidePhotoSwipe = () => {
