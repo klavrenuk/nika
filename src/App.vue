@@ -8,7 +8,7 @@
     <Distributers class="scroll-animate" />
     <About class="scroll-animate" />
     <Portfolio class="scroll-animate" />
-    <Production class="scroll-animate" />
+    <Production />
     <Services class="scroll-animate" />
     <WhyChooseUs class="scroll-animate" />
     <Founder class="scroll-animate" />

@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
 import SectionName from "@/components/section/SectionName.vue";
-import PortfolioSliderCustom from './PortfolioSliderCustom.vue';
+import PortfolioSlider from './PortfolioSlider.vue';
 
 
 const images = [
@@ -83,14 +83,15 @@ onMounted(() => {
 
         <div class="portfolio__right d-flex flex-column scroll-animate">
           <div class="slider no-scrollbar">
-            <div v-for="(image, index) in images" :key="index" class="slider-item" @click="showPhotoSwipe(index)">
+            <!-- <div v-for="(image, index) in images" :key="index" class="slider-item" @click="showPhotoSwipe(index)">
               <PortfolioSliderCustom v-if="image.isCustom" />
               <img v-else :src="image.src" :alt="image.alt">
               <div class="portfolio__wrap-title" v-if="index !== 2">
                 <span class="portfolio__right__title">{{  image.text }}</span>
                 <span class="portfolio__right__title">15 000 м²</span>
               </div>
-            </div>
+            </div> -->
+            <PortfolioSlider :list="images" />
 
             <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
               @hide="hidePhotoSwipe"></vue-easy-lightbox>
@@ -103,7 +104,7 @@ onMounted(() => {
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .portfolio {
   background: #7A4FF1;
 }
