@@ -30,4 +30,10 @@ const avards = [
             }
         }
     }
+
+    @media all and (max-width: 1200px) {
+        .header-avards {
+            display: none;
+        }
+    }
 </style>

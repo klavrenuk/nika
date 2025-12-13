@@ -53,6 +53,10 @@ onMounted(() => {
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
+
+  @media all and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .cursor-dot {

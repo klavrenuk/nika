@@ -2,11 +2,11 @@
     <swiper :slides-per-view="'auto'" :centered-slides="true" :space-between="30" :pagination="{
         clickable: true,
     }" :autoplay="{
-        delay: 3000,
+        delay: 30000,
         disableOnInteraction: false,
     }" :modules="modules" class="mySwiper">
         <swiper-slide v-for="(image, index) of list" :key="image.id">
-            <a class="slider-item" @click="handleSliderClick(index)">
+            <a class="slider-item">
                 <PortfolioSliderCustom v-if="image.isCustom" />
                 <img v-else :src="image.src" :alt="image.alt" class="slider-item__img">
                 <div class="portfolio__wrap-title" v-if="index !== 2">
@@ -99,7 +99,7 @@ export default {
     }
 
     .slider-item__img {
-        height: auto !important;
+        height: 302px !important;
     }
 }
 </style>

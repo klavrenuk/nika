@@ -38,8 +38,8 @@ const projects = [
     top: -25px;
 
     @media all and (max-width: 1200px) {
-        top: 0;
-        height: auto;
+        top: -40px;
+        height: 310px;
         padding: 1rem .5rem;
         gap: 1rem;
     }
