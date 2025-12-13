@@ -92,4 +92,14 @@ export default {
     width: 100% !important;
     object-fit: cover;
 }
+
+@media all and (max-width: 1200px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+
+    .slider-item__img {
+        height: auto !important;
+    }
+}
 </style>
