@@ -19,17 +19,11 @@
 </template>
 
 <script>
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
 import PortfolioSliderCustom from './PortfolioSliderCustom.vue';
-
-// import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
 
 export default {
@@ -38,16 +32,14 @@ export default {
         SwiperSlide,
         PortfolioSliderCustom
     },
-
     props: {
         list: {
             type: Array
         }
     },
-
     setup() {
         return {
-            modules: [Pagination, Autoplay], // 添加 Autoplay 模块
+            modules: [Pagination, Autoplay],
         };
     },
 };
@@ -60,36 +52,7 @@ export default {
 }
 
 .swiper-slide {
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiper-slide {
-    width: 60%;
-}
-
-.swiper-slide:nth-child(2n) {
-    width: 40%;
-}
-
-.swiper-slide:nth-child(3n) {
-    width: 20%;
-}
-
-.slider-item {
-    display: inline-block;
-}
-
-.swiper-slide {
+    width: 650px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +64,11 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.slider-item {
+    display: inline-block;
+    width: 100%;
 }
 
 .portfolio__wrap-title {
@@ -121,5 +89,7 @@ export default {
 
 .slider-item__img {
     height: 561px !important;
+    width: 100% !important;
+    object-fit: cover;
 }
 </style>
