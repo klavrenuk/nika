@@ -5,9 +5,9 @@
     <CustomCursor />
 
     <AppHeader class="scroll-animate" />
-    <Distributers />
+    <Distributers class="scroll-animate" />
     <About class="scroll-animate" />
-    <Portfolio />
+    <Portfolio class="scroll-animate" />
     <Production class="scroll-animate" />
     <Services class="scroll-animate" />
     <WhyChooseUs class="scroll-animate" />

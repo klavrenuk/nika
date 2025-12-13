@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('/public/images/header-slider-0.png') center center no-repeat;
+  background: url('/public/images/header-slider-0.jpg') center center no-repeat;
   background-color: #000;
   background-size: 100% 100%;
   z-index: 2;
@@ -82,15 +82,15 @@ onBeforeUnmount(() => {
   }
 
   &.active-slider-1 {
-    background: url('/public/images/header-slider-1.png') center center no-repeat;
+    background: url('/public/images/header-slider-1.jpg') center center no-repeat;
   }
 
   &.active-slider-2 {
-    background: url('/public/images/header-slider-2.png') center center no-repeat;
+    background: url('/public/images/header-slider-2.jpg') center center no-repeat;
   }
 
   &.active-slider-3 {
-    background: url('/public/images/header-slider-3.png') center center no-repeat;
+    background: url('/public/images/header-slider-3.jpg') center center no-repeat;
   }
 
   &__container {
