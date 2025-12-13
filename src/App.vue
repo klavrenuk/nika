@@ -16,12 +16,6 @@
     <Contacts class="scroll-animate" />
     <Footer class="scroll-animate" />
 
-<!-- 
-    <Stages class="scroll-animate" />
-    <Steps class="scroll-animate" />
-    <Feedback class="scroll-animate" />
-    <Contacts class="scroll-animate" /> -->
-
     <AppCookieBanner v-if="isShowContent" />
   </div>
 </template>

@@ -17,13 +17,13 @@ const startAnimation = () => {
   intervalId = setInterval(() => {
     isChangeSlider.value = true;
     activeSlider.value = activeSlider.value === 3 ? 0 : activeSlider.value + 1
-  }, 5000)
+  }, 10000)
 }
 
 onMounted(() => {
   setTimeout(() => {
     startAnimation()
-  }, 3000)
+  }, 10000)
 })
 
 onBeforeUnmount(() => {
@@ -72,49 +72,24 @@ onBeforeUnmount(() => {
   padding-bottom: 50px;
   overflow: hidden;
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: rgba(0, 0, 0, 0.45);
-  //   z-index: 2;
-  // }
-
-
-  &.active-slider-1 {
-    opacity: 1;
-    transform: translateY(0);
-    background: url('/public/images/header-slider-1.png') center center no-repeat;
-    background-size: 100% 100%;
-
-    &::before {
-      content: none;
-    }
-  }
-
-  &.active-slider-2 {
-    opacity: 1;
-    transform: translateY(0);
-    background: url('/public/images/header-slider-2.png') center center no-repeat;
-    background-size: 100% 100%;
-
-    &::before {
-      content: none;
-    }
-  }
-
+  &.active-slider-1,
+  &.active-slider-2,
   &.active-slider-3 {
     opacity: 1;
     transform: translateY(0);
-    background: url('/public/images/header-slider-3.png') center center no-repeat;
     background-size: 100% 100%;
+  }
 
-    &::before {
-      content: none;
-    }
+  &.active-slider-1 {
+    background: url('/public/images/header-slider-1.png') center center no-repeat;
+  }
+
+  &.active-slider-2 {
+    background: url('/public/images/header-slider-2.png') center center no-repeat;
+  }
+
+  &.active-slider-3 {
+    background: url('/public/images/header-slider-3.png') center center no-repeat;
   }
 
   &__container {
@@ -145,6 +120,10 @@ onBeforeUnmount(() => {
 }
 
 @media all and (max-width: 1200px) {
+  .app-header {
+    background-size: auto;
+  }
+
   .app-header__img-top {
     display: none;
   }

@@ -3,12 +3,13 @@
         <swiper 
             :slidesPerView="'auto'" 
             :spaceBetween="30" 
+            :centeredSlides="true" 
             :pagination="{
                 clickable: false,
             }" 
-            :modules="modules" 
-            class="mySwiper"
-            :autoplay="{ delay: 1000, disableOnInteraction: false }"
+            :modules="modules" class="mySwiper"
+            :loop="true"
+            :autoplay="{ delay: 3000, disableOnInteraction: false }"
         >
             <swiper-slide v-for="(image, index) of list">
                 <a class="slider-item" @click="handleSliderClick(index)">
@@ -70,8 +71,12 @@ export default {
 </script>
 
 <style lang="scss">
+.mySwiper {
+}
+
 #app .swiper-wrapper {
     height: auto !important;
+    // overflow: visible !important;
 }
 
 .swiper {
@@ -84,9 +89,11 @@ export default {
 }
 
 .swiper-slide {
+    width: 650px !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .swiper-slide img {
@@ -94,10 +101,6 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.swiper-slide {
-    width: 650px;
 }
 
 .portfolio__wrap-title {

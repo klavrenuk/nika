@@ -187,7 +187,7 @@ const description = computed(() => {
 .header-bottom__description {
   color: #FFFFFF;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 110%;
 
