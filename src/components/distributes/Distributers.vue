@@ -5,11 +5,14 @@
                 <SectionName>Официальный представитель</SectionName>
 
                 <h3 class="distributers__title app-custom-color-title scroll-animate">
-                        <span>Дистрибьюторы</span> компаний:
-                    </h3>
+                    <span>Дистрибьюторы</span> компаний:
+                </h3>
 
-                <div class="distributers__block-img">
-                    <img src="/images/distributers-img.png" alt="" class="distributers__img" />
+                <div class="distributes__block-images">
+                    <div v-for="(distributer, index) in distributers"" :key="distributer" class="marquee-group" :class="`marquee-image marquee-image--${index % 2 === 0 ? 'left' : 'right'}`">
+                        <img :src="distributer"
+                            alt="Дистрибьютор" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -18,8 +21,13 @@
 
 <script setup>
 import SectionName from "@/components/section/SectionName.vue";
-</script>
 
+const distributers = [
+    '/images/dist1.png',
+    '/images/dist2.png',
+    '/images/dist3.png',
+];
+</script>
 
 <style scoped lang="scss">
 .distributers {
@@ -27,6 +35,7 @@ import SectionName from "@/components/section/SectionName.vue";
         display: flex;
         flex-direction: column;
         gap: 20px;
+        overflow: hidden;
     }
 
     &__title {
@@ -39,26 +48,117 @@ import SectionName from "@/components/section/SectionName.vue";
             line-height: 24px;
         }
     }
+}
 
-    &__block-img {
-        height: 305px;
-        position: relative;
+.distributes__block-images {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 4px;
-            background: #fff;
-        }
+.distributes__marquee-track {
+    display: flex;
+    gap: 60px;
+    width: max-content;
+    animation: marquee-scroll 20s linear infinite;
+}
 
-        & .distributers__img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+.marquee-group {}
+
+.distributes__marquee-track {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.marquee-image {
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.marquee-image--left {
+    animation: scroll-left 25s linear infinite;
+    animation-delay: 0.5s;
+}
+
+.marquee-image--right {
+    animation: scroll-right 25s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
+@keyframes float-left {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+@keyframes float-right {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(2deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-2deg);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .distributes__block-images {
+        height: 80px;
+    }
+
+    .marquee-image {
+        height: 50px;
+    }
+
+    .distributes__marquee-track,
+    .marquee-group {
+        gap: 40px;
     }
 }
 </style>
