@@ -66,7 +66,19 @@ const distributers = [
     animation: marquee-scroll 20s linear infinite;
 }
 
-.marquee-group {}
+.marquee-group {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: #fff;
+    }
+}
 
 .distributes__marquee-track {
     display: flex;
