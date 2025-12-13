@@ -68,6 +68,7 @@ const distributers = [
 
 .marquee-group {
     position: relative;
+    height: 105px;
 
     &:after {
         content: '';
@@ -160,14 +161,6 @@ const distributers = [
 }
 
 @media all and (max-width: 1200px) {
-    .distributes__block-images {
-        height: 80px;
-    }
-
-    .marquee-image {
-        height: 50px;
-    }
-
     .distributes__marquee-track,
     .marquee-group {
         gap: 40px;

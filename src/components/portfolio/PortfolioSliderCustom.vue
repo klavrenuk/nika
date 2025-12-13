@@ -41,7 +41,6 @@ const projects = [
         top: -40px;
         height: 310px;
         padding: 1rem .5rem;
-        gap: 1rem;
     }
 
     &__title {
@@ -51,6 +50,7 @@ const projects = [
         line-height: 120%;
 
         @media all and (max-width: 1200px) {
+            margin-top: .5rem;
             font-size: 24px;
         }
     }
