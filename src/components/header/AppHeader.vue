@@ -10,6 +10,7 @@ const isChangeSlider = ref(false)
 let intervalId = null
 
 const setActiveSlider = (index) => {
+  clearInterval(intervalId)
   activeSlider.value = index
 }
 

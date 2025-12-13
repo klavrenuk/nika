@@ -8,6 +8,7 @@ import PortfolioSlider from './PortfolioSlider.vue';
 
 const images = [
   {
+    id: 1,
     src: '/images/portfolio-img.jpg',
     thumbnail: '/images/portfolio-img.jpg',
     title: 'Музей Самбекские высоты',
@@ -15,6 +16,7 @@ const images = [
     text: 'Музей Самбекские высоты'
   },
   {
+    id: 2,
     src: '/images/portfolio-img-1.png',
     thumbnail: '/images/portfolio-img-1.png',
     title: 'Автовокзал им. М.А. Шолохова',
@@ -22,6 +24,7 @@ const images = [
     text: 'Автовокзал им. М.А. Шолохова'
   },
   {
+    id: 3,
     isCustom: true
   }
 ]
