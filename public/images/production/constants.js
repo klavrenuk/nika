@@ -1,27 +1,27 @@
 export const list = [
     {
         id: 1,
-        img: 'slide-1.png',
+        img: 'slide-1.jpg',
         text: 'Керамогранит для внешней многоквартирных домов, коммерческих и социальных объектов, бюджетных учреждений ',
-        magnifier: 'slide-1-magnifier.png'
+        magnifier: 'slide-1-magnifier.jpg'
     },
     {
         id: 2,
-        img: 'slide-2.png',
+        img: 'slide-2.jpg',
         text: 'Керамогранит для внутренней отделки многоквартирных домов, коммерческих и социальных объектов, бюджетных учреждений ',
-        magnifier: 'slide-2-magnifier.png'
+        magnifier: 'slide-2-magnifier.jpg'
     },
     {
         id: 3,
-        img: 'slide-3.png',
+        img: 'slide-3.jpg',
         text: 'Керамогранит и керамическая плитка для внутренней отделки квартир и домов ',
-        magnifier: 'slide-3-magnifier.png'
+        magnifier: 'slide-3-magnifier.jpg'
     },
     {
         id: 4,
-        img: 'slide-4.png',
+        img: 'slide-4.jpg',
         text: 'Для торговых центров и магазинов',
-        magnifier: 'slide-4-magnifier.png'
+        magnifier: 'slide-4-magnifier.jpg'
     },
 ]
 

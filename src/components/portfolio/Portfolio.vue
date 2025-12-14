@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import VueEasyLightbox from 'vue-easy-lightbox'
 
 import SectionName from "@/components/section/SectionName.vue";
 import PortfolioSlider from './PortfolioSlider.vue';
