@@ -6,7 +6,7 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
   <div id="application" class="feedback app-section">
     <div class="app-container">
       <div class="app-component-layout">
-        <img src="/images/feedback-photo.svg" alt="Форма обратной связи" />
+        <img src="/images/feedback-photo.png" alt="Форма обратной связи" />
 
         <FeedbackRight />
       </div>
