@@ -32,25 +32,11 @@ const images = [
 let sliderInterval = null
 
 const currentIndex = ref(0)
-const isOpen = ref(false)
 const visibleRef = ref(false)
 const indexRef = ref(0)
 
 const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % images.length
-}
-
-const showPhotoSwipe = (data) => {
-  if(!data || data.index === 2) {
-    return
-  }
-
-  visibleRef.value = true
-  indexRef.value = data.index
-}
-
-const hidePhotoSwipe = () => {
-  visibleRef.value = false;
 }
 
 onMounted(() => {
@@ -87,11 +73,6 @@ onMounted(() => {
         <div class="portfolio__right d-flex flex-column scroll-animate">
           <div class="slider no-scrollbar">
             <PortfolioSlider :list="images" @on-click="showPhotoSwipe" />
-
-             <Teleport to="body">
-              <vue-easy-lightbox :visible="visibleRef" :imgs="images" :index="indexRef"
-              @hide="hidePhotoSwipe"></vue-easy-lightbox>
-             </Teleport>
           </div>
 
           <div class="portfolio__right__bottom"></div>

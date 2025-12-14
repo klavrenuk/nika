@@ -13,8 +13,6 @@
     "photoswipe": "^5.4.4",
     "swiper": "^11.2.10",
     "vue": "^3.2.13",
-    "vue-draggable": "^2.0.6",
-    "vue-easy-lightbox": "^1.19.0",
     "vue-yandex-maps": "^2.1.9"
   },
   "devDependencies": {
