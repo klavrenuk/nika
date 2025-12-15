@@ -7,9 +7,7 @@
                 <img :src="`/images/production/${data.magnifier}`" </div>
             </div>
 
-            <p class="production-card__text">
-                {{ data.text }}
-            </p>
+            <p class="production-card__text" v-html="data.text" />
             <!-- <a class="production-card__link">
             подробнее
         </a> -->

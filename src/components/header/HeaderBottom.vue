@@ -13,7 +13,7 @@ const { activeSlider } = defineProps({
 const description = computed(() => {
   switch (activeSlider) {
     case 0:
-      return 'Оптовые поставки керамической плитки и керамогранита от 100 кв.м.'
+      return 'Оптовые поставки <br />керамической плитки и керамогранита от 100 кв.м.'
 
     case 1:
       return 'Комплектация строительных объектов по всей Росии';
@@ -22,7 +22,7 @@ const description = computed(() => {
       return 'Более 80 000 кв. м. плитки в наличии на складе';
 
     case 3:
-      return 'Официальный дилер PROTILES, Piastrella, PROGRES, UNITILE, Gracia ceramica, Kerama Marazzi, Italon'
+      return 'Официальный дилер<br /> PROTILES, Piastrella, PROGRES, UNITILE, Gracia ceramica,<br /> Kerama Marazzi, Italon'
 
     default:
       return null;
@@ -55,8 +55,8 @@ const description = computed(() => {
         ООО «НИКА»
       </h1>
 
-      <p v-if="activeSlider !== null" class="header-bottom__description">
-        {{ description }}
+      <p v-if="activeSlider !== null" class="header-bottom__description" v-html="description">
+        
       </p>
 
       <div class="header-bottom__control d-flex align-items-center">

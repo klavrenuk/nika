@@ -2,13 +2,13 @@ export const list = [
     {
         id: 1,
         img: 'slide-1.jpg',
-        text: 'Керамогранит для внешней многоквартирных домов, коммерческих и социальных объектов, бюджетных учреждений ',
+        text: 'Керамогранит для внешней отделки многоквартирных домов, коммерческих и социальных объектов, бюджетных учреждений',
         magnifier: 'slide-1-magnifier.jpg'
     },
     {
         id: 2,
         img: 'slide-2.jpg',
-        text: 'Керамогранит для внутренней отделки многоквартирных домов, коммерческих и социальных объектов, бюджетных учреждений ',
+        text: 'Керамогранит для внутренней отделки<br /> многоквартирных домов, коммерческих и социальных объектов, бюджетных учреждений ',
         magnifier: 'slide-2-magnifier.jpg'
     },
     {
@@ -28,11 +28,11 @@ export const list = [
 export const listNoImg = [
     {
         id: '03',
-        text: 'Широкоформатная плитка для оформления интерьеров и производства столов'
+        text: 'Широкоформатная плитка для оформления<br /> интерьеров и производства столов'
     },
     {
         id: '04',
-        text: 'Для медицинских учреждений и косметологических кабинетов'
+        text: 'Для медицинских учреждений<br /> и косметологических кабинетов'
     },
 
     {
@@ -68,24 +68,24 @@ export const listWithImg = [
         id: 1,
         img: 'slide-with-img-1.png',
         text: 'Для автосалонов и сервисных автоцентров',
-        magnifier: 'slide-1-magnifier-no-img.png'
+        magnifier: 'slide-1-magnifier-no-img.jpg'
     },
     {
         id: 2,
         img: 'slide-with-img-2.png',
         text: 'Для автосалонов и сервисных автоцентров',
-        magnifier: 'slide-2-magnifier-no-img.png'
+        magnifier: 'slide-2-magnifier-no-img.jpg'
     },
     {
         id: 3,
         img: 'slide-with-img-3.png',
         text: 'Для автосалонов и сервисных автоцентров',
-        magnifier: 'slide-3-magnifier-no-img.png'
+        magnifier: 'slide-3-magnifier-no-img.jpg'
     },
     {
         id: 4,
         img: 'slide-with-img-4.png',
         text: 'Для автосалонов и сервисных автоцентров',
-        magnifier: 'slide-4-magnifier-no-img.png'
+        magnifier: 'slide-4-magnifier-no-img.jpg'
     },
 ]
