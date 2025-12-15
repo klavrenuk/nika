@@ -7,45 +7,43 @@
                 <h3 class="distributers__title app-custom-color-title scroll-animate">
                     <span>Дистрибьюторы</span> компаний:
                 </h3>
+            </div>
+        </div>
 
-                <div class="distributes__block-images">
-                    <div class="marquee-track marquee-track--top">
-                        <div class="marquee-content">
-                            <div v-for="(distributer, index) in distributers" :key="'top-' + index" 
-                                 class="marquee-item">
-                                <img :src="distributers[0]" alt="Дистрибьютор" />
-                            </div>
-                            <div v-for="(distributer, index) in distributers" :key="'top-duplicate-' + index" 
-                                 class="marquee-item">
-                                <img :src="distributers[0]" alt="Дистрибьютор" />
-                            </div>
-                        </div>
+        <div class="distributes__block-images">
+            <div class="marquee-track marquee-track--top">
+                <div class="marquee-content">
+                    <div v-for="(distributer, index) in distributers" :key="'top-' + index" class="marquee-item">
+                        <img :src="distributers[0]" alt="Дистрибьютор" />
                     </div>
-
-                    <div class="marquee-track marquee-track--bottom">
-                        <div class="marquee-content">
-                            <div v-for="(distributer, index) in [...distributers].reverse()" :key="'bottom-' + index" 
-                                 class="marquee-item">
-                                <img :src="distributers[1]" alt="Дистрибьютор" />
-                            </div>
-                            <div v-for="(distributer, index) in [...distributers].reverse()" :key="'bottom-duplicate-' + index" 
-                                 class="marquee-item">
-                                <img :src="distributers[[1]]" alt="Дистрибьютор" />
-                            </div>
-                        </div>
+                    <div v-for="(distributer, index) in distributers" :key="'top-duplicate-' + index"
+                        class="marquee-item">
+                        <img :src="distributers[0]" alt="Дистрибьютор" />
                     </div>
+                </div>
+            </div>
 
-                    <div class="marquee-track marquee-track--top">
-                        <div class="marquee-content">
-                            <div v-for="(distributer, index) in distributers" :key="'top-' + index" 
-                                 class="marquee-item">
-                                <img :src="distributers[2]" alt="Дистрибьютор" />
-                            </div>
-                            <div v-for="(distributer, index) in distributers" :key="'top-duplicate-' + index" 
-                                 class="marquee-item">
-                                <img :src="distributers[2]" alt="Дистрибьютор" />
-                            </div>
-                        </div>
+            <div class="marquee-track marquee-track--bottom">
+                <div class="marquee-content">
+                    <div v-for="(distributer, index) in [...distributers].reverse()" :key="'bottom-' + index"
+                        class="marquee-item">
+                        <img :src="distributers[1]" alt="Дистрибьютор" />
+                    </div>
+                    <div v-for="(distributer, index) in [...distributers].reverse()" :key="'bottom-duplicate-' + index"
+                        class="marquee-item">
+                        <img :src="distributers[[1]]" alt="Дистрибьютор" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-track marquee-track--top">
+                <div class="marquee-content">
+                    <div v-for="(distributer, index) in distributers" :key="'top-' + index" class="marquee-item">
+                        <img :src="distributers[2]" alt="Дистрибьютор" />
+                    </div>
+                    <div v-for="(distributer, index) in distributers" :key="'top-duplicate-' + index"
+                        class="marquee-item">
+                        <img :src="distributers[2]" alt="Дистрибьютор" />
                     </div>
                 </div>
             </div>
@@ -65,6 +63,9 @@ const distributers = [
 
 <style scoped lang="scss">
 .distributers {
+    padding-left: 0;
+    padding-right: 0;
+    
     &__container {
         display: flex;
         flex-direction: column;
@@ -98,7 +99,7 @@ const distributers = [
     width: 100%;
     overflow: hidden;
     position: relative;
-    
+
     &:before {
         content: '';
         position: absolute;
@@ -106,11 +107,11 @@ const distributers = [
         left: 0;
         width: 100px;
         height: 100%;
-        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
         z-index: 2;
         pointer-events: none;
     }
-    
+
     &:after {
         content: '';
         position: absolute;
@@ -118,7 +119,7 @@ const distributers = [
         right: 0;
         width: 100px;
         height: 100%;
-        background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
         z-index: 2;
         pointer-events: none;
     }
@@ -142,7 +143,7 @@ const distributers = [
     align-items: center;
     justify-content: center;
     position: relative;
-    
+
     &:after {
         content: '';
         position: absolute;
@@ -152,13 +153,13 @@ const distributers = [
         height: 100%;
         background: #fff;
     }
-    
+
     img {
         height: 100%;
         width: auto;
         object-fit: contain;
         transition: transform 0.3s ease;
-        
+
         &:hover {
             transform: scale(1.05);
         }
@@ -169,6 +170,7 @@ const distributers = [
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
