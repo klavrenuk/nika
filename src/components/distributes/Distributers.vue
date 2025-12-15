@@ -9,20 +9,41 @@
                 </h3>
 
                 <div class="distributes__block-images">
-                    <div class="marquee-track">
-                        <div class="marquee-group">
-                            <div v-for="(distributer, index) in distributers" 
-                                 :key="`first-${index}`" 
+                    <div class="marquee-track marquee-track--top">
+                        <div class="marquee-content">
+                            <div v-for="(distributer, index) in distributers" :key="'top-' + index" 
                                  class="marquee-item">
-                                <img :src="distributer" alt="Дистрибьютор" />
+                                <img :src="distributers[0]" alt="Дистрибьютор" />
+                            </div>
+                            <div v-for="(distributer, index) in distributers" :key="'top-duplicate-' + index" 
+                                 class="marquee-item">
+                                <img :src="distributers[0]" alt="Дистрибьютор" />
                             </div>
                         </div>
+                    </div>
 
-                        <div class="marquee-group">
-                            <div v-for="(distributer, index) in distributers" 
-                                 :key="`second-${index}`" 
+                    <div class="marquee-track marquee-track--bottom">
+                        <div class="marquee-content">
+                            <div v-for="(distributer, index) in [...distributers].reverse()" :key="'bottom-' + index" 
                                  class="marquee-item">
-                                <img :src="distributer" alt="Дистрибьютор" />
+                                <img :src="distributers[1]" alt="Дистрибьютор" />
+                            </div>
+                            <div v-for="(distributer, index) in [...distributers].reverse()" :key="'bottom-duplicate-' + index" 
+                                 class="marquee-item">
+                                <img :src="distributers[[1]]" alt="Дистрибьютор" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marquee-track marquee-track--top">
+                        <div class="marquee-content">
+                            <div v-for="(distributer, index) in distributers" :key="'top-' + index" 
+                                 class="marquee-item">
+                                <img :src="distributers[2]" alt="Дистрибьютор" />
+                            </div>
+                            <div v-for="(distributer, index) in distributers" :key="'top-duplicate-' + index" 
+                                 class="marquee-item">
+                                <img :src="distributers[2]" alt="Дистрибьютор" />
                             </div>
                         </div>
                     </div>
@@ -68,45 +89,79 @@ const distributers = [
     overflow: hidden;
     position: relative;
     display: flex;
-    align-items: center;
-    min-height: 120px;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee-scroll 20s linear infinite;
-    will-change: transform;
-}
-
-.marquee-group {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    margin-right: 30px;
-}
-
-.marquee-item {
-    height: 105px;
-    display: flex;
-    align-items: center;
-    
-    img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-    }
-    
+    width: 100%;
+    overflow: hidden;
     position: relative;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        z-index: 2;
+        pointer-events: none;
+    }
     
     &:after {
         content: '';
         position: absolute;
         top: 0;
         right: 0;
-        width: 3px;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        z-index: 2;
+        pointer-events: none;
+    }
+}
+
+.marquee-content {
+    display: flex;
+    gap: 60px;
+    width: max-content;
+    animation: marquee-scroll 60s linear infinite;
+}
+
+.marquee-track--bottom .marquee-content {
+    animation-direction: reverse;
+}
+
+.marquee-item {
+    flex-shrink: 0;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 10px;
         height: 100%;
         background: #fff;
+    }
+    
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
 
@@ -116,35 +171,6 @@ const distributers = [
     }
     100% {
         transform: translateX(-50%);
-    }
-}
-
-@media all and (max-width: 1200px) {
-    .marquee-group {
-        gap: 40px;
-    }
-    
-    .marquee-item {
-        height: 80px;
-    }
-}
-
-@media all and (max-width: 768px) {
-    .marquee-group {
-        gap: 30px;
-    }
-    
-    .marquee-item {
-        height: 60px;
-        
-        &:after {
-            right: -15px;
-            width: 2px;
-        }
-    }
-    
-    .marquee-track {
-        animation-duration: 15s;
     }
 }
 </style>
