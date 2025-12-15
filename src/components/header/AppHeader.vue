@@ -68,17 +68,20 @@ onBeforeUnmount(() => {
   width: 100%;
   background: url('/public/images/header-slider-0.jpg') center center no-repeat;
   background-color: #000;
-  background-size: 100% 100%;
+  background-size: 100% 100% !important;
   z-index: 2;
   padding-bottom: 50px;
   overflow: hidden;
+
+  @media all and (min-height: 1400px) {
+    background-size: cover !important;
+  }
 
   &.active-slider-1,
   &.active-slider-2,
   &.active-slider-3 {
     opacity: 1;
     transform: translateY(0);
-    background-size: 100% 100%;
   }
 
   &.active-slider-1 {

@@ -9,9 +9,22 @@
                 </h3>
 
                 <div class="distributes__block-images">
-                    <div v-for="(distributer, index) in distributers"" :key="distributer" class="marquee-group" :class="`marquee-image marquee-image--${index % 2 === 0 ? 'left' : 'right'}`">
-                        <img :src="distributer"
-                            alt="Дистрибьютор" />
+                    <div class="marquee-track">
+                        <div class="marquee-group">
+                            <div v-for="(distributer, index) in distributers" 
+                                 :key="`first-${index}`" 
+                                 class="marquee-item">
+                                <img :src="distributer" alt="Дистрибьютор" />
+                            </div>
+                        </div>
+
+                        <div class="marquee-group">
+                            <div v-for="(distributer, index) in distributers" 
+                                 :key="`second-${index}`" 
+                                 class="marquee-item">
+                                <img :src="distributer" alt="Дистрибьютор" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,21 +68,37 @@ const distributers = [
     overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    min-height: 120px;
 }
 
-.distributes__marquee-track {
+.marquee-track {
     display: flex;
-    gap: 60px;
     width: max-content;
     animation: marquee-scroll 20s linear infinite;
+    will-change: transform;
 }
 
 .marquee-group {
-    position: relative;
-    height: 105px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-right: 30px;
+}
 
+.marquee-item {
+    height: 105px;
+    display: flex;
+    align-items: center;
+    
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    position: relative;
+    
     &:after {
         content: '';
         position: absolute;
@@ -81,89 +110,41 @@ const distributers = [
     }
 }
 
-.distributes__marquee-track {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.marquee-image {
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-.marquee-image--left {
-    animation: scroll-left 25s linear infinite;
-    animation-delay: 0.5s;
-}
-
-.marquee-image--right {
-    animation: scroll-right 25s linear infinite;
-    animation-delay: 0.5s;
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100vw);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
-
 @keyframes marquee-scroll {
     0% {
         transform: translateX(0);
     }
-
     100% {
-        transform: translateX(calc(-100% / 3));
-    }
-}
-
-@keyframes float-left {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(-2deg);
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(2deg);
-    }
-}
-
-@keyframes float-right {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(2deg);
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(-2deg);
-    }
-}
-
-@keyframes scroll-right {
-    0% {
-        transform: translateX(-100vw);
-    }
-    100% {
-        transform: translateX(100vw);
+        transform: translateX(-50%);
     }
 }
 
 @media all and (max-width: 1200px) {
-    .distributes__marquee-track,
     .marquee-group {
         gap: 40px;
+    }
+    
+    .marquee-item {
+        height: 80px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .marquee-group {
+        gap: 30px;
+    }
+    
+    .marquee-item {
+        height: 60px;
+        
+        &:after {
+            right: -15px;
+            width: 2px;
+        }
+    }
+    
+    .marquee-track {
+        animation-duration: 15s;
     }
 }
 </style>
