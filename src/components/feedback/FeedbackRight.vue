@@ -55,7 +55,7 @@ const handleSubmit = () => {
 .feedback-right {
   &__title {
     margin: 40px 0 10px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 35px;
     color: #121211;
     line-height: 43px;

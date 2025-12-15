@@ -41,7 +41,7 @@ export const listNoImg = [
     },
     {
         id: '06',
-        text: 'Для производственных помещений'
+        text: 'Для гостиниц и отелей'
     },
 
     {
@@ -79,13 +79,13 @@ export const listWithImg = [
     {
         id: 3,
         img: 'slide-with-img-3.png',
-        text: 'Для автосалонов и сервисных автоцентров',
+        text: 'Клинкерная плита',
         magnifier: 'slide-3-magnifier-no-img.jpg'
     },
     {
         id: 4,
         img: 'slide-with-img-4.png',
-        text: 'Для автосалонов и сервисных автоцентров',
+        text: 'Для отделки помещений ресторанов и<br /> точек быстрого питания',
         magnifier: 'slide-4-magnifier-no-img.jpg'
     },
 ]

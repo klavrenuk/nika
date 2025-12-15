@@ -16,7 +16,7 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
             {{ req }}
           </li>
           <li>
-            <a>Скачать реквизиты</a>
+            <a href="/docs/agree.docx" download="Реквизиты">Скачать реквизиты</a>
           </li>
         </ul>
       </section>

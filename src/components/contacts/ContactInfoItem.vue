@@ -8,7 +8,7 @@ defineProps({
 <template>
   <div class="contact-info-item d-flex flex-column">
     <label class="contact-info-item__label">{{ label }}</label>
-    <span class="contact-info-item__text">{{ text }}</span>
+    <span class="contact-info-item__text" v-html="text" />
   </div>
 </template>
 

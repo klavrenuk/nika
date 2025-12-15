@@ -22,7 +22,7 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
           <div class="contacts__info">
             <ContactInfoItem label="Телефон:" text="+7 (938) 080-22-22" />
             <ContactInfoItem label="Почта:" text="plitka2222@mail.ru" />
-            <ContactInfoItem label="Адрес:" text="Ростов-на-Дону, ул. Ерёменко, 89Б/5" />
+            <ContactInfoItem label="Адрес:" text="Ростов-на-Дону,<br /> ул. Ерёменко, 89Б/5" />
             <ContactInfoItem label="Часы работы:" text="Пн–Вс 10:00–20:00" />
           </div>
         </div>
