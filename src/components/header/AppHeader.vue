@@ -125,7 +125,7 @@ onBeforeUnmount(() => {
 
 @media all and (max-width: 1200px) {
   .app-header {
-    background-size: auto;
+    background-size: auto !important;
   }
 
   .app-header__img-top {
