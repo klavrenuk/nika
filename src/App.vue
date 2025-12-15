@@ -1,5 +1,5 @@
 <template>
-  <div class="app" :class="{'show': isShowContent}">
+  <div class="app" :class="{ 'show': isShowContent }">
     <AppLoader v-if="!isShowContent" />
 
     <CustomCursor />
@@ -54,16 +54,22 @@ const handleIntersection = (entries) => {
 }
 
 const startAnimation = () => {
-  const elements = document.querySelectorAll('.scroll-animate')
+  try {
+    const elements = document.querySelectorAll('.scroll-animate')
 
-  observer = new IntersectionObserver(handleIntersection, {
-    rootMargin: '0px',
-    threshold: 0.1
-  })
+    observer = new IntersectionObserver(handleIntersection, {
+      rootMargin: '0px',
+      threshold: 0.1
+    })
 
-  elements.forEach(element => {
-    observer.observe(element)
-  })
+    elements.forEach(element => {
+      observer.observe(element)
+    })
+
+  } catch (err) {
+    console.error(err);
+    isShowContent.value = true;
+  }
 }
 
 onMounted(() => {
@@ -93,8 +99,8 @@ onMounted(() => {
   opacity: 0;
   transform: translateY(20px);
   transition:
-      opacity 1.5s cubic-bezier(.215,.61,.355,1) .1s,
-      transform 1s cubic-bezier(.215,.61,.355,1) .1s;
+    opacity 1.5s cubic-bezier(.215, .61, .355, 1) .1s,
+    transform 1s cubic-bezier(.215, .61, .355, 1) .1s;
 
   &.visible {
     opacity: 1;
