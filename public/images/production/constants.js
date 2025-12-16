@@ -41,7 +41,7 @@ export const listNoImg = [
     },
     {
         id: '06',
-        text: 'Для гостиниц и отелей'
+        text: 'Для производственных помещений'
     },
 
     {
@@ -73,7 +73,7 @@ export const listWithImg = [
     {
         id: 2,
         img: 'slide-with-img-2.png',
-        text: 'Для автосалонов и сервисных автоцентров',
+        text: 'Для гостиниц и отелей',
         magnifier: 'slide-2-magnifier-no-img.jpg'
     },
     {
