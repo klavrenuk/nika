@@ -9,9 +9,9 @@
             <a class="slider-item">
                 <PortfolioSliderCustom v-if="image.isCustom" />
                 <img v-else :src="image.src" :alt="image.alt" class="slider-item__img">
-                <div class="portfolio__wrap-title" v-if="index !== 2">
+                <div class="portfolio__wrap-title" v-if="!image.isCustom">
                     <span class="portfolio__right__title">{{ image.text }}</span>
-                    <span class="portfolio__right__title">15 000 м²</span>
+                    <span class="portfolio__right__title">{{  image.textRight }}</span>
                 </div>
             </a>
         </swiper-slide>

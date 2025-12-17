@@ -8,22 +8,128 @@ import PortfolioSlider from './PortfolioSlider.vue';
 const images = [
   {
     id: 1,
-    src: '/images/portfolio-img.jpg',
-    thumbnail: '/images/portfolio-img.jpg',
-    title: 'Музей Самбекские высоты',
-    alt: 'Музей Самбекские высоты',
-    text: 'Музей Самбекские высоты'
+    src: '/images/portfolio/Автовокзал имени М. А. Шолохова 15000 м² .jpg',
+    thumbnail: '/images/portfolio-img-1.png',
+    title: 'Автовокзал имени М. А. Шолохова .jpg',
+    alt: 'Автовокзал им. М.А. Шолохова',
+    text: 'Автовокзал им. М.А. Шолохова',
+    textRight: '15000 м²'
   },
   {
     id: 2,
-    src: '/images/portfolio-img-1.png',
-    thumbnail: '/images/portfolio-img-1.png',
-    title: 'Автовокзал им. М.А. Шолохова',
-    alt: 'Автовокзал им. М.А. Шолохова',
-    text: 'Автовокзал им. М.А. Шолохова'
+    src: '/images/portfolio/ЖК «Николаевский»  20000 м².jpg',
+    thumbnail: '/images/portfolio/portfolio-img-1.png',
+    title: 'ЖК «Николаевский»',
+    alt: 'ЖК «Николаевский»',
+    text: 'ЖК «Николаевский»',
+    textRight: '20000 м²'
   },
   {
     id: 3,
+    src: '/images/portfolio/ЖК «Левенцовский»  40000 м².jpg',
+    thumbnail: '/images/portfolio/portfolio/ЖК «Левенцовский»  40000 м².jpg',
+    title: 'ЖК «Левенцовский»  40000 м².jpg',
+    alt: 'ЖК «Левенцовский»  40000 м².jpg',
+    text: 'ЖК «Левенцовский».jpg',
+    textRight: '40000 м²'
+  },
+
+  {
+    id: 4,
+    src: '/images/portfolio/ЖК «Сокольники»  15000 м².webp',
+    thumbnail: '/images/portfolio/ЖК «Сокольники»',
+    title: 'ЖК «Сокольники»',
+    alt: 'ЖК «Сокольники»',
+    text: 'ЖК «Сокольники»',
+    textRight: '15000 м²'
+  },
+  {
+    id: 5,
+    src: '/images/portfolio/МБОУ СОШ 3500 м².jpg',
+    thumbnail: '/images/portfolio/МБОУ СОШ 3500 м².jpg',
+    title: 'МБОУ СОШ 3500 м².jpg',
+    alt: 'МБОУ СОШ 3500 м².jpg',
+    text: 'МБОУ СОШ',
+    textRight: '3500 м²'
+  },
+  {
+    id: 6,
+    src: '/images/portfolio/МБОУ СОШ № 39 2500 м²_.webp',
+    thumbnail: '/images/portfolio/МБОУ СОШ № 39 2500 м²_.webp',
+    title: 'МБОУ СОШ № 39 2500 м²',
+    alt: 'МБОУ СОШ № 39 2500 м²',
+    text: 'МБОУ СОШ № 39',
+    textRight: '2500 м²'
+  },
+
+  {
+    id: 7,
+    src: '/images/portfolio/Отель «Sun palase Gagra» 2500 м².jpg',
+    thumbnail: '/images/portfolio/portfolio-img-1.png',
+    title: 'Отель «Sun palase Gagra»',
+    alt: 'Отель «Sun palase Gagra»',
+    text: 'Отель «Sun palase Gagra»',
+    textRight: '2500 м²'
+  },
+  {
+    id: 8,
+    src: '/images/portfolio/Перинатальный центр 5000 м².jpg',
+    thumbnail: '/images/portfolio/portfolio-img-1.png',
+    title: 'Перинатальный центр',
+    alt: 'Перинатальный центр',
+    text: 'Перинатальный центр',
+    textRight: '5000 м²'
+  },
+  {
+    id: 9,
+    src: '/images/portfolio/Ресторан «KFS» 1000 м².jpg',
+    thumbnail: '/images/portfolio/Ресторан «KFS»',
+    title: 'Ресторан «KFS»',
+    alt: 'Ресторан «KFS»',
+    text: 'Ресторан «KFS»',
+    textRight: '1000 м²'
+  },
+
+  {
+    id: 10,
+    src: '/images/portfolio/ТЦ «Сиверс»  15000м2.jpg',
+    thumbnail: '/images/portfolio/ТЦ «Сиверс»  15000м2.jpg',
+    title: 'ТЦ «Сиверс»',
+    alt: 'ТЦ «Сиверс»',
+    text: 'ТЦ «Сиверс»',
+    textRight: '15000 м2'
+  },
+  {
+    id: 11,
+    src: '/images/portfolio/Центр неврологии 9 000 м² г. Москва.jpg',
+    thumbnail: '/images/portfolio/Центр неврологии 9 000 м² г. Москва.jpg',
+    title: 'Центр неврологии 9 000 м² г. Москва.jpg',
+    alt: 'Центр неврологии 9 000 м² г. Москва.jpg',
+    text: 'Центр неврологии 9 000 м² г. Москва.jpg',
+    textRight: '9 000 м²'
+  },
+  {
+    id: 12,
+    src: '/images/portfolio/Amra Park-hotel & SPA 4500 м².jpg',
+    thumbnail: '/images/portfolio/Amra Park-hotel & SPA 4500 м²',
+    title: 'Amra Park-hotel & SPA 4500 м²',
+    alt: 'Amra Park-hotel & SPA 4500 м²',
+    text: 'Amra Park-hotel & SPA',
+    textRight: '4500 м²'
+  },
+
+  {
+    id: 13,
+    src: '/images/portfolio/Paradise Beach Hotel 3500 м² .jpg',
+    thumbnail: '/images/portfolio/Paradise Beach Hotel 3500 м² .jpg',
+    title: 'Paradise Beach Hotel 3500 м²',
+    alt: 'Paradise Beach Hotel 3500 м²',
+    text: 'Paradise Beach Hotel 3500 м²',
+    textRight: '3500 м²'
+  },
+
+  {
+    id: 14,
     isCustom: true
   }
 ]
