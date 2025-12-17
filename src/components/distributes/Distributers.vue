@@ -55,9 +55,9 @@
 import SectionName from "@/components/section/SectionName.vue";
 
 const distributers = [
-    '/images/dist1.png',
-    '/images/dist2.png',
-    '/images/dist3.png',
+    '/images/dist1.svg',
+    '/images/dist2.svg',
+    '/images/dist3.svg',
 ];
 </script>
 
