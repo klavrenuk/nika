@@ -4,14 +4,12 @@
             <img :src="imgSrc" alt="" class="production-card__img" />
 
             <div class="production-card__magnifier">
-                <img :src="`/images/production/${data.magnifier}`" </div>
+                <img :src="`/images/production/${data.magnifier}`"  />
             </div>
 
             <p class="production-card__text" v-html="data.text" />
-            <!-- <a class="production-card__link">
-            подробнее
-        </a> -->
         </div>
+    </div>
 </template>
 
 <script setup>
@@ -51,6 +49,7 @@ const imgSrc = computed(() => {
     &__img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
     &__text {

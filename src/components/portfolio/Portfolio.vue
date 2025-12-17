@@ -13,7 +13,7 @@ const images = [
     title: 'Автовокзал имени М. А. Шолохова .jpg',
     alt: 'Автовокзал им. М.А. Шолохова',
     text: 'Автовокзал им. М.А. Шолохова',
-    textRight: '15000 м²'
+    textRight: '15000м²'
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const images = [
     title: 'ЖК «Николаевский»',
     alt: 'ЖК «Николаевский»',
     text: 'ЖК «Николаевский»',
-    textRight: '20000 м²'
+    textRight: '20000м²'
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const images = [
     title: 'ЖК «Левенцовский»  40000 м².jpg',
     alt: 'ЖК «Левенцовский»  40000 м².jpg',
     text: 'ЖК «Левенцовский».jpg',
-    textRight: '40000 м²'
+    textRight: '40000м²'
   },
 
   {
@@ -41,7 +41,7 @@ const images = [
     title: 'ЖК «Сокольники»',
     alt: 'ЖК «Сокольники»',
     text: 'ЖК «Сокольники»',
-    textRight: '15000 м²'
+    textRight: '15000м²'
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const images = [
     title: 'МБОУ СОШ 3500 м².jpg',
     alt: 'МБОУ СОШ 3500 м².jpg',
     text: 'МБОУ СОШ',
-    textRight: '3500 м²'
+    textRight: '3500м²'
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const images = [
     title: 'МБОУ СОШ № 39 2500 м²',
     alt: 'МБОУ СОШ № 39 2500 м²',
     text: 'МБОУ СОШ № 39',
-    textRight: '2500 м²'
+    textRight: '2500м²'
   },
 
   {
@@ -69,7 +69,7 @@ const images = [
     title: 'Отель «Sun palase Gagra»',
     alt: 'Отель «Sun palase Gagra»',
     text: 'Отель «Sun palase Gagra»',
-    textRight: '2500 м²'
+    textRight: '2500м²'
   },
   {
     id: 8,
@@ -78,7 +78,7 @@ const images = [
     title: 'Перинатальный центр',
     alt: 'Перинатальный центр',
     text: 'Перинатальный центр',
-    textRight: '5000 м²'
+    textRight: '5000м²'
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const images = [
     title: 'Ресторан «KFS»',
     alt: 'Ресторан «KFS»',
     text: 'Ресторан «KFS»',
-    textRight: '1000 м²'
+    textRight: '1000м²'
   },
 
   {
@@ -97,7 +97,7 @@ const images = [
     title: 'ТЦ «Сиверс»',
     alt: 'ТЦ «Сиверс»',
     text: 'ТЦ «Сиверс»',
-    textRight: '15000 м2'
+    textRight: '15000м2'
   },
   {
     id: 11,
@@ -105,8 +105,8 @@ const images = [
     thumbnail: '/images/portfolio/Центр неврологии 9 000 м² г. Москва.jpg',
     title: 'Центр неврологии 9 000 м² г. Москва.jpg',
     alt: 'Центр неврологии 9 000 м² г. Москва.jpg',
-    text: 'Центр неврологии 9 000 м² г. Москва.jpg',
-    textRight: '9 000 м²'
+    text: 'Центр неврологии',
+    textRight: '9 000м²'
   },
   {
     id: 12,
@@ -115,7 +115,7 @@ const images = [
     title: 'Amra Park-hotel & SPA 4500 м²',
     alt: 'Amra Park-hotel & SPA 4500 м²',
     text: 'Amra Park-hotel & SPA',
-    textRight: '4500 м²'
+    textRight: '4500м²'
   },
 
   {
@@ -124,8 +124,8 @@ const images = [
     thumbnail: '/images/portfolio/Paradise Beach Hotel 3500 м² .jpg',
     title: 'Paradise Beach Hotel 3500 м²',
     alt: 'Paradise Beach Hotel 3500 м²',
-    text: 'Paradise Beach Hotel 3500 м²',
-    textRight: '3500 м²'
+    text: 'Paradise Beach Hotel',
+    textRight: '3500м²'
   },
 
   {

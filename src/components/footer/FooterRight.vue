@@ -2,6 +2,8 @@
 import { socials, footerRequisites } from '@/constants/constants';
 
 import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
+
+const currentYear = new Date().getFullYear();
 </script>
 
 <template>
@@ -16,7 +18,7 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
             {{ req }}
           </li>
           <li>
-            <a href="/docs/agree.docx" download="Реквизиты">Скачать реквизиты</a>
+            <a href="/docs/Ника реквизиты.docx" download="Реквизиты">Скачать реквизиты</a>
           </li>
         </ul>
       </section>
@@ -36,7 +38,7 @@ import FooterContactBlock from "@/components/footer/FooterContactBlock.vue";
         </div>
 
         <div class="footer-right__texts-bottom">
-          <p>© 2024. Все права защищены</p>
+          <p>© {{ currentYear }}. Все права защищены</p>
           <p>Политика конфиденциальности | Пользовательское соглашение</p>
         </div>
       </div>
