@@ -39,7 +39,9 @@ const currentYear = new Date().getFullYear();
 
         <div class="footer-right__texts-bottom">
           <p>© {{ currentYear }}. Все права защищены</p>
-          <p>Политика конфиденциальности | Пользовательское соглашение</p>
+          <p>
+            <a href="/docs/nika-partners.ru Политика Обработки персональных данных" download="Политика конфиденциальности">Политика конфиденциальности</a> | <a href="/docs/nika-partners.ru Согласие на обработку персональных данных.pdf" download="Пользовательское соглашение">Пользовательское соглашение</a>
+          </p>
         </div>
       </div>
     </div>

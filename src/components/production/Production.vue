@@ -1,5 +1,5 @@
 <template>
-    <section id="Production" class="app-section production">
+    <section id="Cases" class="app-section production">
         <div class="app-container">
             <div class="production__container">
                 <SectionName>Продукция</SectionName>

@@ -60,7 +60,7 @@ const description = computed(() => {
       </p>
 
       <div class="header-bottom__control d-flex align-items-center">
-        <a class="app-button header-bottom__btn header-bottom__catalog">Смотреть продукцию</a>
+        <a class="app-button header-bottom__btn header-bottom__catalog" href="#Cases">Смотреть продукцию</a>
         <a class="app-button header-bottom__btn header-bottom__view-objects" href="#Production">Реализованные объекты
           ↓</a>
       </div>
