@@ -40,7 +40,7 @@ const currentYear = new Date().getFullYear();
         <div class="footer-right__texts-bottom">
           <p>© {{ currentYear }}. Все права защищены</p>
           <p>
-            <a href="/docs/nika-partners.ru Политика Обработки персональных данных" download="Политика конфиденциальности">Политика конфиденциальности</a> | <a href="/docs/nika-partners.ru Согласие на обработку персональных данных.pdf" download="Пользовательское соглашение">Пользовательское соглашение</a>
+            <a href="/docs/nika-partners.ru Политика Обработки персональных данных.pdf" download="Политика конфиденциальности">Политика конфиденциальности</a> | <a href="/docs/nika-partners.ru Согласие на обработку персональных данных.pdf" download="Пользовательское соглашение">Пользовательское соглашение</a>
           </p>
         </div>
       </div>
@@ -122,6 +122,12 @@ const currentYear = new Date().getFullYear();
       color: #555555;
       font-size: 16px;
     }
+
+    & a {
+      &:hover, &:active, &:focus {
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -140,9 +146,15 @@ const currentYear = new Date().getFullYear();
     display: none;
   }
 
-  & p {
+  & p, & a {
     color: #555555;
     font-size: 14px;
+  }
+
+  & a {
+    &:hover, &:active, &:focus {
+      color: #fff;
+    }
   }
 }
 

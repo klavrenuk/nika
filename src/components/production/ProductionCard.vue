@@ -6,9 +6,9 @@
             <div class="production-card__magnifier">
                 <img :src="`/images/production/${data.magnifier}`"  />
             </div>
-
-            <p class="production-card__text" v-html="data.text" />
         </div>
+        
+        <p class="production-card__text" v-html="data.text" />
     </div>
 </template>
 

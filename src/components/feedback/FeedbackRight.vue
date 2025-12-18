@@ -39,7 +39,7 @@ const handleSubmit = () => {
           :class="{ 'checked': isChecked }">
         <label class="form-check-label" for="checkDefault">
           <p class="feedback-right__politics">
-            Я соглашаюсь на обработку персональных данных  
+            Отправляя запрос я соглашаюсь с <a href="/docs/nika-partners.ru Политика Обработки персональных данных.pdf" download="Политика Обработки персональных данных">Политикой обработки персональных данных</a> и даю <a href="/docs/nika-partners.ru Согласие на обработку персональных данных.pdf" download="Согласие на обработку персональных данных">согласие на обработку персональных данных</a>
           </p>
         </label>
       </div>

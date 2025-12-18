@@ -28,9 +28,9 @@ const images = [
     id: 3,
     src: '/images/portfolio/ЖК «Левенцовский»  40000 м².jpg',
     thumbnail: '/images/portfolio/portfolio/ЖК «Левенцовский»  40000 м².jpg',
-    title: 'ЖК «Левенцовский»  40000 м².jpg',
+    title: 'ЖК «Левенцовский»  40000 м²',
     alt: 'ЖК «Левенцовский»  40000 м².jpg',
-    text: 'ЖК «Левенцовский».jpg',
+    text: 'ЖК «Левенцовский»',
     textRight: '40000м²'
   },
 
