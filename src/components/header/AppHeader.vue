@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div :class="{'slider-changed': isChangeSlider}">
+  <div :class="{ 'slider-changed': isChangeSlider }">
     <div class="app-header" :class="`active-slider-${activeSlider}`">
       <div class="app-header__img-top"></div>
 
@@ -68,14 +68,11 @@ onBeforeUnmount(() => {
   width: 100%;
   background: url('/public/images/header-slider-0.jpg') center center no-repeat;
   background-color: #000;
-  background-size: 100% 100% !important;
+  overflow: hidden;
   z-index: 2;
+  background-size: cover !important;
   padding-bottom: 50px;
   overflow: hidden;
-
-  @media all and (min-height: 1400px) {
-    background-size: cover !important;
-  }
 
   &.active-slider-1,
   &.active-slider-2,

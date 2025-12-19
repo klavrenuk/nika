@@ -8,7 +8,7 @@ import FooterLeftBottom from "@/components/footer/FooterLeftBottom.vue";
       <div class="footer-left__container">
         <div class="footer-left__block-logo d-flex flex-column">
           <a class="footer-left__logo" href="/">
-            <img src="/images/logo-photo-new.png" alt="" class="footer-left__logo__img" />
+            <img src="/images/app-header-logo-new.png" alt="" class="footer-left__logo__img" />
           </a>
         </div>
 
