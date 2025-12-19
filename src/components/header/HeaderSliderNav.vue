@@ -41,10 +41,4 @@ const handleSelect = (index) => {
         }
     }
 }
-
-@media all and (max-width: 1200px) {
-    .header-slider-nav {
-        display: none;
-    }
-}
 </style>

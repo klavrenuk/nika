@@ -109,6 +109,10 @@ onBeforeUnmount(() => {
   top: 113px;
   right: 0;
   z-index: 10;
+
+  @media all and (max-width: 1200px) {
+    top: 56px;
+  }
 }
 
 .app-header__img-bottom {
