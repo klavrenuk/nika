@@ -30,7 +30,7 @@ const { projects } = defineProps({
     background: #633DCA;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 20px;
     height: calc(560px + 25px);
     position: relative;
     top: -25px;
@@ -50,7 +50,7 @@ const { projects } = defineProps({
 
         @media all and (max-width: 1200px) {
             margin-top: .5rem;
-            font-size: 24px;
+            font-size: 18px;
         }
     }
 
@@ -69,10 +69,6 @@ const { projects } = defineProps({
         word-break: break-word;
 
         & li {
-            // overflow-wrap: break-word;
-            // word-wrap: break-word;
-            // white-space: normal;
-
             width: 100%;
             box-sizing: border-box;
             white-space: normal;

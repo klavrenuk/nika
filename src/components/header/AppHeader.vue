@@ -74,6 +74,10 @@ onBeforeUnmount(() => {
   padding-bottom: 50px;
   overflow: hidden;
 
+  @media all and (max-width: 1200px) {
+    background: url('/public/images/header-slider-0-mobile.png') center center no-repeat;
+  }
+
   &.active-slider-1,
   &.active-slider-2,
   &.active-slider-3 {
@@ -83,14 +87,26 @@ onBeforeUnmount(() => {
 
   &.active-slider-1 {
     background: url('/public/images/header-slider-1.jpg') center center no-repeat;
+
+    @media all and (max-width: 1200px) {
+      background: url('/public/images/header-slider-1-mobile.png') center center no-repeat;
+    }
   }
 
   &.active-slider-2 {
     background: url('/public/images/header-slider-2.jpg') center center no-repeat;
+
+    @media all and (max-width: 1200px) {
+      background: url('/public/images/header-slider-2-mobile.png') center center no-repeat;
+    }
   }
 
   &.active-slider-3 {
     background: url('/public/images/header-slider-3.jpg') center center no-repeat;
+
+    @media all and (max-width: 1200px) {
+      background: url('/public/images/header-slider-3-mobile.png') center center no-repeat;
+    }
   }
 
   &__container {
@@ -126,7 +142,7 @@ onBeforeUnmount(() => {
 
 @media all and (max-width: 1200px) {
   .app-header {
-    background-size: auto !important;
+    background-size: cover !important;
   }
 
   .app-header__img-top {
