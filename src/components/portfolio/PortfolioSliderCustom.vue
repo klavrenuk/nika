@@ -13,16 +13,14 @@
 </template>
 
 <script setup>
-const projects = [
-    'Средняя образовательная школа №15 г. Батайск',
-    'Областная детская клиническая больница г. Ростов-на-Дону',
-    'Донецкая областная больница',
-    'СК  «Тлепшь» г. Нальчик',
-    'Корпуса Росгвардии г. Адлер',
-    'ТЦ  г. Геническ в Херсонской области',
-    'Городская больница г. Орёл',
-    'Пансионат «Кяласур» г. Сухум'
-]    
+import { defineProps } from 'vue'
+
+const { projects } = defineProps({
+    projects: {
+        type: Array,
+        required: true
+    }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -64,6 +62,12 @@ const projects = [
         color: #FFFFFF;
         font-size: 24px;
         line-height: 120%;
+        gap: 12px;
+
+        & li {
+            padding: 15px 13px;
+            border: 1px solid #fff;
+        }
 
         @media all and (max-width: 1200px) {
             font-size: 16px;

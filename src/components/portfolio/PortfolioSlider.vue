@@ -5,9 +5,9 @@
         delay: 30000,
         disableOnInteraction: false,
     }" :modules="modules" class="mySwiper">
-        <swiper-slide v-for="(image, index) of list" :key="image.id">
+        <swiper-slide v-for="(image) of list" :key="image.id">
             <a class="slider-item">
-                <PortfolioSliderCustom v-if="image.isCustom" />
+                <PortfolioSliderCustom v-if="image.isCustom" :projects="image.projects" />
                 <img v-else :src="image.src" :alt="image.alt" class="slider-item__img">
                 <div class="portfolio__wrap-title" v-if="!image.isCustom">
                     <span class="portfolio__right__title">{{ image.text }}</span>
