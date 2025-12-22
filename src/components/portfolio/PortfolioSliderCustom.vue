@@ -34,11 +34,12 @@ const { projects } = defineProps({
     height: calc(560px + 25px);
     position: relative;
     top: -25px;
+    overflow: hidden;
 
     @media all and (max-width: 1200px) {
-        top: -40px;
-        height: 310px;
-        padding: 1rem .5rem;
+        width: 100%;
+        height: auto;
+        padding: 2rem .5rem;
     }
 
     &__title {
@@ -63,8 +64,21 @@ const { projects } = defineProps({
         font-size: 24px;
         line-height: 120%;
         gap: 12px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
 
         & li {
+            // overflow-wrap: break-word;
+            // word-wrap: break-word;
+            // white-space: normal;
+
+            width: 100%;
+            box-sizing: border-box;
+            white-space: normal;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+
             padding: 15px 13px;
             border: 1px solid #fff;
         }
