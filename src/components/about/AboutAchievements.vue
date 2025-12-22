@@ -21,6 +21,10 @@ defineProps({
     font-size: 80px;
     text-transform: uppercase;
     font-weight: 500;
+
+    @media all and (max-width: 1200px) {
+      margin-top: 30px;
+    }
   }
 
   &__description {

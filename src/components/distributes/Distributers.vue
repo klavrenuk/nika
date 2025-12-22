@@ -2,10 +2,10 @@
     <section id="Distributers" class="app-section distributers">
         <div class="app-container">
             <div class="distributers__container">
-                <SectionName>Официальный представитель</SectionName>
+                <SectionName>ООО “Ника</SectionName>
 
                 <h3 class="distributers__title app-custom-color-title scroll-animate">
-                    <span>Дистрибьюторы</span> компаний:
+                    <span>Дистрибьютор</span> брендов:
                 </h3>
             </div>
         </div>
@@ -65,7 +65,7 @@ const distributers = [
 .distributers {
     padding-left: 0;
     padding-right: 0;
-    
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -93,6 +93,10 @@ const distributers = [
     flex-direction: column;
     gap: 40px;
     margin-top: 20px;
+
+    @media all and (max-width: 1200px) {
+        gap: 0;
+    }
 }
 
 .marquee-track {

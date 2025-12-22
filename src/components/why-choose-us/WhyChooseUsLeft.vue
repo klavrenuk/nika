@@ -58,6 +58,7 @@ import SectionName from "@/components/section/SectionName.vue";
 }
 
 @media all and (max-width: 720px) {
+
   .why-choose-us-left__top-img,
   .why-choose-us-left__wrap-top-img {
     display: none;
@@ -81,11 +82,17 @@ import SectionName from "@/components/section/SectionName.vue";
 
   .why-choose-us-left__img {
     width: 100%;
+    object-fit: cover;
   }
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 </style>
