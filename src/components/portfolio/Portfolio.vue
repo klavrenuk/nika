@@ -369,7 +369,7 @@ onMounted(() => {
 
 .portfolio {
   .slider {
-    width: 130%;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 10px;
