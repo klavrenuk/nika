@@ -4,9 +4,42 @@ import { ref } from "vue";
 import SectionName from "@/components/section/SectionName.vue";
 
 const isChecked = ref(false)
+const formData = ref({
+  name: '',
+  email: '',
+  company: '',
+  phone: '',
+  message: ''
+})
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   console.log('submit');
+
+  console.log('formData.value', formData.value);
+
+  try {
+    const response = await fetch('/mail.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData.value)
+    })
+
+    if (response.ok) {
+      console.log('Форма отправлена');
+    }
+
+  } catch (error) {
+    console.error('Ошибка:', error)
+
+  } finally {
+    formData.value = {
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      message: ''
+    }
+  }
 }
 </script>
 
@@ -25,21 +58,27 @@ const handleSubmit = () => {
 
     <form @submit.prevent="handleSubmit" class="feedback-right__form">
       <div class="feedback-right__form__grid">
-        <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя">
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail">
-        <input class="form-control" id="company" aria-describedby="emailHelp" placeholder="Компания">
+        <input class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ваше имя"
+          v-model="formData.name">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail"
+          v-model="formData.email">
+        <input class="form-control" id="company" aria-describedby="emailHelp" placeholder="Компания"
+          v-model="formData.company">
         <input type="phone" class="form-control" id="phone" aria-describedby="emailHelp"
-          placeholder="+7 (999) 999-99-99">
+          placeholder="+7 (999) 999-99-99" v-model="formData.phone">
       </div>
 
-      <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Сообщение">
+      <input class="form-control" id="area" aria-describedby="emailHelp" placeholder="Сообщение" v-model="formData.message">
 
       <div class="form-check feedback-right__form__check">
         <input class="form-check-input" type="checkbox" value="" id="checkDefault" v-model="isChecked"
           :class="{ 'checked': isChecked }">
         <label class="form-check-label" for="checkDefault">
           <p class="feedback-right__politics">
-            Отправляя запрос я соглашаюсь с <a href="/docs/nika-partners.ru Политика Обработки персональных данных.pdf" download="Политика Обработки персональных данных">Политикой обработки персональных данных</a> и даю <a href="/docs/nika-partners.ru Согласие на обработку персональных данных.pdf" download="Согласие на обработку персональных данных">согласие на обработку персональных данных</a>
+            Отправляя запрос я соглашаюсь с <a href="/docs/nika-partners.ru Политика Обработки персональных данных.pdf"
+              download="Политика Обработки персональных данных">Политикой обработки персональных данных</a> и даю <a
+              href="/docs/nika-partners.ru Согласие на обработку персональных данных.pdf"
+              download="Согласие на обработку персональных данных">согласие на обработку персональных данных</a>
           </p>
         </label>
       </div>
