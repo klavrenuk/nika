@@ -53,7 +53,7 @@ onMounted(() => {
       </p>
     </div>
 
-    <img src="/images/about-people.svg" alt="" class="about-right__people" />
+    <img src="/images/about-people.png" alt="" class="about-right__people" />
 
     <div class="about-right__footer d-flex align-items-center flex-wrap">
       <AboutAchievements :text="`${counterYears} лет`" description="опыта в отрасли" />
@@ -98,9 +98,9 @@ onMounted(() => {
 }
 
 .about-right__people {
-  margin-top: 48px;
-  height: 72px;
-  width: 204px;
+  margin: 20px 0 -30px;
+  height: 100px;
+  width: 300px;
   object-fit: cover;
 }
 
