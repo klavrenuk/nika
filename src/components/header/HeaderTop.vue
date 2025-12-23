@@ -6,9 +6,11 @@ import { navHeader } from '@/constants/constants';
 	<div class="header-top">
 		<div class="row">
 			<div class="col-4">
-				<a class="header-top__logo">
-					<img src="/images/app-header-logo-new.png" alt="Ника" />
-				</a>
+				<div class="header-top__wrapper-logo">
+					<a class="header-top__logo">
+						<img src="/images/app-header-logo-new.png" alt="Ника" />
+					</a>
+				</div>
 			</div>
 
 			<div class="col-8 header-top__right">
@@ -76,6 +78,24 @@ import { navHeader } from '@/constants/constants';
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+}
+
+.header-top__wrapper-logo {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 120px;
+		height: 120px;
+		background: rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		z-index: 0;
+		pointer-events: none;
 	}
 }
 
