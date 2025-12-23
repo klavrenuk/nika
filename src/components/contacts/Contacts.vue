@@ -28,7 +28,17 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
         </div>
 
         <div class="contacts__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc07e653bf4510318cf2b7d3e088ff792998a9a814c2c16512ee9d56add71614&amp;source=constructor" width="100%" height="521" frameborder="0"></iframe>
+          <div class="contacts__map--desktop">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc07e653bf4510318cf2b7d3e088ff792998a9a814c2c16512ee9d56add71614&amp;source=constructor"
+              width="100%" height="521" frameborder="0"></iframe>
+          </div>
+          <div class="contacts__map--mobile">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Adc07e653bf4510318cf2b7d3e088ff792998a9a814c2c16512ee9d56add71614&amp;source=constructor"
+              width="100%" height="380" frameborder="0"></iframe>
+          </div>
+
         </div>
       </div>
     </div>
@@ -62,6 +72,22 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
     gap: 70px;
   }
 }
+
+.contacts__map--desktop {
+  @media all and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.contacts__map--mobile {
+  display: none;
+
+  @media all and (max-width: 1200px) {
+    display: block;
+  }
+}
+
+
 
 .contacts__map__img {
   height: 100%;

@@ -39,10 +39,11 @@ const { projects } = defineProps({
     @media all and (max-width: 1200px) {
         width: 100%;
         height: auto;
-        padding: 2rem .5rem;
-        height: 345px;
+        padding: .5rem;
+        height: 302px;
         overflow: hidden;
-        gap: 10px;
+        gap: 20px;
+        top: -34px;
     }
 
     &__title {
@@ -52,6 +53,7 @@ const { projects } = defineProps({
         line-height: 120%;
 
         @media all and (max-width: 1200px) {
+            padding-top: 10px;
             font-size: 18px;
         }
     }

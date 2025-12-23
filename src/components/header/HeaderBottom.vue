@@ -22,7 +22,7 @@ const description = computed(() => {
       return 'Более 80 000 кв. м. плитки в наличии на складе';
 
     case 3:
-      return 'Официальный дилер<br /> PROTILES, Piastrella, PROGRES, UNITILE, Gracia ceramica,<br /> Kerama Marazzi, Italon'
+      return 'Официальный дилер<br /> Protiles, Piastrella, Progres, Unitile, Gracia ceramica, <br /> Kerama Marazzi, Italon'
 
     default:
       return null;

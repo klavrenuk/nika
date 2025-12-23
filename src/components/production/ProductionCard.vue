@@ -4,10 +4,10 @@
             <img :src="imgSrc" alt="" class="production-card__img" />
 
             <div class="production-card__magnifier">
-                <img :src="`/images/production/${data.magnifier}`"  />
+                <img :src="`/images/production/${data.magnifier}`" />
             </div>
         </div>
-        
+
         <p class="production-card__text" v-html="data.text" />
     </div>
 </template>
@@ -98,9 +98,19 @@ const imgSrc = computed(() => {
     }
 
     .production-card__wrap-img {
-        min-height: 450px;  
+        min-height: 450px;
         height: 100%;
         display: inline-block;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .production-card__wrap-img {
+        margin-bottom: 0;
+    }
+
+    .production-card__text {
+        margin-bottom: 10px;
     }
 }
 </style>
