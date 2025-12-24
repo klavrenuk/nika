@@ -68,8 +68,12 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
 
   &__info {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto auto;
     gap: 70px;
+
+    @media all and (min-width: 1200) and (max-width: 1400px) {
+      gap: 30px;
+    }
   }
 }
 
@@ -86,8 +90,6 @@ import ContactInfoItem from "@/components/contacts/ContactInfoItem.vue";
     display: block;
   }
 }
-
-
 
 .contacts__map__img {
   height: 100%;

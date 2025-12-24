@@ -1,5 +1,5 @@
 <template>
-    <swiper :slides-per-view="'auto'" :centered-slides="true" :space-between="30" :pagination="{
+    <swiper :slides-per-view="'auto'" :centered-slides="true" :pagination="{
         clickable: true,
     }" :autoplay="{
         delay: 30000,
@@ -11,7 +11,7 @@
                 <img v-else :src="image.src" :alt="image.alt" class="slider-item__img">
                 <div class="portfolio__wrap-title" v-if="!image.isCustom">
                     <span class="portfolio__right__title">{{ image.text }}</span>
-                    <span class="portfolio__right__title">{{  image.textRight }}</span>
+                    <span class="portfolio__right__title">{{ image.textRight }}</span>
                 </div>
             </a>
         </swiper-slide>
@@ -53,6 +53,7 @@ export default {
 
 .swiper-slide {
     width: 650px !important;
+    max-width: 100% !important;
     display: flex;
     justify-content: center;
     align-items: center;

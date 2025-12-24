@@ -81,23 +81,6 @@ import { navHeader } from '@/constants/constants';
 	}
 }
 
-.header-top__wrapper-logo {
-	position: relative;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 120px;
-		height: 120px;
-		background: rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
-		z-index: 0;
-		pointer-events: none;
-	}
-}
 
 @media all and (max-width: 1200px) {
 	.header-top__phone {

@@ -68,4 +68,15 @@ import ProductionCardNoImg from './ProductionCardNoImg.vue';
         height: 2px;
     }
 }
+
+@media all and (max-width: 1450px) {
+    .production__container {
+        width: 100%;
+    }
+
+    .production__layout {
+        display: flex !important;
+        flex-direction: column;
+    }
+}
 </style>

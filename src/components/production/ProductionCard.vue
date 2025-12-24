@@ -91,6 +91,12 @@ const imgSrc = computed(() => {
     }
 }
 
+@media all and (min-width: 1200px) and (max-width: 1450px) {
+    .production-card {
+        width: 100%;
+    }
+}
+
 
 @media all and (min-width: 750px) and (max-width: 1200px) {
     .production-card__magnifier {

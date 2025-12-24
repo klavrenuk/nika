@@ -5,7 +5,7 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
 <template>
   <div id="application" class="feedback app-section">
     <div class="app-container">
-      <div class="app-component-layout">
+      <div class="app-component-layout feedback__layout">
         <img src="/images/feedback-photo.png" alt="Форма обратной связи" />
 
         <FeedbackRight />
@@ -15,6 +15,14 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
 </template>
 
 <style lang="scss" scoped>
+@media all and (max-width: 1550px) {
+  .feedback__layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
 @media all and (max-width: 720px) {
   .feedback {
     & img {
