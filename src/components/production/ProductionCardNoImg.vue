@@ -6,6 +6,7 @@
                 {{  data.id }}
             </h3>
         </div>
+        
 
         <p class="production-card-no-img__text" v-html="data.text" />
         <!-- <a class="production-card-no-img__link">

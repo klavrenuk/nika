@@ -8,6 +8,13 @@
             </div>
         </div>
 
+        <div class="production-card-no-img__header">
+            <div class="production-card-no-img__square"></div>
+            <h3 class="production-card-no-img__title">
+                {{ data.id }}
+            </h3>
+        </div>
+
         <p class="production-card__text" v-html="data.text" />
     </div>
 </template>
@@ -43,7 +50,6 @@ const imgSrc = computed(() => {
         position: relative;
         width: 100%;
         height: 422px;
-        margin-bottom: 10px;
     }
 
     &__img {
@@ -91,6 +97,25 @@ const imgSrc = computed(() => {
     }
 }
 
+.production-card-no-img {
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__square {
+        width: 24px;
+        height: 22px;
+        background: #7A4FF1;
+    }
+
+    &__title {
+        color: #949494;
+        font-size: 17px;
+        line-height: 120%;
+    }
+}
 
 @media all and (min-width: 750px) and (max-width: 1200px) {
     .production-card__magnifier {

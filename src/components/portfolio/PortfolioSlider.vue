@@ -52,11 +52,11 @@ export default {
 }
 
 .swiper-slide {
+    padding: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    padding-right: 2px;
 }
 
 .swiper-slide img {
