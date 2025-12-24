@@ -1,5 +1,5 @@
 <template>
-    <swiper :slides-per-view="'auto'" :centered-slides="true" :pagination="{
+    <swiper :slides-per-view="1" :centered-slides="true" :pagination="{
         clickable: true,
     }" :autoplay="{
         delay: 30000,
