@@ -15,13 +15,11 @@ import FeedbackRight from "@/components/feedback/FeedbackRight.vue";
 </template>
 
 <style lang="scss" scoped>
-@media all and (max-width: 1550px) {
-  .feedback__layout {
-    display: flex;
-    flex-direction: column;
-  }
-}
+@media all and (max-width: 1550px) {}
 
+.feedback img {
+  width: 100%;
+}
 
 @media all and (max-width: 720px) {
   .feedback {

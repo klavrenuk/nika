@@ -82,8 +82,8 @@ const images = [
   },
   {
     id: 9,
-    src: '/images/portfolio/Ресторан «KFC» 1000 м².jpg',
-    thumbnail: '/images/portfolio/Ресторан «KFC»',
+    src: '/images/portfolio/Ресторан «KFS» 1000 м².jpg',
+    thumbnail: '/images/portfolio/Ресторан «KFS»',
     title: 'Ресторан «KFC»',
     alt: 'Ресторан «KFC»',
     text: 'Ресторан «KFC»',

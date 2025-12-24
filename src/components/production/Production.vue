@@ -73,10 +73,5 @@ import ProductionCardNoImg from './ProductionCardNoImg.vue';
     .production__container {
         width: 100%;
     }
-
-    .production__layout {
-        display: flex !important;
-        flex-direction: column;
-    }
 }
 </style>

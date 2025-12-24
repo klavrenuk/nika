@@ -28,7 +28,7 @@ const imgSrc = computed(() => {
 
 <style lang="scss" scoped>
 .production-card {
-    width: 643px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -88,12 +88,6 @@ const imgSrc = computed(() => {
     & img {
         width: 100%;
         height: 100%;
-    }
-}
-
-@media all and (min-width: 1200px) and (max-width: 1450px) {
-    .production-card {
-        width: 100%;
     }
 }
 
