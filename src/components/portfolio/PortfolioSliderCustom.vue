@@ -25,7 +25,6 @@ const { projects } = defineProps({
 
 <style lang="scss" scoped>
 .portfolio-slider-custom {
-    width: 650px;
     padding: 50px 60px;
     background: #633DCA;
     display: flex;
